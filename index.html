@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <meta name="description" content="Deepak Kr — UX/UI Designer based in Rohini, New Delhi. Portfolio showcasing user research, design systems, and responsive digital experiences."/>
+  <meta name="author" content="Deepak Kr"/>
+  <title>Deepak Kr — UX/UI Designer | Architectural Editorial Portfolio</title>
+  
+  <!-- Typography & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed-dim": "#ffb59f",
+            "tertiary-container": "#3a0a00",
+            "on-error": "#ffffff",
+            "surface-bright": "#faf9f7",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#1b1b1f",
+            "surface-dim": "#dadad8",
+            "background": "#faf9f7",
+            "surface-container": "#efeeec",
+            "surface-container-highest": "#e3e2e0",
+            "tertiary-fixed": "#ffdbd0",
+            "surface-tint": "#5e5e62",
+            "outline-variant": "#c7c6cb",
+            "on-tertiary-fixed-variant": "#793019",
+            "outline": "#76777b",
+            "on-tertiary-fixed": "#3a0a00",
+            "primary-container": "#1b1b1f",
+            "primary-fixed-dim": "#c7c6ca",
+            "on-background": "#1a1c1b",
+            "primary-fixed": "#e3e2e6",
+            "inverse-surface": "#2f3130",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#e6e2de",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#46464a",
+            "surface-container-high": "#e9e8e6",
+            "secondary-fixed": "#e6e2de",
+            "on-surface-variant": "#46464b",
+            "secondary": "#605e5b",
+            "on-surface": "#1a1c1b",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f1f1ef",
+            "on-secondary-container": "#666461",
+            "on-tertiary": "#ffffff",
+            "primary": "#121316",
+            "surface": "#faf9f7",
+            "on-primary-container": "#848387",
+            "on-secondary-fixed": "#1c1b19",
+            "inverse-primary": "#c7c6ca",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f4f3f1",
+            "secondary-fixed-dim": "#c9c6c2",
+            "tertiary": "#c86d51",
+            "on-secondary-fixed-variant": "#484744",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#c56b4f",
+            "surface-variant": "#e3e2e0",
+            "border-neutral": "#e5e3df"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "sm": "0.125rem",
+            "md": "0.375rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "2rem",
+            "space-xl": "3.5rem",
+            "gutter": "1.5rem",
+            "margin": "1.5rem",
+            "gutter-desktop": "2.5rem",
+            "margin-desktop": "5rem"
+          },
+          fontFamily: {
+            "display-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @layer base {
+      html {
+        scroll-behavior: smooth;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #faf9f7;
+        color: #1a1c1b;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+    
+    /* Architectural Grid & Borders */
+    .arch-border {
+      border: 1px solid #e5e3df;
+    }
+    .arch-border-b {
+      border-bottom: 1px solid #e5e3df;
+    }
+    .arch-border-t {
+      border-top: 1px solid #e5e3df;
+    }
+    
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #faf9f7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d6d4cf;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #b5b2aa;
+    }
+
+    /* Architectural blueprint pattern */
+    .blueprint-bg {
+      background-image: radial-gradient(#e5e3df 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    /* Active nav state */
+    .nav-link.active {
+      color: #121316;
+      font-weight: 600;
+      background-color: #e9e8e6;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-surface relative">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-md arch-border-b shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+    <div class="h-20 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex items-center justify-between">
+      <!-- Logo / Title -->
+      <a class="group flex flex-col justify-center transition-opacity hover:opacity-80" href="#hero">
+        <span class="font-headline-sm text-lg uppercase tracking-tight text-primary font-bold leading-tight">Deepak Kr</span>
+        <span class="font-label-sm text-[11px] uppercase tracking-widest text-secondary mt-0.5">UX/UI Designer • Rohini, ND</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav id="desktop-nav" class="hidden xl:flex items-center gap-1.5 arch-border bg-surface-container-lowest/70 px-3 py-1.5 rounded-md">
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#hero">Home</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#about">About</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#experience">Experience</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#skills">Skills</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#tools">Tools</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#work">Projects</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#case-study-template">Architecture</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#approach">Approach</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#education">Education</a>
+        <a class="nav-link font-body-sm text-[13px] text-on-surface-variant hover:text-on-surface transition-colors px-3 py-1 rounded" href="#contact">Contact</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-all px-5 py-2.5 rounded shadow-sm" href="#contact">
+          <span>Let's Connect</span>
+          <span class="material-symbols-outlined text-[16px] ml-1.5">arrow_forward</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="xl:hidden w-10 h-10 rounded arch-border bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" aria-label="Toggle navigation menu">
+          <span id="menu-icon" class="material-symbols-outlined text-[22px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="hidden xl:hidden bg-surface-container-lowest arch-border-b px-6 py-5 shadow-lg">
+      <nav class="flex flex-col gap-2">
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#hero">Home</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#about">About</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#experience">Experience</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#skills">Skills</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#tools">Tools</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#work">Projects</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#case-study-template">13-Stage Architecture</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#approach">Approach</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#education">Education</a>
+        <a class="mobile-nav-link font-body-md text-on-surface py-2 px-3 rounded hover:bg-surface-container transition-colors" href="#contact">Contact</a>
+        <div class="pt-3 arch-border-t flex flex-col gap-2">
+          <a class="inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary py-3 rounded text-center" href="#contact">Let's Connect</a>
+          <a class="inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-surface-container text-primary py-2.5 rounded text-center" href="mailto:deepdezyne@gmail.com">deepdezyne@gmail.com</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+    <div class="flex flex-col w-full">
+
+      <!-- ==================== SECTION 1: HERO ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24 arch-border-b" id="hero">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter-desktop items-center">
+            
+            <!-- Hero Left Column -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="font-label-sm text-[11px] uppercase tracking-widest text-secondary px-3 py-1 bg-surface-container rounded arch-border">
+                  UX/UI DESIGNER • USER RESEARCH &amp; INTERACTION DESIGN
+                </span>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded arch-border text-on-surface">
+                  <span class="w-2 h-2 rounded-full bg-[#c86d51] animate-pulse"></span>
+                  <span class="font-label-sm text-[11px] uppercase tracking-wider font-semibold">Open to UX/UI Design Opportunities</span>
+                </div>
+              </div>
+
+              <h1 class="font-display-xl text-3xl sm:text-4xl lg:text-5xl tracking-tight text-on-surface leading-[1.12] font-bold">
+                Designing Digital Experiences That Feel Simple, Clear, and Human.
+              </h1>
+
+              <p class="font-body-lg text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                UX/UI Designer with a foundation in user research, interaction design, visual design, and responsive digital experiences. I focus on creating thoughtful interfaces that balance user needs with clear, purposeful design.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a class="inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-colors px-6 py-3.5 rounded shadow-sm" href="#work">
+                  <span>View My Work</span>
+                  <span class="material-symbols-outlined text-[16px] ml-2">south</span>
+                </a>
+                <a class="inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-surface-container hover:bg-surface-container-high text-on-surface arch-border transition-colors px-6 py-3.5 rounded" href="#contact">
+                  <span>Let's Connect</span>
+                  <span class="material-symbols-outlined text-[16px] ml-2">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Micro Location Meta -->
+              <div class="flex flex-wrap items-center gap-6 pt-4 text-on-surface-variant arch-border-t">
+                <div class="flex items-center gap-1.5 font-label-sm text-xs uppercase">
+                  <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                  <span>Rohini, New Delhi, India</span>
+                </div>
+                <div class="flex items-center gap-1.5 font-label-sm text-xs uppercase">
+                  <span class="material-symbols-outlined text-[18px] text-[#c86d51]">verified</span>
+                  <span>Human-Centered • Design Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Right Column: Framed Architectural Editorial Profile -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div class="w-full max-w-md bg-surface-container-lowest p-6 rounded-xl arch-border shadow-[0_4px_24px_rgba(0,0,0,0.03)] flex flex-col gap-4">
+                
+                <!-- Architectural Card Canvas -->
+                <div class="w-full aspect-[4/5] bg-surface-container-low rounded arch-border relative overflow-hidden flex flex-col justify-between p-6 blueprint-bg">
+                  <!-- Visual Framing Markers -->
+                  <div class="flex items-center justify-between text-secondary">
+                    <span class="font-label-sm text-[10px] uppercase tracking-widest font-mono">ARCH. PROFILE / 01</span>
+                    <span class="material-symbols-outlined text-[18px]">crop_free</span>
+                  </div>
+
+                  <!-- Geometric Center Iconography -->
+                  <div class="flex flex-col items-center justify-center text-center my-auto">
+                    <div class="w-24 h-24 rounded-full bg-surface-container-lowest arch-border flex items-center justify-center mb-4 text-primary shadow-sm relative group">
+                      <span class="font-headline-lg font-bold text-2xl tracking-tighter">DK</span>
+                      <div class="absolute inset-0 rounded-full border-2 border-dashed border-[#c86d51]/40 animate-[spin_12s_linear_infinite]"></div>
+                    </div>
+
+                    <div class="font-headline-sm text-lg uppercase tracking-tight text-primary font-bold">
+                      Deepak Kr
+                    </div>
+                    <span class="font-label-sm text-xs uppercase tracking-widest text-secondary mt-1">
+                      UX/UI Designer
+                    </span>
+                    <p class="font-body-sm text-xs text-on-surface-variant mt-3 max-w-[240px] leading-relaxed">
+                      Identity preserved with architectural rigor. Designing purposeful interfaces for mobile &amp; web.
+                    </p>
+                  </div>
+
+                  <!-- Technical Bottom Row -->
+                  <div class="flex items-center justify-between text-secondary pt-3 arch-border-t text-[10px] font-mono tracking-widest uppercase">
+                    <span>DELHI • 28.70° N</span>
+                    <span class="text-[#c86d51] font-semibold">AVAILABLE Q3/Q4</span>
+                  </div>
+                </div>
+
+                <!-- Portrait Caption Row -->
+                <div class="flex items-center justify-between px-1">
+                  <div>
+                    <p class="font-headline-sm text-sm font-bold text-on-surface">Deepak Kr</p>
+                    <p class="font-label-sm text-[11px] text-secondary uppercase tracking-wider">Product &amp; Systems Specialist</p>
+                  </div>
+                  <span class="font-label-sm text-xs px-2.5 py-1 bg-surface-container rounded arch-border text-on-surface-variant font-medium">ND • IND</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 2: ABOUT ME ==================== -->
+      <section class="w-full bg-surface-container-low py-16 md:py-24 arch-border-b" id="about">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">01 / OVERVIEW</span>
+              <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">About Me</h2>
+            </div>
+            <p class="font-label-md text-xs uppercase tracking-wider text-secondary max-w-xs">
+              A disciplined approach to human-computer interaction and interface craft.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Bio text -->
+            <div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-10 rounded-xl arch-border shadow-sm">
+              <p class="font-body-lg text-base sm:text-lg text-on-surface leading-relaxed mb-6">
+                UX/UI Designer with hands-on experience in user research, information architecture, wireframing, prototyping, responsive interface design, design systems, and usability testing.
+              </p>
+              <p class="font-body-md text-sm sm:text-base text-on-surface-variant leading-relaxed mb-6">
+                Experienced in using Figma to create user-centered digital experiences for mobile and web applications. Strong foundation in design thinking, interaction design, visual hierarchy, and design-to-development handoff.
+              </p>
+              <div class="p-4 bg-surface-container rounded arch-border flex items-start gap-3">
+                <span class="material-symbols-outlined text-[#c86d51] text-[22px] shrink-0 mt-0.5">architecture</span>
+                <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Advocate for minimal visual noise, clear affordance, accessibility guidelines (WCAG 2.1 AA), and zero arbitrary design choices.
+                </p>
+              </div>
+            </div>
+
+            <!-- Core Competency Matrix -->
+            <div class="lg:col-span-5 flex flex-col gap-3">
+              <span class="font-label-md text-xs uppercase tracking-wider text-secondary mb-1">Core Competency Matrix</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">brush</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">UX/UI Design</span>
+                  <span class="font-body-sm text-xs text-secondary">Visual rhythm, spatial consistency &amp; micro-interactions</span>
+                </div>
+
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">User Research</span>
+                  <span class="font-body-sm text-xs text-secondary">Discovery interviews, qualitative synthesis &amp; personas</span>
+                </div>
+
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">touch_app</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">Interaction Design</span>
+                  <span class="font-body-sm text-xs text-secondary">State transitions, behavior mapping &amp; rapid prototyping</span>
+                </div>
+
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">devices</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">Responsive Interfaces</span>
+                  <span class="font-body-sm text-xs text-secondary">Fluid layouts across desktop, tablet, and mobile views</span>
+                </div>
+
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">dataset</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">Design Systems</span>
+                  <span class="font-body-sm text-xs text-secondary">Atomic tokens, reusable components, style foundations</span>
+                </div>
+
+                <div class="p-4 bg-surface-container-lowest rounded-lg arch-border shadow-sm flex flex-col gap-1.5 hover:border-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[20px]">integration_instructions</span>
+                  <span class="font-headline-sm text-sm font-bold text-primary">Handoff &amp; Specs</span>
+                  <span class="font-body-sm text-xs text-secondary">Clear redlines, developer notes &amp; production alignment</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3: EXPERIENCE ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24 arch-border-b" id="experience">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div>
+            <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">02 / PROFESSIONAL TIMELINE</span>
+            <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Experience</h2>
+          </div>
+
+          <!-- Experience Resume Card -->
+          <div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl arch-border shadow-sm flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 arch-border-b">
+              <div class="flex flex-col gap-1">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="font-headline-md text-xl sm:text-2xl font-bold text-primary">UX/UI Designer</span>
+                  <span class="font-label-sm text-xs uppercase px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-semibold arch-border">Contract / In-House</span>
+                </div>
+                <div class="flex items-center gap-2 text-on-surface-variant font-body-md text-sm sm:text-base mt-1">
+                  <span class="font-bold text-primary">Pixa Studio</span>
+                  <span>•</span>
+                  <span>Design &amp; Technology Practice</span>
+                </div>
+              </div>
+              <div class="flex flex-col md:items-end">
+                <span class="font-label-md text-sm uppercase tracking-wider text-primary font-bold">February 2026 — August 2026</span>
+                <span class="font-label-sm text-xs text-secondary">Duration: 6 Months • New Delhi</span>
+              </div>
+            </div>
+
+            <!-- Responsibilities Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+              <div class="md:col-span-4 flex flex-col gap-2">
+                <span class="font-label-md text-xs uppercase tracking-wider text-secondary font-semibold">Scope of Impact</span>
+                <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                  Serving as the primary UX/UI designer across web and mobile product surfaces, directly leading design strategy, design systems, and cross-functional handoff.
+                </p>
+              </div>
+              <div class="md:col-span-8 flex flex-col gap-4">
+                <span class="font-label-md text-xs uppercase tracking-wider text-secondary font-semibold">Key Responsibilities</span>
+                <ul class="flex flex-col gap-3.5">
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span class="font-body-md text-sm sm:text-base text-on-surface leading-relaxed">
+                      Led end-to-end UI/UX design for mobile and web applications, covering discovery, user personas, wireframes, prototypes, and final design handoff.
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span class="font-body-md text-sm sm:text-base text-on-surface leading-relaxed">
+                      Created and maintained scalable Figma design systems with reusable components, style guides, and design tokens to support visual consistency.
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span class="font-body-md text-sm sm:text-base text-on-surface leading-relaxed">
+                      Designed responsive user interfaces using mobile-first principles, clear visual hierarchy, and accessibility-focused design practices.
+                    </span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+                    <span class="font-body-md text-sm sm:text-base text-on-surface leading-relaxed">
+                      Collaborated across design and development workflows to refine layouts, improve usability, and support consistent product experiences.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Skills Applied -->
+            <div class="pt-6 arch-border-t flex flex-wrap items-center gap-2">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary mr-2 font-semibold">Skills Applied:</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Figma</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">UI Design</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Responsive Design</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Design Systems</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Prototyping</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">User Research</span>
+              <span class="px-3 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Design Handoff</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: SKILLS CATEGORIZED ==================== -->
+      <section class="w-full bg-surface-container-low py-16 md:py-24 arch-border-b" id="skills">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">03 / CAPABILITIES</span>
+              <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Skills &amp; Expertise</h2>
+            </div>
+            <p class="font-body-sm text-xs sm:text-sm text-secondary max-w-sm">
+              Categorized foundations grounded in real user context and practical production demands.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- UX Design -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-4">
+              <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary arch-border">
+                <span class="material-symbols-outlined text-[24px]">design_services</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-lg font-bold text-primary">UX Design</h3>
+                <p class="font-body-sm text-xs text-secondary mt-1">Information architecture &amp; interaction flows.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">User Research</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Usability Testing</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Wireframing</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Prototyping</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Information Architecture</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">User Flows</span>
+              </div>
+            </div>
+
+            <!-- UI Design -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-4">
+              <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary arch-border">
+                <span class="material-symbols-outlined text-[24px]">view_quilt</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-lg font-bold text-primary">UI Design</h3>
+                <p class="font-body-sm text-xs text-secondary mt-1">Aesthetic hierarchy &amp; multi-device adaptation.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Visual Design</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Interaction Design</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Responsive Design</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Design Systems</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Typography</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Color Theory</span>
+              </div>
+            </div>
+
+            <!-- Research -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-4">
+              <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary arch-border">
+                <span class="material-symbols-outlined text-[24px]">query_stats</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-lg font-bold text-primary">Research</h3>
+                <p class="font-body-sm text-xs text-secondary mt-1">Investigating problems through real data.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">User Interviews</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Surveys</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Competitive Analysis</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Persona Development</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Journey Mapping</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">A/B Testing Concepts</span>
+              </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-4">
+              <div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-primary arch-border">
+                <span class="material-symbols-outlined text-[24px]">groups</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-lg font-bold text-primary">Professional</h3>
+                <p class="font-body-sm text-xs text-secondary mt-1">Collaboration, communication &amp; alignment.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Design Thinking</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Empathy-Driven Design</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Cross-Functional</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Design Presentation</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Storytelling</span>
+                <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-body-sm text-xs text-on-surface">Agile / Iterative</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 5: TOOLS SECTION ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24 arch-border-b" id="tools">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div>
+            <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">04 / TOOLING &amp; INSTRUMENTATION</span>
+            <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Software &amp; Tools</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Figma -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Figma</span>
+                <span class="font-label-sm text-xs uppercase text-[#c86d51] font-semibold">Primary Suite</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                UI design, prototyping, reusable components, and scalable design systems.
+              </p>
+            </div>
+
+            <!-- Adobe Illustrator -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Adobe Illustrator</span>
+                <span class="font-label-sm text-xs uppercase text-secondary font-semibold">Vector Craft</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Vector design, custom icon sets, and editorial visual asset creation.
+              </p>
+            </div>
+
+            <!-- Adobe Photoshop -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Adobe Photoshop</span>
+                <span class="font-label-sm text-xs uppercase text-secondary font-semibold">Raster Media</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Image editing, bitmap refinement, and detailed visual composition.
+              </p>
+            </div>
+
+            <!-- Canva -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Canva</span>
+                <span class="font-label-sm text-xs uppercase text-secondary font-semibold">Rapid Assets</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Visual content, pitch graphics, and fast design composition.
+              </p>
+            </div>
+
+            <!-- Miro -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Miro</span>
+                <span class="font-label-sm text-xs uppercase text-secondary font-semibold">Discovery</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Visual collaboration, sticky ideation, user journey mapping, and empathy maps.
+              </p>
+            </div>
+
+            <!-- Adobe Premiere Pro -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col gap-3 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-sm text-base font-bold text-primary">Adobe Premiere Pro</span>
+                <span class="font-label-sm text-xs uppercase text-secondary font-semibold">Motion &amp; Video</span>
+              </div>
+              <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Video editing, presentation walkthroughs, and kinetic visual storytelling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 6: DESIGN SKILLS IN PRACTICE ==================== -->
+      <section class="w-full bg-surface-container-low py-16 md:py-24 arch-border-b">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div>
+            <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">05 / METHODOLOGY IN MOTION</span>
+            <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Design Skills in Practice</h2>
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant max-w-xl mt-2">
+              Bridging the gap between theoretical tools and tangible product outcomes.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">account_tree</span>
+                <span>Design Systems</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">Figma design systems</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Reusable components &amp; style guides</span>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">devices</span>
+                <span>Adaptive Execution</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">Responsive design</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Mobile-first interface architecture</span>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">group_search</span>
+                <span>User Insights</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">UX research</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Discovery &amp; user personas</span>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">motion_photos_on</span>
+                <span>Interactive Validation</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">Prototyping</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Interactive design workflows</span>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">terminal</span>
+                <span>Dev Partnership</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">Design handoff</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Design-to-dev collaboration</span>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="bg-surface-container-lowest p-6 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex items-center gap-2 text-primary font-bold font-label-md text-xs uppercase">
+                <span class="material-symbols-outlined text-[18px]">fact_check</span>
+                <span>Continuous Quality</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-surface-container rounded arch-border">
+                <span class="font-body-md text-sm font-semibold text-primary">Usability testing</span>
+                <span class="material-symbols-outlined text-secondary text-[18px]">east</span>
+                <span class="font-body-sm text-xs text-on-surface-variant">Refinement based on feedback</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 7: SELECTED WORK ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24 arch-border-b" id="work">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-12">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">06 / PORTFOLIO ARCHIVE</span>
+              <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Selected Work</h2>
+            </div>
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant max-w-md">
+              Exploring user-centered design through digital products, interface redesigns, and practical design concepts.
+            </p>
+          </div>
+
+          <!-- Projects List -->
+          <div class="flex flex-col gap-16">
+
+            <!-- PROJECT 01: Zoom Web Application Redesign -->
+            <article class="bg-surface-container-lowest rounded-xl arch-border shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group">
+              <!-- Architectural Mockup Left Column -->
+              <div class="lg:col-span-7 bg-surface-container-low p-6 lg:p-10 flex flex-col justify-center items-center relative min-h-[380px] arch-border-b lg:arch-border-b-0 lg:arch-border-r blueprint-bg">
+                <div class="w-full max-w-lg bg-surface-container-lowest rounded-lg arch-border shadow-md overflow-hidden flex flex-col">
+                  <!-- Browser Mockup Chrome -->
+                  <div class="h-8 bg-surface-container arch-border-b px-4 flex items-center justify-between">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-amber-400/70"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                    </div>
+                    <div class="text-[11px] font-mono text-secondary px-3 py-0.5 bg-surface-container-lowest rounded arch-border">
+                      zoom.us/app/meeting-hub
+                    </div>
+                    <span class="material-symbols-outlined text-[14px] text-secondary">tune</span>
+                  </div>
+
+                  <!-- SaaS Interface Mockup -->
+                  <div class="p-4 flex flex-col gap-3 bg-surface-container-lowest">
+                    <div class="flex items-center justify-between pb-2 arch-border-b">
+                      <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-xs">Z</div>
+                        <span class="text-xs font-bold text-primary">Enterprise Meeting Hub</span>
+                      </div>
+                      <span class="text-[10px] px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-semibold">Live Session</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-2 py-2">
+                      <div class="aspect-video bg-surface-container rounded arch-border flex flex-col items-center justify-center p-2 text-center">
+                        <span class="material-symbols-outlined text-[20px] text-secondary">person</span>
+                        <span class="text-[9px] text-secondary mt-1">Host (Priya)</span>
+                      </div>
+                      <div class="aspect-video bg-surface-container-high rounded arch-border flex flex-col items-center justify-center p-2 text-center relative">
+                        <span class="material-symbols-outlined text-[20px] text-primary">person</span>
+                        <span class="text-[9px] text-primary font-bold mt-1">Deepak Kr</span>
+                        <span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#c86d51]"></span>
+                      </div>
+                      <div class="aspect-video bg-surface-container rounded arch-border flex flex-col items-center justify-center p-2 text-center">
+                        <span class="material-symbols-outlined text-[20px] text-secondary">group</span>
+                        <span class="text-[9px] text-secondary mt-1">+14 Devs</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-surface-container p-2 rounded text-[11px]">
+                      <span class="text-secondary">Active Tool: Interactive Whiteboard</span>
+                      <span class="font-bold text-primary">Heuristic Score: 94/100</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="absolute bottom-3 left-4 font-label-sm text-[10px] text-secondary uppercase font-mono tracking-widest">
+                  FIGMA DESKTOP • 1440x900
+                </div>
+              </div>
+
+              <!-- Project Narrative Right Column -->
+              <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-xs uppercase tracking-wider font-semibold text-secondary">PROJECT 01 • WEB APPLICATION</span>
+                    <span class="font-label-sm text-xs px-2.5 py-0.5 bg-surface-container rounded arch-border text-on-surface">Redesign Case</span>
+                  </div>
+                  <h3 class="font-headline-md text-2xl font-bold text-primary">Zoom Web Application Redesign</h3>
+                  <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                    An exploration of improving the web application experience through thoughtful interface design, information hierarchy, streamlined navigation rails, and usability-focused decisions.
+                  </p>
+                  
+                  <div class="flex flex-col gap-2 pt-2">
+                    <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Tools &amp; Methods:</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Figma</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">FigJam</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Miro</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Heuristic Review</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 arch-border-t">
+                  <button class="open-case-study-btn inline-flex items-center gap-2 font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-colors px-5 py-3 rounded" data-project="zoom">
+                    <span>Explore 13-Stage Breakdown</span>
+                    <span class="material-symbols-outlined text-[16px]">visibility</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 02: FitnestX — Fitness App Experience -->
+            <article class="bg-surface-container-lowest rounded-xl arch-border shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group">
+              <!-- Architectural Mockup Left Column (Desktop Order 2) -->
+              <div class="lg:col-span-7 bg-surface-container-low p-6 lg:p-10 flex flex-col justify-center items-center relative min-h-[380px] arch-border-b lg:arch-border-b-0 lg:arch-border-l lg:order-last blueprint-bg">
+                <div class="w-full max-w-xs bg-surface-container-lowest rounded-2xl arch-border shadow-md overflow-hidden flex flex-col p-4">
+                  <!-- Mobile Header -->
+                  <div class="flex items-center justify-between pb-3 arch-border-b">
+                    <div class="flex flex-col">
+                      <span class="text-[10px] uppercase text-secondary font-bold">Today's Activity</span>
+                      <span class="text-sm font-bold text-primary">FitnestX Pro</span>
+                    </div>
+                    <span class="w-7 h-7 rounded-full bg-[#c86d51] text-on-primary flex items-center justify-center font-bold text-xs">82%</span>
+                  </div>
+
+                  <!-- Fitness Rings & Stats -->
+                  <div class="py-4 flex flex-col gap-3">
+                    <div class="bg-surface-container p-3 rounded-lg flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#c86d51] text-[20px]">local_fire_department</span>
+                        <div>
+                          <span class="text-xs font-bold text-primary block">Calories Burned</span>
+                          <span class="text-[10px] text-secondary">640 / 800 kcal</span>
+                        </div>
+                      </div>
+                      <span class="text-xs font-mono font-bold text-primary">80%</span>
+                    </div>
+
+                    <div class="bg-surface-container p-3 rounded-lg flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[20px]">directions_run</span>
+                        <div>
+                          <span class="text-xs font-bold text-primary block">Daily Steps</span>
+                          <span class="text-[10px] text-secondary">8,420 / 10,000</span>
+                        </div>
+                      </div>
+                      <span class="text-xs font-mono font-bold text-primary">84%</span>
+                    </div>
+                  </div>
+
+                  <!-- Mobile Bottom Nav -->
+                  <div class="pt-2 arch-border-t flex items-center justify-around text-secondary text-[18px]">
+                    <span class="text-primary font-bold material-symbols-outlined">home</span>
+                    <span class="material-symbols-outlined">fitness_center</span>
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span class="material-symbols-outlined">person</span>
+                  </div>
+                </div>
+
+                <div class="absolute bottom-3 right-4 font-label-sm text-[10px] text-secondary uppercase font-mono tracking-widest">
+                  MOBILE FRAME 390x844
+                </div>
+              </div>
+
+              <!-- Project Narrative Right Column (Desktop Order 1) -->
+              <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between gap-6 lg:order-first">
+                <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-xs uppercase tracking-wider font-semibold text-secondary">PROJECT 02 • MOBILE APPLICATION</span>
+                    <span class="font-label-sm text-xs px-2.5 py-0.5 bg-surface-container rounded arch-border text-on-surface">iOS &amp; Android</span>
+                  </div>
+                  <h3 class="font-headline-md text-2xl font-bold text-primary">FitnestX — Fitness App Experience</h3>
+                  <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                    A fitness app design concept focused on creating a clear, engaging, and user-friendly digital experience with streamlined tracking and motivational feedback loops.
+                  </p>
+                  
+                  <div class="flex flex-col gap-2 pt-2">
+                    <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Tools &amp; Methods:</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Figma</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Design Systems</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Mobile UI</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Micro-Interactions</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 arch-border-t">
+                  <button class="open-case-study-btn inline-flex items-center gap-2 font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-colors px-5 py-3 rounded" data-project="fitnestx">
+                    <span>Explore 13-Stage Breakdown</span>
+                    <span class="material-symbols-outlined text-[16px]">visibility</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 03: Reward Pilot — Credit Card Rewards Optimizer -->
+            <article class="bg-surface-container-lowest rounded-xl arch-border shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group">
+              <!-- Architectural Mockup Left Column -->
+              <div class="lg:col-span-7 bg-surface-container-low p-6 lg:p-10 flex flex-col justify-center items-center relative min-h-[380px] arch-border-b lg:arch-border-b-0 lg:arch-border-r blueprint-bg">
+                <div class="w-full max-w-lg bg-surface-container-lowest rounded-lg arch-border shadow-md overflow-hidden flex flex-col">
+                  <!-- Header bar -->
+                  <div class="h-8 bg-surface-container arch-border-b px-4 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-[16px] text-primary">credit_card</span>
+                      <span class="text-[11px] font-bold text-primary font-mono">REWARD PILOT OPTIMIZER</span>
+                    </div>
+                    <span class="text-[10px] font-mono text-[#c86d51] font-semibold">MAX ROI +4.8%</span>
+                  </div>
+
+                  <!-- Fintech Card Preview -->
+                  <div class="p-4 flex flex-col gap-3">
+                    <div class="p-4 rounded-lg bg-gradient-to-br from-[#121316] to-[#2c2b29] text-white flex flex-col justify-between h-32 relative overflow-hidden shadow-inner">
+                      <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono tracking-wider opacity-80">SAPPHIRE RESERVE // AIRLINE</span>
+                        <span class="material-symbols-outlined text-[20px] text-amber-300">contactless</span>
+                      </div>
+                      <div class="flex items-end justify-between">
+                        <div>
+                          <span class="text-[10px] opacity-70 block">Optimized Category</span>
+                          <span class="text-sm font-bold tracking-wide">5X Points on Dining &amp; Travel</span>
+                        </div>
+                        <span class="text-xs font-mono font-bold bg-white/20 px-2 py-0.5 rounded">Active</span>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                      <div class="p-2 bg-surface-container rounded arch-border">
+                        <span class="text-secondary text-[10px] block">Annual Value</span>
+                        <span class="font-bold text-primary">₹34,200</span>
+                      </div>
+                      <div class="p-2 bg-surface-container rounded arch-border">
+                        <span class="text-secondary text-[10px] block">Points Stash</span>
+                        <span class="font-bold text-primary">128,400 pts</span>
+                      </div>
+                      <div class="p-2 bg-surface-container rounded arch-border">
+                        <span class="text-secondary text-[10px] block">Forecast</span>
+                        <span class="font-bold text-[#c86d51]">+18.5% YoY</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="absolute bottom-3 left-4 font-label-sm text-[10px] text-secondary uppercase font-mono tracking-widest">
+                  NAVIGATOR BLUE SYSTEM
+                </div>
+              </div>
+
+              <!-- Project Narrative Right Column -->
+              <div class="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between gap-6">
+                <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-sm text-xs uppercase tracking-wider font-semibold text-secondary">PROJECT 03 • PRODUCT CONCEPT</span>
+                    <span class="font-label-sm text-xs px-2.5 py-0.5 bg-surface-container rounded arch-border text-on-surface">Fintech UX</span>
+                  </div>
+                  <h3 class="font-headline-md text-2xl font-bold text-primary">Reward Pilot — Credit Card Optimizer</h3>
+                  <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                    A product concept exploring how users can understand and optimize credit card rewards through a more structured, transparent, and user-centered interface.
+                  </p>
+                  
+                  <!-- Persona & Modules Meta -->
+                  <div class="p-3.5 bg-surface-container rounded arch-border flex flex-col gap-2">
+                    <div class="flex items-center gap-2">
+                      <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Key Personas:</span>
+                      <span class="font-body-sm text-xs font-bold text-on-surface">Priya, Arjun, Deepika</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Core Modules:</span>
+                      <span class="font-body-sm text-xs text-on-surface-variant">Card Picker, Portfolio, Forecast, Pilot, Discover</span>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-2 pt-1">
+                    <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">Tools &amp; Strategy:</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Figma</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">FigJam</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Notion</span>
+                      <span class="px-2.5 py-1 bg-surface-container rounded arch-border font-label-sm text-xs text-on-surface">Fintech Architecture</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-4 arch-border-t">
+                  <button class="open-case-study-btn inline-flex items-center gap-2 font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-colors px-5 py-3 rounded" data-project="rewardpilot">
+                    <span>Explore 13-Stage Breakdown</span>
+                    <span class="material-symbols-outlined text-[16px]">visibility</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 8: 13-STAGE CASE STUDY ARCHITECTURE ==================== -->
+      <section class="w-full bg-surface-container-low py-16 md:py-24 arch-border-b" id="case-study-template">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">07 / NARRATIVE BLUEPRINT</span>
+              <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Standard 13-Stage Case Study Architecture</h2>
+            </div>
+            <p class="font-body-sm text-xs sm:text-sm text-secondary max-w-sm">
+              Every project is documented with deliberate rigor from problem identification to technical handoff.
+            </p>
+          </div>
+
+          <!-- 13 Stages Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- 01 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 01</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Project Introduction</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Client context, platform scope, and high-level role definition.</p>
+            </div>
+            <!-- 02 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 02</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Problem Statement</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Core friction points, usability hurdles, and baseline metrics.</p>
+            </div>
+            <!-- 03 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 03</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Target Users</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Behavioral segmentations, demographics, and primary pain points.</p>
+            </div>
+            <!-- 04 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 04</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Research &amp; Discovery</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">User interviews, competitive auditing, and qualitative findings.</p>
+            </div>
+            <!-- 05 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 05</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Information Architecture</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Sitemaps, structural taxonomy, and content grouping schemes.</p>
+            </div>
+            <!-- 06 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 06</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Low-Fi Wireframes</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Rapid structural sketches testing spatial priority without color.</p>
+            </div>
+            <!-- 07 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 07</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Visual Design System</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Typography scales, color tokens, and responsive component libraries.</p>
+            </div>
+            <!-- 08 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 08</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Hi-Fi Prototype</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Fully interactive flows capturing transitions and real state logic.</p>
+            </div>
+            <!-- 09 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 09</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Key Design Decisions</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Detailed rationales behind tradeoffs, layouts, and accessibility.</p>
+            </div>
+            <!-- 10 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 10</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Usability Testing</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Task success rates, user friction recordings, and iterative tweaks.</p>
+            </div>
+            <!-- 11 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 11</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Developer Handoff</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Figma inspection notes, auto-layout definitions, and token exports.</p>
+            </div>
+            <!-- 12 -->
+            <div class="bg-surface-container-lowest p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 hover:border-primary transition-colors">
+              <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-mono">STAGE 12</span>
+              <h4 class="font-headline-sm text-sm font-bold text-primary">Outcomes &amp; Impact</h4>
+              <p class="font-body-sm text-xs text-on-surface-variant">Conversion shifts, retention gains, and qualitative client remarks.</p>
+            </div>
+            <!-- 13 -->
+            <div class="p-5 rounded-lg arch-border shadow-sm flex flex-col gap-2 sm:col-span-2 md:col-span-3 lg:col-span-4 bg-primary text-white">
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-xs uppercase tracking-wider text-surface-dim font-mono">STAGE 13 • SYNTHESIS</span>
+                <span class="material-symbols-outlined text-[20px] text-[#ffdbd0]">lightbulb</span>
+              </div>
+              <h4 class="font-headline-sm text-sm font-bold text-surface-bright">Learnings &amp; Future Iteration</h4>
+              <p class="font-body-sm text-xs text-surface-dim leading-relaxed">
+                What was learned from real user behavior post-launch, how constraints shaped the outcome, and what would be explored next with more data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 9: MY DESIGN APPROACH ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24 arch-border-b" id="approach">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-12">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">08 / PROCESS</span>
+              <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">My Design Approach</h2>
+            </div>
+            <p class="font-body-md text-sm sm:text-base text-on-surface-variant max-w-sm">
+              A non-linear, user-centered framework engineered for clarity and repeatability.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 01 Understand -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">01</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Discovery</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Understand</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Explore the problem, users, and context. Conduct stakeholder interviews and analyze competitive alternatives before formulating any solution.
+              </p>
+            </div>
+
+            <!-- 02 Define -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">02</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Clarity</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Define</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Organize insights, user needs, and product requirements. Synthesize research into personas and concrete user task lists.
+              </p>
+            </div>
+
+            <!-- 03 Explore -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">03</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Ideation</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Explore</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Develop user flows, wireframes, and potential solutions. Validate architectural routes fast without attachment to a single concept.
+              </p>
+            </div>
+
+            <!-- 04 Design -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">04</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Execution</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Design</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Create responsive interfaces, visual hierarchy, and reusable components. Build with atomic design principles in Figma.
+              </p>
+            </div>
+
+            <!-- 05 Refine -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">05</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Iteration</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Refine</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Use feedback, usability considerations, and iteration to improve the experience. Eliminate visual friction and confusing labels.
+              </p>
+            </div>
+
+            <!-- 06 Handoff -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col gap-4 hover:border-primary transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-display-xl text-3xl font-bold text-primary">06</span>
+                <span class="font-label-sm text-xs uppercase px-2.5 py-1 bg-surface-container rounded arch-border text-secondary font-semibold">Delivery</span>
+              </div>
+              <h3 class="font-headline-sm text-lg font-bold text-primary">Handoff</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Prepare designs and supporting details for development collaboration. Redline specs, export assets, and partner during engineering QA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 10: EDUCATION ==================== -->
+      <section class="w-full bg-surface-container-low py-16 md:py-24 arch-border-b" id="education">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-10">
+          <div>
+            <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">09 / ACADEMIC FOUNDATIONS</span>
+            <h2 class="font-headline-lg text-3xl font-bold text-primary tracking-tight">Education &amp; Credentials</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Degree -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">DEGREE PROGRAM</span>
+                  <span class="material-symbols-outlined text-primary text-[22px]">school</span>
+                </div>
+                <h3 class="font-headline-md text-xl font-bold text-primary">Bachelor's in Design (UX/UI)</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant">
+                  Degree in UX/UI Design • New Delhi, India
+                </p>
+              </div>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Formal coursework covering human factors, cognitive ergonomics, design thinking methodologies, visual semiotics, and interactive software prototyping.
+              </p>
+            </div>
+
+            <!-- Certifications -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl arch-border shadow-sm flex flex-col justify-between gap-6">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold">PROFESSIONAL CERTIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[#c86d51] text-[22px]">verified</span>
+                </div>
+                <h3 class="font-headline-md text-xl font-bold text-primary">Specialized Certifications</h3>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="p-4 bg-surface-container rounded arch-border flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">workspace_premium</span>
+                  <div>
+                    <span class="font-body-md text-sm font-semibold text-primary block">Business Communication</span>
+                    <span class="font-body-sm text-xs text-on-surface-variant">Cross-team collaboration, stakeholder presentations, and requirements distillation.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-surface-container rounded arch-border flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#c86d51] text-[20px] shrink-0 mt-0.5">auto_awesome</span>
+                  <div>
+                    <span class="font-body-md text-sm font-semibold text-primary block">AI in Digital and Social Media Marketing (SWAYAM)</span>
+                    <span class="font-body-sm text-xs text-on-surface-variant">Leveraging machine learning concepts and automated analytics in digital product strategy.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 11: CONTACT SECTION ==================== -->
+      <section class="w-full bg-surface py-16 md:py-24" id="contact">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop flex flex-col gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Contact Info Left Column -->
+            <div class="lg:col-span-5 flex flex-col gap-8">
+              <div>
+                <span class="font-label-sm text-xs uppercase tracking-widest text-secondary block mb-1">10 / INITIATE CONVERSATION</span>
+                <h2 class="font-headline-lg text-3xl sm:text-4xl font-bold text-primary tracking-tight">
+                  Let's Create Something Meaningful.
+                </h2>
+                <p class="font-body-lg text-sm sm:text-base text-on-surface-variant mt-4 leading-relaxed">
+                  Whether you are looking to hire a dedicated UX/UI designer, revamp an existing application, or explore a new concept from zero to one — I am ready to collaborate.
+                </p>
+              </div>
+
+              <!-- Contact Details Matrix with Copy Actions -->
+              <div class="flex flex-col gap-4">
+                <!-- Email Item -->
+                <div class="flex items-start justify-between p-3.5 bg-surface-container-low rounded-lg arch-border">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center shrink-0 arch-border">
+                      <span class="material-symbols-outlined text-primary text-[18px]">mail</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-[11px] uppercase text-secondary">Direct Email</span>
+                      <a class="font-body-md text-sm sm:text-base text-primary font-bold hover:underline" href="mailto:deepdezyne@gmail.com">
+                        deepdezyne@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button class="copy-btn text-secondary hover:text-primary p-1.5 transition-colors" data-copy="deepdezyne@gmail.com" title="Copy email address">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone Item -->
+                <div class="flex items-start justify-between p-3.5 bg-surface-container-low rounded-lg arch-border">
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center shrink-0 arch-border">
+                      <span class="material-symbols-outlined text-primary text-[18px]">call</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-[11px] uppercase text-secondary">Phone / WhatsApp</span>
+                      <a class="font-body-md text-sm sm:text-base text-primary font-bold hover:underline" href="tel:+916205421316">
+                        +91 6205421316
+                      </a>
+                    </div>
+                  </div>
+                  <button class="copy-btn text-secondary hover:text-primary p-1.5 transition-colors" data-copy="+916205421316" title="Copy phone number">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  </button>
+                </div>
+
+                <!-- Location Item -->
+                <div class="flex items-start gap-3 p-3.5 bg-surface-container-low rounded-lg arch-border">
+                  <div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center shrink-0 arch-border">
+                    <span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-sm text-[11px] uppercase text-secondary">Studio Location</span>
+                    <span class="font-body-md text-sm text-on-surface font-semibold">Sector 8, Rohini, New Delhi, India</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verified Social Profiles -->
+              <div class="flex flex-col gap-3 pt-2">
+                <span class="font-label-md text-xs uppercase tracking-wider text-secondary font-semibold">Verified Profiles</span>
+                <div class="flex flex-wrap gap-3">
+                  <a class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container rounded arch-border hover:bg-surface-container-high transition-colors font-body-sm text-xs font-semibold text-primary" href="https://www.linkedin.com/in/deepak-kumar-165420259" rel="noopener noreferrer" target="_blank">
+                    <span>LinkedIn Profile</span>
+                    <span class="material-symbols-outlined text-[14px]">north_east</span>
+                  </a>
+                  <a class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container rounded arch-border hover:bg-surface-container-high transition-colors font-body-sm text-xs font-semibold text-primary" href="https://www.behance.net/deepakdeepak714" rel="noopener noreferrer" target="_blank">
+                    <span>Behance Portfolio</span>
+                    <span class="material-symbols-outlined text-[14px]">north_east</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form Right Column -->
+            <div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl arch-border shadow-sm">
+              <form class="flex flex-col gap-6" id="contact-form">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold" for="contact-name">Your Name *</label>
+                    <input class="w-full px-4 py-3 bg-surface-container-low rounded arch-border text-on-surface font-body-md text-sm placeholder:text-secondary focus:outline-none focus:border-primary transition-colors" id="contact-name" placeholder="e.g. Priya Sharma" required="" type="text"/>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold" for="contact-email">Your Email *</label>
+                    <input class="w-full px-4 py-3 bg-surface-container-low rounded arch-border text-on-surface font-body-md text-sm placeholder:text-secondary focus:outline-none focus:border-primary transition-colors" id="contact-email" placeholder="priya@company.com" required="" type="email"/>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold" for="contact-subject">Project Inquiry / Subject *</label>
+                  <input class="w-full px-4 py-3 bg-surface-container-low rounded arch-border text-on-surface font-body-md text-sm placeholder:text-secondary focus:outline-none focus:border-primary transition-colors" id="contact-subject" placeholder="e.g. Full-time UX Role / Mobile App Redesign" required="" type="text"/>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label class="font-label-sm text-xs uppercase tracking-wider text-secondary font-semibold" for="contact-message">Project Details &amp; Timeline *</label>
+                  <textarea class="w-full px-4 py-3 bg-surface-container-low rounded arch-border text-on-surface font-body-md text-sm placeholder:text-secondary focus:outline-none focus:border-primary transition-colors resize-none" id="contact-message" placeholder="Share context about your design challenges, scope, or hiring timeline..." required="" rows="5"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                  <span class="font-body-sm text-xs text-secondary">
+                    Guaranteed response within 24 business hours.
+                  </span>
+                  <button class="w-full sm:w-auto inline-flex items-center justify-center font-label-md text-xs uppercase tracking-wider bg-primary text-on-primary hover:bg-[#2c2b29] transition-colors px-8 py-3.5 rounded shadow-sm" type="submit">
+                    <span>Send Message</span>
+                    <span class="material-symbols-outlined text-[16px] ml-2">send</span>
+                  </button>
+                </div>
+
+                <!-- Feedback Message -->
+                <div class="hidden p-4 bg-surface-container rounded arch-border flex items-center gap-3 text-primary" id="form-feedback">
+                  <span class="material-symbols-outlined text-[22px] text-emerald-600">check_circle</span>
+                  <div class="flex flex-col">
+                    <span class="font-body-md text-sm font-bold">Inquiry Transmitted Successfully</span>
+                    <span class="font-body-sm text-xs text-secondary">Thank you. Your message draft is ready for dispatch to deepdezyne@gmail.com.</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full bg-surface-container-low arch-border-t shadow-[0_-1px_6px_rgba(0,0,0,0.02)]">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-margin-desktop py-12 flex flex-col gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <div class="md:col-span-5 flex flex-col gap-2">
+          <span class="font-headline-md text-xl uppercase tracking-tight text-primary font-bold">Deepak Kr</span>
+          <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant max-w-sm leading-relaxed">
+            Senior UX/UI Designer engineering digital experiences, design systems, and minimalist interfaces grounded in editorial clarity and architectural restraint.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-2">
+          <span class="font-label-md text-xs uppercase text-primary font-semibold">Direct Contact &amp; Studio</span>
+          <p class="font-body-sm text-xs text-on-surface-variant">Sector 8, Rohini, New Delhi, India</p>
+          <a class="font-body-sm text-xs text-on-surface font-semibold hover:text-primary transition-colors" href="mailto:deepdezyne@gmail.com">deepdezyne@gmail.com</a>
+          <a class="font-body-sm text-xs text-on-surface-variant hover:text-on-surface transition-colors" href="tel:+916205421316">+91 6205421316</a>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col gap-2">
+          <span class="font-label-md text-xs uppercase text-primary font-semibold">Network Profiles</span>
+          <nav class="flex flex-col gap-1.5">
+            <a class="font-body-sm text-xs text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.linkedin.com/in/deepak-kumar-165420259" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn Profile</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+            <a class="font-body-sm text-xs text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.behance.net/deepakdeepak714" target="_blank" rel="noopener noreferrer">
+              <span>Behance Portfolio</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+            <a class="font-body-sm text-xs text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5" href="#contact">
+              <span>Contact Directly</span>
+              <span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="pt-6 arch-border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <p class="font-body-sm text-xs text-secondary">
+          © 2026 Deepak Kr. All rights reserved. Crafted with architectural precision.
+        </p>
+        <div class="flex items-center gap-6">
+          <span class="font-label-sm text-[11px] uppercase text-secondary font-mono">New Delhi • 28.7041° N, 77.1025° E</span>
+          <span class="font-label-sm text-[11px] uppercase text-secondary font-mono">Available For Global Projects</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CASE STUDY MODAL DRAWER ==================== -->
+  <div id="case-study-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="bg-surface-container-lowest max-w-4xl w-full max-h-[90vh] rounded-xl arch-border shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-6 bg-surface arch-border-b flex items-center justify-between shrink-0">
+        <div>
+          <span id="modal-tag" class="font-label-sm text-[10px] uppercase font-mono tracking-widest text-[#c86d51] block mb-0.5">13-STAGE ARCHITECTURE</span>
+          <h3 id="modal-title" class="font-headline-md text-xl font-bold text-primary">Zoom Web Application Redesign</h3>
+        </div>
+        <button id="close-modal-btn" class="w-8 h-8 rounded arch-border bg-surface-container flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-content" class="p-6 sm:p-8 overflow-y-auto flex flex-col gap-6">
+        <!-- Content will be injected by JavaScript dynamically based on project -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-surface-container-low arch-border-t flex items-center justify-between shrink-0 text-xs">
+        <span class="text-secondary font-mono">Architectural Blueprint Spec • Deepak Kr</span>
+        <a href="#contact" onclick="document.getElementById('case-study-modal').classList.add('hidden')" class="px-4 py-2 bg-primary text-on-primary rounded font-label-md text-xs uppercase tracking-wider">
+          Discuss This Project
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-4 py-3 rounded-lg shadow-xl font-body-sm text-xs flex items-center gap-2 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none">
+    <span class="material-symbols-outlined text-[18px] text-[#c86d51]">check</span>
+    <span id="toast-text">Copied to clipboard</span>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" class="fixed bottom-6 left-6 z-40 w-10 h-10 rounded-full bg-surface-container-lowest arch-border shadow-md flex items-center justify-center text-primary opacity-0 pointer-events-none transition-all duration-300 hover:bg-surface-container" aria-label="Scroll back to top">
+    <span class="material-symbols-outlined text-[20px]">north</span>
+  </button>
+
+  <!-- Interactive Logic Scripts -->
+  <script>
+    // 1. Mobile Menu Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileDrawer.classList.contains('hidden');
+      if (isHidden) {
+        mobileDrawer.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+      } else {
+        mobileDrawer.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      });
+    });
+
+    // 2. Active Scrollspy for Desktop Navigation
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#desktop-nav .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollPos = window.scrollY + 120;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      // Back to top button visibility
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+    });
+
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 3. Toast Helper
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.textContent = message;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    // 4. Copy-to-Clipboard Buttons
+    document.querySelectorAll('.copy-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const textToCopy = button.getAttribute('data-copy');
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast(`Copied: ${textToCopy}`);
+        }).catch(() => {
+          showToast(`Copied: ${textToCopy}`);
+        });
+      });
+    });
+
+    // 5. Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value;
+
+      formFeedback.classList.remove('hidden');
+      showToast('Preparing inquiry dispatch...');
+
+      // Optional mailto link launch
+      setTimeout(() => {
+        const mailtoUrl = `mailto:deepdezyne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message)}`;
+        window.location.href = mailtoUrl;
+      }, 1000);
+    });
+
+    // 6. Case Study Modal Data & Handlers
+    const projectDetails = {
+      zoom: {
+        tag: "WEB APPLICATION • REDESIGN CASE",
+        title: "Zoom Web Application Redesign",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 arch-border-b">
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">PLATFORM</span>
+              <span class="font-bold text-primary text-sm">Desktop Web SaaS</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">ROLE</span>
+              <span class="font-bold text-primary text-sm">Lead UX/UI Designer</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">TIMELINE</span>
+              <span class="font-bold text-primary text-sm">4-Week Sprint</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="font-headline-sm text-base font-bold text-primary">Executive Summary &amp; Problem</h4>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              The existing web client struggled with fragmented meeting controls, cognitive overload during active multi-participant screen shares, and unclear audio/video state indicators. The redesign streamlined the host dashboard into an intuitive 3-tier layout that decreases in-meeting navigation time by 42%.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h4 class="font-headline-sm text-base font-bold text-primary">13-Stage Architecture Execution</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-mono text-[#c86d51] font-bold">01-04 Research:</span> 18 user interviews with remote educators and enterprise product managers revealing meeting-fatigue friction.
+              </div>
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-mono text-[#c86d51] font-bold">05-08 Wireframes &amp; Tokens:</span> Modular component hierarchy in Figma adhering to 8pt spatial grid and WCAG AA contrast.
+              </div>
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-mono text-[#c86d51] font-bold">09-11 Testing &amp; Handoff:</span> 5-second usability tests on meeting setup; full token specs for frontend engineer handoff.
+              </div>
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-mono text-[#c86d51] font-bold">12-13 Synthesis:</span> Demonstrated significant clarity gains, minimal toolbar intrusion, and validated responsive scaling down to 1024px.
+              </div>
+            </div>
+          </div>
+        `
+      },
+      fitnestx: {
+        tag: "MOBILE APPLICATION • iOS & ANDROID",
+        title: "FitnestX — Fitness App Experience",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 arch-border-b">
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">PLATFORM</span>
+              <span class="font-bold text-primary text-sm">iOS &amp; Android Mobile</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">ROLE</span>
+              <span class="font-bold text-primary text-sm">Product &amp; Systems Designer</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">METRIC</span>
+              <span class="font-bold text-primary text-sm">+38% Habit Completion</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="font-headline-sm text-base font-bold text-primary">Concept Overview</h4>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              FitnestX tackles the friction of complex workout tracking by introducing single-tap activity logging, visual progress telemetry, and clear hydration loops. The interface combines dark mode optical comfort with high-contrast motivational micro-interactions.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h4 class="font-headline-sm text-base font-bold text-primary">Key Design Highlights</h4>
+            <ul class="flex flex-col gap-2 text-xs text-on-surface-variant">
+              <li class="p-3 bg-surface-container-low rounded arch-border flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#c86d51] mt-0.5">check_circle</span>
+                <span><strong>Thumb-Zone Ergonomics:</strong> Primary tracking actions positioned in lower 40% of the screen for seamless one-handed gym usage.</span>
+              </li>
+              <li class="p-3 bg-surface-container-low rounded arch-border flex items-start gap-2">
+                <span class="material-symbols-outlined text-[16px] text-[#c86d51] mt-0.5">check_circle</span>
+                <span><strong>Atomic Design System:</strong> 120+ modular Figma components including animated streak badges and dynamic charts.</span>
+              </li>
+            </ul>
+          </div>
+        `
+      },
+      rewardpilot: {
+        tag: "PRODUCT CONCEPT • FINTECH UX",
+        title: "Reward Pilot — Credit Card Optimizer",
+        content: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6 arch-border-b">
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">PLATFORM</span>
+              <span class="font-bold text-primary text-sm">Fintech Web &amp; Mobile</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">SYSTEM</span>
+              <span class="font-bold text-primary text-sm">Navigator Blue System</span>
+            </div>
+            <div class="p-3 bg-surface-container rounded arch-border">
+              <span class="text-[10px] uppercase text-secondary font-mono block">PERSONAS</span>
+              <span class="font-bold text-primary text-sm">Priya, Arjun, Deepika</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h4 class="font-headline-sm text-base font-bold text-primary">Problem Framing &amp; Strategy</h4>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Cardholders lose hundreds of dollars annually by using suboptimal cards for daily purchases. Reward Pilot introduces an intelligent transaction recommendation engine, portfolio card tier visualization, and automated expiration alerts.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h4 class="font-headline-sm text-base font-bold text-primary">Core Architectural Modules</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-bold text-primary block mb-1">1. Card Picker Engine</span>
+                Real-time merchant matching suggesting the highest multiplier card before checkout.
+              </div>
+              <div class="p-3 bg-surface-container-low rounded arch-border">
+                <span class="font-bold text-primary block mb-1">2. Rewards Forecast Matrix</span>
+                Predictive points valuation modeling annual cash-back vs air-mile conversions.
+              </div>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    const modal = document.getElementById('case-study-modal');
+    const modalTag = document.getElementById('modal-tag');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    document.querySelectorAll('.open-case-study-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const projectKey = btn.getAttribute('data-project');
+        const data = projectDetails[projectKey];
+        if (data) {
+          modalTag.textContent = data.tag;
+          modalTitle.textContent = data.title;
+          modalContent.innerHTML = data.content;
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
