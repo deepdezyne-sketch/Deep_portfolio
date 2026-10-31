@@ -1,214 +1,3502 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Deepak Kr — UX/UI Designer.">
-  <title>Deepak Kr — UX/UI Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Deepak Kr — Product & UX/UI Designer crafting simple, clear, and human digital experiences. Portfolio of selected work, design systems, and case studies.">
+  <meta name="author" content="Deepak Kr">
+  <title>Deepak Kr — Product & UX/UI Designer</title>
+
+  <!-- Typography: Plus Jakarta Sans (Headings), Inter (Body), DM Serif Display (Editorial accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+
   <style>
-    :root{--paper:#f4f3f0;--panel:#f7f6f4;--wash:#efeeec;--ink:#171819;--muted:#5c6168;--line:#ddd9d5;--tag:#e9e7e5;--accent:#d57a5d;--shadow:0 12px 28px rgba(23,24,25,.04)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;-webkit-font-smoothing:antialiased}a,button,input,textarea{transition:all .22s ease}
-    .wrap{max-width:1440px;margin:auto;padding-inline:clamp(1.25rem,4vw,5.2rem)}.section{padding-block:clamp(4rem,7vw,7.5rem);border-bottom:1px solid var(--line)}.eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#5f666f;font-weight:600}.headline{font-size:clamp(2.5rem,4vw,5.25rem);line-height:.94;letter-spacing:-.075em;font-weight:800}.section-title{font-size:clamp(2.35rem,4vw,4.2rem);line-height:1;letter-spacing:-.07em;font-weight:800}.copy{color:#3e4046;line-height:1.75}.icon{font-family:'Material Symbols Outlined';font-size:20px;line-height:1;display:inline-block;vertical-align:middle;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}.tiny{font-size:16px}
-    .card{position:relative;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.4);border-radius:16px;box-shadow:var(--shadow)}.card:hover{transform:translateY(-2px);border-color:#c8c3bc;box-shadow:0 18px 36px rgba(23,24,25,.07)}
-    header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(244,243,240,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav a{font-size:.72rem;padding:.55rem .7rem;border-radius:8px;color:#4a4f57}.nav a:hover{background:#f1efe9;color:var(--ink)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:8px;padding:.86rem 1.18rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:#2e3033}.btn-light{background:#f3f1ee;border:1px solid var(--line);color:var(--ink)}.btn-light:hover{background:#ece8e4}
-    .tag{display:inline-flex;align-items:center;gap:.55rem;background:var(--tag);border:1px solid var(--line);border-radius:999px;padding:.42rem .8rem;font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#40474f}.tag-dot{display:inline-block;height:.5rem;width:.5rem;border-radius:999px;background:var(--accent)}
-    .method-grid,.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.method{padding:1.2rem 1.1rem 1rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.38)}.method-head{display:flex;align-items:center;gap:.7rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#181a1d}.method-row{display:grid;grid-template-columns:1fr 22px 1.15fr;align-items:center;gap:.7rem;margin-top:1.25rem;border-top:1px solid var(--line);padding-top:1rem}.method-row strong{display:block;font-size:1.03rem;line-height:1.3;letter-spacing:-.03em;font-weight:700}.method-row span{font-size:.78rem;line-height:1.35;color:#48515d}.method-row .arrow{font-size:1.5rem;text-align:center;color:#4a4d50}
-    .process{min-height:290px;padding:1.7rem 1.5rem 1.4rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.38)}.process-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.45rem}.number{font-size:2.6rem;line-height:1;letter-spacing:-.08em;font-weight:800}.pill{padding:.48rem .7rem;border:1px solid var(--line);border-radius:6px;background:#efeeec;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4f5860}.process h3{margin:0 0 1rem;font-size:1.7rem;letter-spacing:-.05em}.process p{margin:0;max-width:28rem;font-size:.96rem;line-height:1.72;color:#49515b}
-    .edu-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.credential{padding:1.5rem 1.6rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.38)}.credential-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.3rem}.credential h3{margin:0 0 .3rem;font-size:1.95rem;letter-spacing:-.06em;line-height:1.1}.credential .sub{color:#5c646d;font-size:1.02rem}.credential-copy{margin-top:1.7rem;color:#48515d;line-height:1.7}.credential-item{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.05rem;border-radius:10px;border:1px solid #dad5d0;background:#efeeeb}.credential-item + .credential-item{margin-top:.8rem}.credential-badge{display:grid;place-items:center;flex-shrink:0;width:2.5rem;height:2.5rem;border-radius:999px;background:rgba(213,122,93,.09);color:var(--accent);border:1px solid rgba(213,122,93,.2)}.credential-item h4{margin:0 0 .35rem;font-size:1rem;letter-spacing:-.02em}.credential-item p{margin:0;color:#4f5860;font-size:.82rem;line-height:1.6}
-    .contact-card{padding:2.2rem 2.3rem;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.34)}.contact-card h2{max-width:26rem}.info{font-size:1.05rem;line-height:1.8;color:#434a52}.contact-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.05rem;border:1px solid var(--line);background:#f1efed;border-radius:10px}.contact-row + .contact-row{margin-top:.8rem}.contact-row .left{display:flex;align-items:center;gap:0.9rem}.iconbox{width:2.5rem;height:2.5rem;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;background:#f8f7f4}.label{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#59636d;font-weight:700}.value{font-size:1.02rem;font-weight:700;margin-top:.2rem}.field{display:flex;flex-direction:column;gap:.5rem}.field label{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#56636e;font-weight:700}.field .input{width:100%;padding:1rem 1rem;border-radius:8px;border:1px solid var(--line);background:#f0efec;color:var(--ink);font:inherit}.field .input:focus{outline:2px solid rgba(213,122,93,.2);border-color:#d8cfc8}.field textarea.input{min-height:12.5rem;resize:vertical}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}.full{grid-column:1/-1}.submit-row{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:.7rem}.submit-note{font-size:.84rem;color:#5e646d}
-    .footer{background:var(--paper);border-top:1px solid var(--line)}
-    .footer-grid{display:grid;grid-template-columns:1.3fr .9fr 1fr;gap:1.5rem;align-items:start;padding:2.2rem 0 1.1rem}
-    .footer-title{font-size:clamp(2rem,3vw,3.8rem);letter-spacing:-.08em;font-weight:800;line-height:0.9;margin:0}
-    .footer-sub{font-size:1.05rem;line-height:1.6;color:#3f454d;max-width:27rem}
-    .footer-column h3{margin:0 0 1.1rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#545d68;font-weight:700}.footer-links{display:grid;gap:.75rem;font-size:1.05rem}.footer-links a{color:#171819;text-decoration:none;font-weight:500}.footer-links a:hover{text-decoration:underline}.footer-meta{padding-top:1.1rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:72px}
-    .copyright{display:flex;align-items:center;gap:.7rem;font-size:1.05rem;color:#2d3035}.circle-up{width:2.4rem;height:2.4rem;border:1px solid var(--line);border-radius:999px;background:#f7f6f4;display:grid;place-items:center}.footer-attrib{font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;color:#525b65;white-space:nowrap}
-    .reveal{opacity:0;transform:translateY(18px);transition:.72s ease}.reveal.show{opacity:1;transform:none}@media(max-width:900px){.method-grid,.process-grid,.edu-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}.nav{display:none}.footer-meta{flex-direction:column;align-items:flex-start}}@media(max-width:640px){.form-grid{grid-template-columns:1fr}.full{grid-column:1/-1}.headline{font-size:3.2rem}.section-title{font-size:2.6rem}.submit-row{flex-direction:column;align-items:stretch}.submit-row > *{width:100%}.footer-grid{padding-top:1.5rem}.footer-title{font-size:2.6rem}}
+    /* ==========================================================================
+       DESIGN SYSTEM & COLOR TOKENS
+       Warm Ivory: #F5F2EB | Deep Charcoal: #242521 | Muted Bronze: #A58B68
+       Soft Stone: #DCD6CA | Pure White: #FFFFFF
+       ========================================================================== */
+    :root {
+      --ivory: #F5F2EB;
+      --ivory-wash: #EDEAE1;
+      --ivory-surface: #FAF8F4;
+      --charcoal: #242521;
+      --charcoal-soft: #383A35;
+      --charcoal-muted: #5E5D57;
+      --charcoal-faint: #8B8A83;
+      --bronze: #A58B68;
+      --bronze-dark: #8C7250;
+      --bronze-soft: rgba(165, 139, 104, 0.12);
+      --stone: #DCD6CA;
+      --stone-light: #E7E2D7;
+      --white: #FFFFFF;
+
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'DM Serif Display', Georgia, serif;
+
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: 0.2s var(--ease);
+      --transition-med: 0.35s var(--ease);
+      --transition-slow: 0.6s var(--ease);
+    }
+
+    /* Base Reset & Typography */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    button, input, textarea {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+    }
+
+    /* Utility Container & Layout */
+    .wrap {
+      width: 100%;
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+    }
+
+    .section {
+      padding-block: clamp(4.5rem, 8vw, 8rem);
+      border-bottom: 1px solid var(--stone);
+      position: relative;
+    }
+
+    .section-alt {
+      background-color: var(--ivory-wash);
+    }
+
+    /* Typography Hierarchy */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bronze-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 1px;
+      background-color: var(--bronze);
+    }
+
+    .headline {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      color: var(--charcoal);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.8vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--charcoal-muted);
+      max-width: 36rem;
+      margin-top: 0.75rem;
+    }
+
+    .editorial-serif {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--charcoal-soft);
+    }
+
+    /* Google Icons */
+    .icon {
+      font-family: 'Material Symbols Outlined';
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .icon.sm { font-size: 16px; }
+    .icon.md { font-size: 22px; }
+    .icon.lg { font-size: 28px; }
+
+    /* Buttons & Interactive Elements */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.82rem 1.45rem;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all var(--transition-med);
+    }
+
+    .btn-primary {
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border: 1px solid var(--charcoal);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--charcoal-soft);
+      border-color: var(--charcoal-soft);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--charcoal);
+      border: 1px solid var(--stone);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--white);
+      border-color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      border-bottom: 1px solid var(--charcoal);
+      padding-bottom: 2px;
+    }
+
+    .btn-link:hover {
+      color: var(--bronze-dark);
+      border-color: var(--bronze-dark);
+    }
+
+    .btn-link .icon {
+      transition: transform var(--transition-fast);
+    }
+
+    .btn-link:hover .icon {
+      transform: translate(3px, -3px);
+    }
+
+    /* Badges & Pills */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      padding: 0.38rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #2E8540;
+      box-shadow: 0 0 0 0 rgba(46, 133, 64, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(46, 133, 64, 0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(46, 133, 64, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(46, 133, 64, 0); }
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.28rem 0.65rem;
+      border-radius: 4px;
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background-color: var(--ivory-wash);
+      border: 1px solid var(--stone);
+      color: var(--charcoal-muted);
+    }
+
+    /* Floating Ambient Mesh Canvas */
+    .ambient-mesh-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .mesh-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.45;
+      will-change: transform;
+      pointer-events: none;
+    }
+
+    .mesh-orb-1 {
+      width: 520px;
+      height: 520px;
+      top: -120px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(165, 139, 104, 0.22) 0%, rgba(220, 214, 202, 0.08) 60%, transparent 100%);
+      animation: meshDriftOne 24s ease-in-out infinite alternate;
+    }
+
+    .mesh-orb-2 {
+      width: 560px;
+      height: 560px;
+      top: 42%;
+      left: -150px;
+      background: radial-gradient(circle, rgba(220, 214, 202, 0.28) 0%, rgba(165, 139, 104, 0.1) 65%, transparent 100%);
+      animation: meshDriftTwo 28s ease-in-out infinite alternate;
+    }
+
+    .mesh-orb-3 {
+      width: 480px;
+      height: 480px;
+      bottom: 2%;
+      right: -100px;
+      background: radial-gradient(circle, rgba(165, 139, 104, 0.18) 0%, rgba(245, 242, 235, 0.15) 65%, transparent 100%);
+      animation: meshDriftThree 26s ease-in-out infinite alternate;
+    }
+
+    @keyframes meshDriftOne {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-70px, 90px) scale(1.1); }
+      100% { transform: translate(30px, 40px) scale(0.96); }
+    }
+
+    @keyframes meshDriftTwo {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(90px, -60px) scale(1.12); }
+      100% { transform: translate(40px, 70px) scale(0.92); }
+    }
+
+    @keyframes meshDriftThree {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-80px, -50px) scale(1.08); }
+      100% { transform: translate(30px, -20px) scale(0.95); }
+    }
+
+    /* Scroll Progress Bar */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2.5px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--bronze), var(--charcoal));
+      z-index: 1000;
+      pointer-events: none;
+      transition: width 0.08s linear;
+    }
+
+    /* Ambient Cursor Spotlight */
+    .cursor-ambient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(165, 139, 104, 0.085) 0%, rgba(165, 139, 104, 0.02) 42%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      will-change: transform;
+    }
+
+    /* Interactive Boutique Dual-Cursor */
+    .cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--charcoal);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease, transform 0.08s ease, width 0.25s ease, height 0.25s ease, background-color 0.2s ease;
+      opacity: 0;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--bronze);
+      background-color: rgba(165, 139, 104, 0.04);
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease, width 0.32s var(--ease), height 0.32s var(--ease), background-color 0.25s ease, border-color 0.25s ease, border-radius 0.32s var(--ease), box-shadow 0.25s ease;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cursor-badge-text {
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--ivory);
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.2s ease, transform 0.2s var(--ease);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    /* Cursor Hover States */
+    body.cursor-hover .cursor-ring {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(165, 139, 104, 0.18);
+      border-color: var(--charcoal);
+    }
+
+    body.cursor-hover .cursor-dot {
+      transform: translate(-50%, -50%) scale(0.5);
+      background-color: var(--bronze-dark);
+    }
+
+    body.cursor-project .cursor-ring {
+      width: 96px;
+      height: 38px;
+      border-radius: 9999px;
+      background-color: var(--charcoal);
+      border-color: var(--charcoal);
+      box-shadow: 0 12px 28px rgba(36, 37, 33, 0.32);
+    }
+
+    body.cursor-project .cursor-badge-text {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    body.cursor-project .cursor-dot {
+      opacity: 0;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      .cursor-dot, .cursor-ring, .cursor-ambient {
+        display: none !important;
+      }
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: rgba(245, 242, 235, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--stone);
+      transition: background-color var(--transition-med), border-color var(--transition-med);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      line-height: 1.1;
+      transition: color var(--transition-fast);
+    }
+
+    .brand:hover .brand-name {
+      color: var(--bronze-dark);
+    }
+
+    .brand-role {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+    }
+
+    .nav-desktop {
+      position: relative;
+      display: none;
+      align-items: center;
+      gap: 0.25rem;
+      background-color: rgba(255, 255, 255, 0.65);
+      border: 1px solid var(--stone);
+      padding: 0.3rem;
+      border-radius: 9999px;
+    }
+
+    .nav-indicator {
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: 4px;
+      width: 0;
+      border-radius: 9999px;
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(36, 37, 33, 0.08);
+      transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1), width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .nav-desktop a {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-heading);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--charcoal-muted);
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-desktop a:hover {
+      color: var(--charcoal);
+    }
+
+    .nav-desktop a.active {
+      color: var(--charcoal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .audio-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--stone);
+      background: var(--white);
+      color: var(--charcoal-muted);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .audio-toggle-btn:hover {
+      border-color: var(--charcoal);
+      color: var(--charcoal);
+      transform: scale(1.06);
+    }
+
+    .audio-toggle-btn.active {
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border-color: var(--charcoal);
+      box-shadow: 0 4px 14px rgba(36, 37, 33, 0.16);
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      border: 1px solid var(--stone);
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid var(--stone);
+      background-color: var(--ivory);
+      padding: 1.5rem clamp(1.25rem, 5vw, 3.5rem);
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-nav-links a {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      padding-block: 0.25rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-top: clamp(7.5rem, 13vw, 10.5rem);
+      padding-bottom: clamp(4.5rem, 8vw, 7rem);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Hero Staggered Entrance Animations */
+    @keyframes heroRevealUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      animation: heroRevealUp 0.75s var(--ease) 0.1s both;
+    }
+
+    /* Live Dynamic Role Ticker Pill */
+    .role-ticker-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      box-shadow: 0 2px 6px rgba(36, 37, 33, 0.02);
+      height: 28px;
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+
+    .role-ticker-pill:hover {
+      border-color: var(--charcoal);
+    }
+
+    .ticker-label {
+      font-weight: 600;
+      color: var(--charcoal-faint);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+    }
+
+    .ticker-roller {
+      position: relative;
+      height: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ticker-text {
+      font-weight: 700;
+      color: var(--charcoal);
+      height: 18px;
+      line-height: 18px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .ticker-text.active {
+      opacity: 1;
+      transform: translateY(0);
+      position: relative;
+    }
+
+    .ticker-text.exit {
+      opacity: 0;
+      transform: translateY(-100%);
+      position: absolute;
+    }
+
+    /* Kinetic Headline Staggered Reveal */
+    .kinetic-headline {
+      overflow: hidden;
+    }
+
+    .kinetic-line {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.06em;
+    }
+
+    .kinetic-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(115%);
+      animation: kineticWordUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      will-change: transform, opacity;
+    }
+
+    .serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--charcoal-soft);
+    }
+
+    @keyframes kineticWordUp {
+      0% {
+        opacity: 0;
+        transform: translateY(115%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-copy {
+      font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+      line-height: 1.75;
+      color: var(--charcoal-muted);
+      max-width: 38rem;
+      animation: heroRevealUp 0.85s var(--ease) 0.35s both;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      animation: heroRevealUp 0.85s var(--ease) 0.48s both;
+    }
+
+    .hero-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--stone);
+      margin-top: 0.5rem;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+      animation: heroRevealUp 0.85s var(--ease) 0.62s both;
+    }
+
+    .hero-specs-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform var(--transition-fast), color var(--transition-fast);
+    }
+
+    .hero-specs-item:hover {
+      transform: translateY(-2px);
+      color: var(--charcoal);
+    }
+
+    .hero-specs-item .icon {
+      color: var(--bronze);
+    }
+
+    .hero-visual {
+      position: relative;
+      animation: heroRevealUp 0.95s var(--ease) 0.3s both;
+    }
+
+    /* 3D Magnetic Card Tilt & Interactive Spotlight Sheen */
+    .tilt-card {
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s var(--ease), border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    .tilt-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        420px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+        rgba(165, 139, 104, 0.12),
+        transparent 65%
+      );
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .tilt-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Metrics Strip (Animated Number Counters) */
+    .metrics-strip {
+      border-bottom: 1px solid var(--stone);
+      background-color: var(--ivory-surface);
+      padding-block: 2.25rem;
+      position: relative;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.25rem;
+      }
+    }
+
+    .metric-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border-left: 2px solid var(--stone);
+      padding-left: 1.25rem;
+      transition: border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .metric-card:hover {
+      border-left-color: var(--bronze-dark);
+      transform: translateX(3px);
+    }
+
+    .metric-num-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+
+    .metric-symbol {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1rem, 1.4vw, 1.25rem);
+      color: var(--bronze);
+      font-weight: 400;
+    }
+
+    .metric-title {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-top: 0.35rem;
+      letter-spacing: -0.01em;
+    }
+
+    .metric-desc {
+      font-size: 0.76rem;
+      color: var(--charcoal-muted);
+    }
+
+    .profile-card {
+      position: relative;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      padding: 0.85rem;
+      box-shadow: 0 16px 40px -10px rgba(36, 37, 33, 0.08);
+    }
+
+    .profile-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--stone-light);
+      background-color: var(--ivory-wash);
+    }
+
+    .profile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform var(--transition-slow);
+    }
+
+    .profile-card:hover .profile-img-wrap img {
+      transform: scale(1.025);
+    }
+
+    .profile-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0.35rem 0.2rem;
+    }
+
+    .profile-caption-name {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    .profile-caption-sub {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+    }
+
+    /* About Me Section */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    .about-intro-text {
+      font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+      line-height: 1.65;
+      letter-spacing: -0.015em;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--stone);
+    }
+
+    .pillar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .pillar-title .icon {
+      color: var(--bronze);
+    }
+
+    .pillar-desc {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--charcoal-muted);
+    }
+
+    /* Education & Credentials Section (Integrated in About Me) */
+    .about-intro-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-pillars {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    .edu-credentials-wrap {
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--stone);
+    }
+
+    .edu-credentials-header {
+      margin-bottom: 2rem;
+    }
+
+    .edu-credentials-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+    }
+
+    .edu-credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 860px) {
+      .edu-credentials-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+      }
+    }
+
+    .edu-cred-card {
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 14px;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px -2px rgba(36, 37, 33, 0.03);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .edu-cred-card:hover {
+      border-color: var(--charcoal);
+      box-shadow: 0 12px 30px -6px rgba(36, 37, 33, 0.06);
+    }
+
+    .edu-cred-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .edu-cred-head .eyebrow {
+      margin-bottom: 0;
+      color: var(--charcoal-muted);
+    }
+
+    .edu-cred-head .icon {
+      color: var(--charcoal);
+    }
+
+    .edu-degree-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--charcoal);
+      line-height: 1.25;
+    }
+
+    .edu-sub-title {
+      font-size: 0.95rem;
+      color: var(--charcoal-muted);
+      margin-top: -0.65rem;
+    }
+
+    .edu-desc {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--charcoal-muted);
+      margin-top: 0.25rem;
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.2rem;
+      background-color: var(--ivory-wash);
+      border: 1px solid var(--stone-light);
+      border-radius: 10px;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .cert-item:hover {
+      border-color: var(--stone);
+      background-color: var(--ivory-surface);
+    }
+
+    .cert-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cert-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      line-height: 1.35;
+    }
+
+    .cert-desc {
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: var(--charcoal-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Experience Section */
+    .timeline {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      padding: clamp(1.5rem, 3.5vw, 2.5rem);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .timeline-item:hover {
+      border-color: var(--charcoal);
+      box-shadow: 0 12px 30px -6px rgba(36, 37, 33, 0.05);
+    }
+
+    .timeline-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--stone);
+      padding-bottom: 1.25rem;
+    }
+
+    .timeline-role-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .timeline-role {
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+    }
+
+    .timeline-dates {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bronze-dark);
+    }
+
+    .timeline-company {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--charcoal-muted);
+    }
+
+    .timeline-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .timeline-overview {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--charcoal-soft);
+      font-weight: 500;
+    }
+
+    .timeline-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline-points li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--charcoal-muted);
+    }
+
+    .timeline-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--bronze);
+    }
+
+    /* Skills & Tools Section */
+    .skills-layout {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .skills-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .skills-group-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 1px solid var(--stone);
+      padding-bottom: 0.75rem;
+    }
+
+    .skills-group-title .icon {
+      color: var(--bronze);
+    }
+
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .competency-card {
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      padding: 1.25rem;
+      transition: border-color var(--transition-fast);
+    }
+
+    .competency-card:hover {
+      border-color: var(--charcoal);
+    }
+
+    .competency-card h4 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      margin-bottom: 0.35rem;
+    }
+
+    .competency-card p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--charcoal-muted);
+    }
+
+    .tools-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .tool-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1.1rem;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      transition: border-color var(--transition-fast);
+    }
+
+    .tool-row:hover {
+      border-color: var(--charcoal);
+    }
+
+    .tool-name {
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    .tool-role {
+      font-size: 0.8rem;
+      color: var(--charcoal-muted);
+      text-align: right;
+    }
+
+    .tool-tag {
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background-color: var(--bronze-soft);
+      color: var(--bronze-dark);
+      margin-left: 0.5rem;
+    }
+
+    /* Process Flow */
+    .process-strip {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--stone);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .process-card {
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      padding: 1.25rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition-fast), transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+    }
+
+    .process-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2.5px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--bronze), var(--charcoal));
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .process-card:hover::after {
+      width: 100%;
+    }
+
+    .process-card:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -6px rgba(36, 37, 33, 0.06);
+    }
+
+    .process-num {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--bronze);
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s var(--ease);
+    }
+
+    .process-card:hover .process-num {
+      color: var(--charcoal);
+      transform: scale(1.1);
+    }
+
+    .process-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    .process-card p {
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: var(--charcoal-muted);
+    }
+
+    /* Projects Section (Selected Work) */
+    .projects-stream {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      background-color: var(--white);
+      overflow: hidden;
+      box-shadow: 0 8px 24px -6px rgba(36, 37, 33, 0.04);
+      transition: border-color var(--transition-med), box-shadow var(--transition-med), transform 0.4s var(--ease);
+      transform-style: preserve-3d;
+    }
+
+    .project-card:hover {
+      border-color: var(--charcoal);
+      box-shadow: 0 20px 45px -10px rgba(36, 37, 33, 0.1);
+    }
+
+    .project-preview {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--ivory-wash);
+      border-bottom: 1px solid var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(1.25rem, 3vw, 2.5rem);
+    }
+
+    .project-preview-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--stone);
+      background-color: var(--white);
+      box-shadow: 0 8px 24px rgba(36, 37, 33, 0.06);
+    }
+
+    .project-preview-frame::after {
+      content: "";
+      position: absolute;
+      top: -60%;
+      left: -80%;
+      width: 40%;
+      height: 220%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.9s var(--ease), opacity 0.4s ease;
+    }
+
+    .project-card:hover .project-preview-frame::after {
+      transform: rotate(25deg) translate(550%, 0);
+      opacity: 1;
+    }
+
+    .project-preview-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.65s var(--ease);
+    }
+
+    .project-card:hover .project-preview-frame img {
+      transform: scale(1.045);
+    }
+
+    .project-info {
+      padding: clamp(1.5rem, 3.5vw, 2.75rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.75rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-index {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--bronze);
+      font-style: italic;
+    }
+
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-top: 0.25rem;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--charcoal-muted);
+      margin-top: 0.75rem;
+      max-width: 32rem;
+    }
+
+    .project-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--stone-light);
+    }
+
+    /* Contact Section */
+    .contact-layout {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .channel-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .channel-row:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+
+    .channel-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .channel-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      background-color: var(--ivory);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      color: var(--charcoal);
+    }
+
+    .channel-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+    }
+
+    .channel-value {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 2px;
+    }
+
+    .contact-form-box {
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      padding: clamp(1.5rem, 3.5vw, 2.5rem);
+      box-shadow: 0 12px 32px -8px rgba(36, 37, 33, 0.05);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .form-field label {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal-muted);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background-color: var(--ivory);
+      border: 1px solid var(--stone);
+      border-radius: 6px;
+      color: var(--charcoal);
+      font-size: 0.92rem;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--charcoal);
+      background-color: var(--white);
+    }
+
+    .form-textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--charcoal-faint);
+    }
+
+    .form-status {
+      display: none;
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      border: 1px solid var(--stone);
+      background-color: var(--ivory);
+      color: var(--charcoal);
+    }
+
+    .form-status.show {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--ivory);
+      border-top: 1px solid var(--stone);
+      padding-block: 4rem 2.5rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .footer-brand {
+      max-width: 28rem;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+    }
+
+    .footer-tagline {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--charcoal-muted);
+      margin-top: 0.75rem;
+    }
+
+    .footer-nav-col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-links a {
+      font-size: 0.92rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--bronze-dark);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 2rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--charcoal-faint);
+    }
+
+    .back-to-top-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 9999px;
+      border: 1px solid var(--stone);
+      background-color: var(--white);
+      color: var(--charcoal);
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .back-to-top-btn:hover {
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border-color: var(--charcoal);
+    }
+
+    .floating-back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 25px rgba(36, 37, 33, 0.15);
+      cursor: pointer;
+      z-index: 90;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px) scale(0.9);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .floating-back-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .floating-back-top:hover {
+      background-color: var(--bronze-dark);
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 14px 30px rgba(36, 37, 33, 0.22);
+    }
+
+    /* Toast Notification */
+    .toast-notify {
+      position: fixed;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(24px);
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border: 1px solid var(--charcoal-soft);
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 16px 36px rgba(36, 37, 33, 0.28);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast-notify.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast-notify .icon {
+      color: #5ED278;
+    }
+
+    /* Channel Copy Chips */
+    .copy-btn-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--stone);
+      background-color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .copy-btn-chip:hover {
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border-color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+
+    .copy-btn-chip.copied {
+      background-color: #2E8540;
+      color: var(--white);
+      border-color: #2E8540;
+    }
+
+    /* Connect Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background-color: rgba(36, 37, 33, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      transition: opacity var(--transition-med);
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-card {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      background-color: var(--ivory);
+      border: 1px solid var(--stone);
+      border-radius: 12px;
+      padding: 1.75rem;
+      box-shadow: 0 24px 60px -12px rgba(36, 37, 33, 0.2);
+      transform: translateY(16px);
+      transition: transform var(--transition-med);
+    }
+
+    .modal-overlay.open .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+    }
+
+    .modal-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      border: 1px solid var(--stone);
+      background-color: var(--white);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: var(--charcoal);
+      transition: background-color var(--transition-fast);
+    }
+
+    .modal-close:hover {
+      background-color: var(--stone-light);
+    }
+
+    .modal-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .modal-option-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.15rem;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 8px;
+      transition: all var(--transition-fast);
+    }
+
+    .modal-option-btn:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+
+    .modal-option-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .modal-option-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      background-color: var(--ivory);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      color: var(--charcoal);
+    }
+
+    .modal-option-title {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    .modal-option-sub {
+      font-size: 0.72rem;
+      color: var(--charcoal-faint);
+    }
+
+    /* Scroll Reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+      will-change: opacity, transform;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Media Queries */
+    @media (min-width: 640px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .form-field-full {
+        grid-column: 1 / -1;
+      }
+      .form-footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .education-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-bottom {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .nav-desktop {
+        display: flex;
+      }
+      .menu-toggle {
+        display: none;
+      }
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 4.5rem;
+      }
+      .about-layout {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+      .timeline-body {
+        grid-template-columns: 0.8fr 1.2fr;
+      }
+      .skills-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+      }
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .project-card {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+      .project-card.reverse {
+        grid-template-columns: 0.85fr 1.15fr;
+      }
+      .project-card.reverse .project-preview {
+        order: 2;
+        border-bottom: none;
+        border-left: 1px solid var(--stone);
+      }
+      .project-card.reverse .project-info {
+        order: 1;
+      }
+      .project-card:not(.reverse) .project-preview {
+        border-bottom: none;
+        border-right: 1px solid var(--stone);
+      }
+      .contact-layout {
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 4rem;
+      }
+      .footer-top {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .process-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    /* Accessibility: Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .pulse-dot {
+        animation: none !important;
+      }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
-<header><div class="wrap flex h-20 items-center justify-between"><a href="#home" class="leading-none"><strong class="block text-lg tracking-tight">DEEPAK KR</strong><small class="mt-1 block text-[10px] uppercase tracking-[.25em] text-[#586370]">UX/UI Designer</small></a><nav class="nav hidden items-center gap-1 rounded-lg border border-[#ddd9d5] bg-white/50 p-1 xl:flex"><a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav><button type="button" class="btn btn-dark hidden sm:inline-flex open-connect-btn">Let's connect <span class="icon tiny">arrow_forward</span></button><button id="menu" class="btn btn-light xl:hidden" aria-label="Menu"><span class="icon">menu</span></button></div><div id="drawer" class="hidden border-t border-[#ddd9d5] bg-[#f4f3f0] p-5"><nav class="wrap grid gap-3"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#contact">Contact</a><button type="button" class="btn btn-dark open-connect-btn mt-2 justify-between">Let's connect <span class="icon tiny">arrow_forward</span></button></nav></div></header>
-<main id="home">
-  <section class="section pt-32"><div class="wrap grid items-center gap-14 lg:grid-cols-[1.14fr_.86fr]"><div class="reveal"><div class="flex flex-wrap gap-3"><span class="tag"><span class="tag-dot"></span>UX/UI Designer — User Research & Interaction</span><span class="tag"><span class="tag-dot" style="background:#d77f63"></span>Open to UX/UI Design Opportunities</span></div><h1 class="headline mt-8 max-w-4xl">Designing Digital Experiences That Feel Simple, Clear, and Human.</h1><p class="copy mt-6 max-w-2xl text-lg">UX/UI Designer with a foundation in user research, interaction design, visual design, and responsive digital experiences. I focus on creating thoughtful interfaces that balance usability, clarity, and business goals.</p><div class="mt-8 flex flex-wrap gap-4"><a class="btn btn-dark" href="#work">View my work <span class="icon tiny">south</span></a><button type="button" class="btn btn-light open-connect-btn">Let's connect <span class="icon tiny">arrow_forward</span></button></div><div class="mt-8 flex flex-wrap gap-6 border-t border-[#ddd9d5] pt-5 text-[10px] font-semibold uppercase tracking-[.18em] text-[#5d646c]"><span><span class="icon mr-2 align-middle">location_on</span>New Delhi, India</span><span><span class="icon mr-2 align-middle text-[#d77f63]">verified</span>Human-Centered — Design Systems</span></div></div><div class="reveal"><div class="card rounded-[20px] bg-[#f0efed] p-4"><img class="h-[500px] w-full rounded-[12px] border border-[#ddd9d5] object-cover" src="./d2%20photo.jpg" alt="Deepak Kr"></div></div></div></section>
+  <!-- Ambient Floating Mesh Orbs -->
+  <div class="ambient-mesh-canvas" aria-hidden="true">
+    <div class="mesh-orb mesh-orb-1"></div>
+    <div class="mesh-orb mesh-orb-2"></div>
+    <div class="mesh-orb mesh-orb-3"></div>
+  </div>
 
-  <section id="about" class="section bg-[#f1efed]"><div class="wrap"><div class="reveal mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><span class="eyebrow">01 / Overview</span><h2 class="section-title mt-4">About Me</h2></div><p class="max-w-sm text-[.66rem] uppercase tracking-[.18em] text-[#5b636b]">A disciplined approach to human-computer interaction and interface craft.</p></div><div class="grid gap-7 lg:grid-cols-[1.2fr_.8fr]"><div class="card reveal p-9 md:p-11"><p class="text-[1.2rem] leading-relaxed tracking-[-.02em]">UX/UI Designer with hands-on experience in user research, information architecture, wireframing, prototyping, responsive interface design, design systems, and usability testing.</p><p class="copy mt-7 text-[1rem]">Experienced in using Figma to create user-centered digital experiences for mobile and web applications. Strong foundation in design thinking, interaction design, visual hierarchy, accessibility, and product storytelling.</p></div><div class="grid grid-cols-2 gap-4"><div class="card reveal p-5"><span class="icon">brush</span><h3 class="mt-5 text-lg font-bold">UX/UI Design</h3><p class="mt-2 text-[.68rem] text-[#586370]">Visual rhythm and microinteractions</p></div><div class="card reveal p-5"><span class="icon">psychology</span><h3 class="mt-5 text-lg font-bold">User Research</h3><p class="mt-2 text-[.68rem] text-[#586370]">Discovery and qualitative synthesis</p></div><div class="card reveal p-5"><span class="icon">touch_app</span><h3 class="mt-5 text-lg font-bold">Interaction Design</h3><p class="mt-2 text-[.68rem] text-[#586370]">States, logic, and prototyping</p></div><div class="card reveal p-5"><span class="icon">dataset</span><h3 class="mt-5 text-lg font-bold">Design Systems</h3><p class="mt-2 text-[.68rem] text-[#586370]">Reusable patterns and foundations</p></div></div></div></div></section>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
-  <section id="experience" class="section"><div class="wrap"><span class="eyebrow reveal">02 / Professional Timeline</span><h2 class="section-title reveal mt-4">Experience</h2><div class="card reveal mt-10 p-8 md:p-11"><div class="flex flex-col justify-between gap-4 border-b border-[#ddd9d5] pb-6 md:flex-row"><div><div class="flex flex-wrap items-center gap-3"><h3 class="text-[1.55rem] font-bold tracking-[-.04em]">UX/UI Designer</h3><span class="tag" style="padding:.38rem .56rem;border-radius:6px;font-size:.58rem;letter-spacing:.12em">Contract / In-House</span></div><p class="mt-2 text-[#586370]">Pixa Studio — Design & Technology Practice</p></div><span class="eyebrow">February 2026 – August 2026</span></div><div class="mt-8 grid gap-8 md:grid-cols-[.7fr_1.3fr]"><div><span class="eyebrow">Scope of impact</span><p class="copy mt-3">Leading product experiences from concept to handoff, balancing user needs with design quality and visual clarity.</p></div><ul class="copy list-disc space-y-3 pl-5"><li>Led end-to-end UI/UX design for mobile and web applications across redesign and product enhancement work.</li><li>Created scalable Figma design systems with reusable components, tokens, patterns, and accessibility improvements.</li><li>Designed responsive interfaces with clear hierarchy and polished interaction states.</li></ul></div></div></section>
+  <!-- Ambient Cursor Glow Spotlight -->
+  <div class="cursor-ambient" id="cursor-ambient" aria-hidden="true"></div>
 
-  <section id="skills" class="section bg-[#f1efed]"><div class="wrap"><span class="eyebrow reveal">03 / Capabilities</span><h2 class="section-title reveal mt-4">Skills & Expertise</h2><div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4"><div class="card reveal p-7"><span class="icon">design_services</span><h3 class="mt-5 text-xl font-bold">UX Design</h3><p class="copy mt-3 text-sm">User flows, research, interaction design, and structured problem-solving.</p></div><div class="card reveal p-7"><span class="icon">view_quilt</span><h3 class="mt-5 text-xl font-bold">UI Design</h3><p class="copy mt-3 text-sm">Responsive layouts, visual hierarchy, and polished digital surfaces.</p></div><div class="card reveal p-7"><span class="icon">query_stats</span><h3 class="mt-5 text-xl font-bold">Research</h3><p class="copy mt-3 text-sm">Interviews, journey mapping, and usability patterns grounded in evidence.</p></div><div class="card reveal p-7"><span class="icon">groups</span><h3 class="mt-5 text-xl font-bold">Professional</h3><p class="copy mt-3 text-sm">Design thinking, collaboration, and stakeholder communication.</p></div></div></div></section>
+  <!-- Interactive Boutique Dual-Cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true">
+    <span class="cursor-badge-text" id="cursor-badge-text">EXPLORE</span>
+  </div>
 
-  <section id="tools" class="section"><div class="wrap"><span class="eyebrow reveal">04 / Tooling & Instrumentation</span><h2 class="section-title reveal mt-4">Software & Tools</h2><div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3"><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Figma</b><span class="eyebrow text-[#d77f63]">Primary Suite</span></div><p class="copy mt-4 text-sm">UI design, reusable systems, and interactive prototypes.</p></div><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Illustrator</b><span class="eyebrow">Vector Craft</span></div><p class="copy mt-4 text-sm">Custom vector assets, icons, and polished visual directions.</p></div><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Photoshop</b><span class="eyebrow">Raster Media</span></div><p class="copy mt-4 text-sm">Image refinement and composition work for digital concepts.</p></div><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Miro</b><span class="eyebrow">Discovery</span></div><p class="copy mt-4 text-sm">Workshops, mapping journeys, and collaborative concepting.</p></div><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Canva</b><span class="eyebrow">Rapid Assets</span></div><p class="copy mt-4 text-sm">Fast social visuals, pitch assets, and mockup compositions.</p></div><div class="card reveal p-7"><div class="flex items-center justify-between gap-2"><b class="text-lg">Premiere Pro</b><span class="eyebrow">Motion</span></div><p class="copy mt-4 text-sm">Presentation edits and short-form storytelling visuals.</p></div></div></div></section>
+  <!-- Interactive Toast Notification -->
+  <div id="toast-notify" class="toast-notify" role="status" aria-live="polite">
+    <span class="icon sm">check_circle</span>
+    <span id="toast-msg">Copied to clipboard</span>
+  </div>
 
-  <section id="work" class="section bg-[#f1efed]"><div class="wrap"><span class="eyebrow reveal">05 / Portfolio Archive</span><h2 class="section-title reveal mt-4">Selected Work</h2><div class="mt-10 space-y-6"><article class="card reveal grid overflow-hidden lg:grid-cols-[1.25fr_.75fr]"><div class="grid min-h-[300px] place-items-center border-b border-[#ddd9d5] bg-[#f5f4f2] p-6 lg:border-b-0 lg:border-r"><img class="h-full max-h-[320px] w-full max-w-lg rounded-[12px] border border-[#ddd9d5] object-cover shadow-sm" src="./zoom_cover_photo.jpeg" alt="Zoom Web Application Redesign Cover"></div><div class="flex flex-col justify-between gap-7 p-8"><div><span class="eyebrow">Project 1</span><h3 class="mt-4 text-[1.8rem] font-bold tracking-[-.05em]">Zoom Web Application Redesign</h3><p class="copy mt-3 text-sm">A redesign focused on improving navigation, hierarchy, and usability for more efficient meeting workflows.</p></div><a href="./Zoom%20redesign%20%20concept-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-fit">Explore case <span class="icon tiny">visibility</span></a></div></article><article class="card reveal grid overflow-hidden lg:grid-cols-[.75fr_1.25fr]"><div class="grid min-h-[300px] place-items-center border-b border-[#ddd9d5] bg-[#f5f4f2] p-6 lg:order-2 lg:border-b-0 lg:border-l"><img class="h-full max-h-[320px] w-full max-w-lg rounded-[12px] border border-[#ddd9d5] object-cover shadow-sm" src="./fitnest.jpg" alt="Fitnest — Fitness App Experience Cover"></div><div class="flex flex-col justify-between gap-7 p-8 lg:order-1"><div><span class="eyebrow">Project 2</span><h3 class="mt-4 text-[1.8rem] font-bold tracking-[-.05em]">Fitnest — Fitness App Experience</h3><p class="copy mt-3 text-sm">A fitness app concept designed to make progress tracking clearer, more motivating, and easier to understand.</p></div><a href="./FITNEST-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-fit">Explore case <span class="icon tiny">visibility</span></a></div></article><article class="card reveal grid overflow-hidden lg:grid-cols-[1.25fr_.75fr]"><div class="grid min-h-[300px] place-items-center border-b border-[#ddd9d5] bg-[#f5f4f2] p-6 lg:border-b-0 lg:border-r"><img class="h-full max-h-[320px] w-full max-w-lg rounded-[12px] border border-[#ddd9d5] object-cover shadow-sm" src="./quora.jpg" alt="Usability Testing Quora Cover"></div><div class="flex flex-col justify-between gap-7 p-8"><div><span class="eyebrow">Project 3</span><h3 class="mt-4 text-[1.8rem] font-bold tracking-[-.05em]">Usability Testing Quora</h3><p class="copy mt-3 text-sm">A comprehensive usability testing study evaluating Quora's user experience, identifying friction points, and proposing validated design improvements.</p></div><a href="./usability%20testing-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-fit">Explore case <span class="icon tiny">visibility</span></a></div></article></div></div></section>
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header>
+    <div class="wrap">
+      <div class="header-inner">
+        <a href="#home" class="brand" aria-label="Deepak Kr Home">
+          <span class="brand-name">DEEPAK KR</span>
+          <span class="brand-role">Product & UX/UI Designer</span>
+        </a>
 
-  <section id="methodology" class="section"><div class="wrap"><span class="eyebrow reveal">05 / Methodology in motion</span><h2 class="section-title reveal mt-4">Design Skills in Practice</h2><p class="copy reveal mt-5 text-lg">Bridging the gap between theoretical tools and tangible product outcomes.</p><div class="method-grid mt-10"><div class="method reveal"><div class="method-head"><span class="icon">grid_view</span><span>Design Systems</span></div><div class="method-row"><strong>Figma design systems</strong><span class="arrow">⇄</span><span>Reusable components & style guides</span></div></div><div class="method reveal"><div class="method-head"><span class="icon">smart_toy</span><span>Adaptive Execution</span></div><div class="method-row"><strong>Responsive design</strong><span class="arrow">⇄</span><span>Mobile-first interface architecture</span></div></div><div class="method reveal"><div class="method-head"><span class="icon">insights</span><span>User Insights</span></div><div class="method-row"><strong>UX research</strong><span class="arrow">⇄</span><span>Discovery & user personas</span></div></div><div class="method reveal"><div class="method-head"><span class="icon">autorenewal</span><span>Interactive Validation</span></div><div class="method-row"><strong>Prototyping</strong><span class="arrow">⇄</span><span>Interactive design workflows</span></div></div><div class="method reveal"><div class="method-head"><span class="icon">terminal</span><span>Dev Partnership</span></div><div class="method-row"><strong>Design handoff</strong><span class="arrow">⇄</span><span>Design-to-dev collaboration</span></div></div><div class="method reveal"><div class="method-head"><span class="icon">checklist</span><span>Continuous Quality</span></div><div class="method-row"><strong>Usability testing</strong><span class="arrow">⇄</span><span>Refinement based on feedback</span></div></div></div></div></section>
+        <nav class="nav-desktop" aria-label="Main Navigation">
+          <span class="nav-indicator" id="nav-indicator"></span>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills & Tools</a>
+          <a href="#work">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-  <section id="approach" class="section"><div class="wrap"><div class="reveal mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><span class="eyebrow">08 / Process</span><h2 class="section-title mt-4">My Design Approach</h2></div><p class="copy max-w-xl text-lg">A non-linear, user-centered framework engineered for clarity and repeatability.</p></div><div class="process-grid"><div class="process reveal"><div class="process-head"><span class="number">01</span><span class="pill">Discovery</span></div><h3>Understand</h3><p>Explore the problem, users, and context. Conduct stakeholder interviews and analyze competitive alternatives before formulating any solution.</p></div><div class="process reveal"><div class="process-head"><span class="number">02</span><span class="pill">Clarity</span></div><h3>Define</h3><p>Organize insights, user needs, and product requirements. Synthesize research into personas and concrete user task lists.</p></div><div class="process reveal"><div class="process-head"><span class="number">03</span><span class="pill">Ideation</span></div><h3>Explore</h3><p>Develop user flows, wireframes, and potential solutions. Validate architectural routes fast without attachment to a single concept.</p></div><div class="process reveal"><div class="process-head"><span class="number">04</span><span class="pill">Execution</span></div><h3>Design</h3><p>Create responsive interfaces, visual hierarchy, and reusable components. Build with atomic design principles in Figma.</p></div><div class="process reveal"><div class="process-head"><span class="number">05</span><span class="pill">Iteration</span></div><h3>Refine</h3><p>Use feedback, usability considerations, and iteration to improve the experience. Eliminate visual friction and confusing labels.</p></div><div class="process reveal"><div class="process-head"><span class="number">06</span><span class="pill">Delivery</span></div><h3>Handoff</h3><p>Prepare designs and supporting details for development collaboration. Redline specs, export assets, and partner during engineering QA.</p></div></div></div></section>
-
-  <section id="education" class="section"><div class="wrap"><span class="eyebrow reveal">09 / Academic foundations</span><h2 class="section-title reveal mt-4">Education & Credentials</h2><div class="edu-grid mt-10"><div class="credential reveal"><div class="credential-head"><span class="eyebrow">Degree program</span><span class="icon">school</span></div><h3>Bachelor's in Design (UX/UI)</h3><div class="sub">Degree in UX/UI Design — New Delhi, India</div><p class="credential-copy">Formal coursework covering human factors, cognitive ergonomics, design thinking methodologies, visual semiotics, and interactive software prototyping.</p></div><div class="credential reveal"><div class="credential-head"><span class="eyebrow">Professional certifications</span><span class="icon">verified</span></div><div class="credential-item"><div class="credential-badge"><span class="icon">groups</span></div><div><h4>Business Communication</h4><p>Cross-team collaboration, stakeholder presentations, and requirements distillation.</p></div></div><div class="credential-item"><div class="credential-badge"><span class="icon">auto_awesome</span></div><div><h4>AI in Digital and Social Media Marketing (SWAYAM)</h4><p>Leveraging machine learning concepts and automated analytics in digital product strategy.</p></div></div></div></div></div></section>
-
-  <section id="contact" class="section"><div class="wrap"><div class="contact-grid"><div class="reveal"><span class="eyebrow">10 / Initiate conversation</span><h2 class="headline mt-5">Let's Create Something Meaningful.</h2><p class="info mt-7 max-w-xl">Whether you are looking to hire a dedicated UX/UI designer, revamp an existing application, or explore a new concept from zero to one — I am ready to collaborate.</p><div class="mt-9"><a href="mailto:deepdezyne@gmail.com" class="contact-row block text-inherit no-underline transition hover:border-[#b8b3ac]"><div class="left"><span class="iconbox"><span class="icon">mail</span></span><div><div class="label">Direct email</div><div class="value">deepdezyne@gmail.com</div></div></div><span class="icon">open_in_new</span></a><a href="https://wa.me/916205421316" target="_blank" rel="noreferrer" class="contact-row block text-inherit no-underline transition hover:border-[#b8b3ac]"><div class="left"><span class="iconbox"><span class="icon">phone_iphone</span></span><div><div class="label">Phone / WhatsApp</div><div class="value">+91 6205421316</div></div></div><span class="icon">open_in_new</span></a><div class="contact-row"><div class="left"><span class="iconbox"><span class="icon">location_on</span></span><div><div class="label">Location</div><div class="value">New Delhi, India</div></div></div></div></div><div class="mt-8"><div class="eyebrow">Verified profiles</div><div class="mt-4 flex flex-wrap gap-3"><a class="btn btn-light" href="https://www.linkedin.com/in/deepak-kumar-165420259?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn Profile <span class="icon tiny">arrow_outward</span></a><a class="btn btn-light" href="https://www.behance.net/deepakdeepak714" target="_blank" rel="noreferrer">Behance Portfolio <span class="icon tiny">arrow_outward</span></a></div></div></div><div class="contact-card reveal"><form id="contact-form" class="form-grid"><div class="field"><label for="name">Your name *</label><input id="name" class="input" type="text" placeholder="e.g. Priya Sharma" required></div><div class="field"><label for="email">Your email *</label><input id="email" class="input" type="email" placeholder="priya@company.com" required></div><div class="field full"><label for="subject">Project inquiry / subject *</label><input id="subject" class="input" type="text" placeholder="e.g. Full-time UX Role / Mobile App Redesign" required></div><div class="field full"><label for="details">Project details & timeline *</label><textarea id="details" class="input" placeholder="Share context about your design challenges, scope, or hiring timeline..." required></textarea></div><div class="full submit-row flex items-center justify-between gap-4 pt-2"><span class="submit-note text-sm text-[#5e646d]">Guaranteed response within 24 business hours.</span><button class="btn btn-dark" type="submit" id="submit-btn">Send message <span class="icon tiny">send</span></button></div><div id="form-status" class="full hidden rounded-lg border p-4 text-sm"></div></form></div></div></div></section>
-</main>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h2 class="footer-title">DEEPAK KR</h2>
-        <p class="footer-sub mt-5">Senior UX/UI Designer engineering digital experiences, design systems, and minimalist interfaces grounded in editorial clarity and architectural restraint.</p>
-      </div>
-      <div class="footer-column">
-        <h3>Direct contact</h3>
-        <div class="footer-links">
-          <a href="mailto:deepdezyne@gmail.com">deepdezyne@gmail.com</a>
-          <a href="tel:+916205421316">+91 6205421316</a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h3>Network profiles</h3>
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/deepak-kumar-165420259?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn Profile <span class="icon tiny" style="font-size:15px;vertical-align:-2px">arrow_outward</span></a>
-          <a href="https://www.behance.net/deepakdeepak714" target="_blank" rel="noreferrer">Behance Portfolio <span class="icon tiny" style="font-size:15px;vertical-align:-2px">arrow_outward</span></a>
-          <a href="mailto:deepdezyne@gmail.com">Contact Directly <span class="icon tiny" style="font-size:15px;vertical-align:-2px">arrow_downward</span></a>
+        <div class="nav-actions">
+          <button id="audio-toggle-btn" class="audio-toggle-btn" type="button" aria-label="Toggle subtle tactile interaction audio" title="Subtle Haptics: Muted">
+            <span class="icon sm" id="audio-icon">volume_off</span>
+          </button>
+          <button type="button" class="btn btn-primary open-connect-btn">
+            Let's connect <span class="icon sm">arrow_forward</span>
+          </button>
+          <button id="menu-toggle-btn" class="menu-toggle" aria-label="Toggle Navigation Menu">
+            <span class="icon" id="menu-icon">menu</span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class="footer-meta">
-      <div class="copyright">
-        <span class="circle-up"><span class="icon" style="font-size:1.3rem">arrow_upward</span></span>
-        <span>© 2026 Deepak Kr. All rights reserved. Crafted with architectural precision.</span>
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About Me</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#skills" class="mobile-link">Skills & Tools</a>
+        <a href="#work" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <button type="button" class="btn btn-primary open-connect-btn" style="margin-top: 0.5rem; justify-content: space-between;">
+          Let's connect <span class="icon sm">arrow_forward</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="home">
+
+    <!-- 01 / HERO SECTION -->
+    <section class="section hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <div class="hero-meta-bar">
+              <span class="status-pill">
+                <span class="pulse-dot"></span> Available for UX/UI Design Opportunities
+              </span>
+              <div class="role-ticker-pill" id="role-ticker" aria-label="Specialization Focus">
+                <span class="ticker-label">Specializing in</span>
+                <div class="ticker-roller">
+                  <span class="ticker-text active">Figma Design Systems</span>
+                  <span class="ticker-text">Cognitive Ergonomics</span>
+                  <span class="ticker-text">Interactive Prototyping</span>
+                  <span class="ticker-text">Responsive UI Architecture</span>
+                </div>
+              </div>
+              <span class="tag">New Delhi, India</span>
+            </div>
+
+            <h1 class="headline kinetic-headline">
+              <span class="kinetic-line"><span class="kinetic-word">Designing</span> <span class="kinetic-word">digital</span></span>
+              <span class="kinetic-line"><span class="kinetic-word">experiences</span> <span class="kinetic-word">that</span> <span class="kinetic-word">feel</span></span>
+              <span class="kinetic-line"><span class="kinetic-word serif-accent">simple,</span> <span class="kinetic-word">clear,</span> <span class="kinetic-word">and</span> <span class="kinetic-word serif-accent">human.</span></span>
+            </h1>
+
+            <p class="hero-copy">
+              Product and UX/UI Designer with a foundation in user research, interaction design, visual design, and responsive digital experiences. I focus on creating thoughtful interfaces that balance usability, clarity, and business goals.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#work" class="btn btn-primary">
+                View selected work <span class="icon sm">south</span>
+              </a>
+              <button type="button" class="btn btn-secondary open-connect-btn">
+                Let's connect <span class="icon sm">arrow_forward</span>
+              </button>
+            </div>
+
+            <div class="hero-specs">
+              <div class="hero-specs-item">
+                <span class="icon sm">verified</span>
+                <span>Human-Centered Systems</span>
+              </div>
+              <div class="hero-specs-item">
+                <span class="icon sm">school</span>
+                <span>UX/UI Design Degree</span>
+              </div>
+              <div class="hero-specs-item">
+                <span class="icon sm">layers</span>
+                <span>Figma Design Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="profile-card tilt-card">
+              <div class="profile-img-wrap">
+                <img src="./d2%20photo.jpg" alt="Deepak Kr — Product & UX/UI Designer">
+              </div>
+              <div class="profile-caption">
+                <div>
+                  <div class="profile-caption-name">Deepak Kr</div>
+                  <div class="profile-caption-sub">Product & UX Designer</div>
+                </div>
+                <span class="tag">B.Des UX/UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-attrib">Available for global projects</div>
+    </section>
+
+    <!-- LIVE METRICS & CAPABILITIES STRIP -->
+    <section class="metrics-strip reveal" aria-label="Key Capabilities and Highlights">
+      <div class="wrap">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-num-row">
+              <span class="metric-counter" data-target="6">0</span>
+              <span class="metric-symbol">/06</span>
+            </div>
+            <div class="metric-title">Design Process Phases</div>
+            <div class="metric-desc">Structured, non-linear UX methodology</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num-row">
+              <span class="metric-counter" data-target="100">0</span>
+              <span class="metric-symbol">%</span>
+            </div>
+            <div class="metric-title">Human-Centered Rigor</div>
+            <div class="metric-desc">Behavioral user evidence & heuristic testing</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num-row">
+              <span class="metric-counter" data-target="3">0</span>
+              <span class="metric-symbol">Case Studies</span>
+            </div>
+            <div class="metric-title">Featured Portfolios</div>
+            <div class="metric-desc">Zoom Web, Fitnest Mobile, & Quora UX</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num-row">
+              <span class="metric-counter" data-target="6">0</span>
+              <span class="metric-symbol">+</span>
+            </div>
+            <div class="metric-title">Core Production Tools</div>
+            <div class="metric-desc">Figma, Adobe Creative Suite, Miro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / ABOUT ME SECTION -->
+    <section id="about" class="section section-alt">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">01 / Profile</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="editorial-serif" style="font-size: 1.15rem; color: var(--bronze-dark); margin-top: 0.35rem;">
+            A disciplined approach to human-computer interaction, interface craft, and systematic product thinking.
+          </p>
+        </div>
+
+        <div class="about-intro-grid reveal" style="margin-top: 2.5rem;">
+          <p class="about-intro-text">
+            I am a Product and UX/UI Designer with a formal background in UX/UI Design and Human-Computer Interaction. I bridge user research with human-centered design thinking, transforming complex workflows into intuitive, resilient digital products. My work focuses on cognitive ergonomics, clean typography, and systematic design foundations—building products that solve genuine user problems with restraint, speed, and enduring aesthetic clarity.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-title">
+                <span class="icon sm">psychology</span>
+                Cognitive Clarity
+              </div>
+              <p class="pillar-desc">
+                Designing intuitive user flows and clear visual hierarchies that reduce cognitive load and simplify complex digital operations.
+              </p>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-title">
+                <span class="icon sm">dataset</span>
+                Systematic Foundations
+              </div>
+              <p class="pillar-desc">
+                Engineering modular Figma design systems, tokens, and reusable components that ensure seamless parity from design to code.
+              </p>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-title">
+                <span class="icon sm">fact_check</span>
+                Evidence-Based Validation
+              </div>
+              <p class="pillar-desc">
+                Grounding decisions in qualitative user interviews, heuristic usability testing, and measurable behavioral insights.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Credentials (Matching user screenshot) -->
+        <div id="education" class="edu-credentials-wrap reveal">
+          <div class="edu-credentials-header">
+            <h3 class="edu-credentials-title">Education & Credentials</h3>
+          </div>
+
+          <div class="edu-credentials-grid">
+            <!-- Degree Program Card -->
+            <div class="edu-cred-card tilt-card">
+              <div class="edu-cred-head">
+                <span class="eyebrow">DEGREE PROGRAM</span>
+                <span class="icon sm">school</span>
+              </div>
+              <h4 class="edu-degree-title">Bachelor's in Design (UX/UI)</h4>
+              <p class="edu-sub-title">Degree in UX/UI Design — New Delhi, India</p>
+              <p class="edu-desc">
+                Formal coursework covering human factors, cognitive ergonomics, design thinking methodologies, visual semiotics, and interactive software prototyping.
+              </p>
+            </div>
+
+            <!-- Professional Certifications Card -->
+            <div class="edu-cred-card tilt-card">
+              <div class="edu-cred-head">
+                <span class="eyebrow">PROFESSIONAL CERTIFICATIONS</span>
+                <span class="icon sm">verified</span>
+              </div>
+              <div class="cert-list">
+                <div class="cert-item">
+                  <div class="cert-icon-wrap">
+                    <span class="icon sm" style="color: var(--bronze-dark);">groups</span>
+                  </div>
+                  <div>
+                    <h5 class="cert-title">Business Communication</h5>
+                    <p class="cert-desc">Cross-team collaboration, stakeholder presentations, and requirements distillation.</p>
+                  </div>
+                </div>
+
+                <div class="cert-item">
+                  <div class="cert-icon-wrap">
+                    <span class="icon sm" style="color: var(--bronze-dark);">auto_awesome</span>
+                  </div>
+                  <div>
+                    <h5 class="cert-title">AI in Digital and Social Media Marketing (SWAYAM)</h5>
+                    <p class="cert-desc">Leveraging machine learning concepts and automated analytics in digital product strategy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">02 / Professional Trajectory</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-desc">
+            A track record of balancing user advocacy, interface craft, and pragmatic engineering execution.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item tilt-card">
+            <div class="timeline-header">
+              <div class="timeline-role-row">
+                <h3 class="timeline-role">UX/UI Designer</h3>
+                <span class="timeline-dates">February 2026 – August 2026</span>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem;">
+                <p class="timeline-company">Pixa Studio — Design & Technology Practice</p>
+                <span class="tag">Contract / In-House</span>
+              </div>
+            </div>
+
+            <div class="timeline-body">
+              <div>
+                <span class="eyebrow" style="margin-bottom: 0.5rem;">Scope & Responsibility</span>
+                <p class="timeline-overview">
+                  Leading product experiences from concept to engineering handoff, balancing user needs with visual clarity and business objectives.
+                </p>
+              </div>
+
+              <ul class="timeline-points">
+                <li>
+                  Led end-to-end UI/UX design for mobile and web applications across product redesigns and feature enhancements.
+                </li>
+                <li>
+                  Architected scalable Figma design systems with reusable components, design tokens, responsive layout grids, and accessibility standards.
+                </li>
+                <li>
+                  Designed responsive digital interfaces with clear visual hierarchy, intuitive feedback loops, and polished interaction states.
+                </li>
+                <li>
+                  Partnered closely with engineering teams during development handoff to ensure fidelity, design precision, and smooth interaction transitions.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / SKILLS & TOOLS SECTION -->
+    <section id="skills" class="section section-alt">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">03 / Capabilities & Tooling</span>
+          <h2 class="section-title">Skills & Expertise</h2>
+          <p class="section-desc">
+            A methodical toolkit spanning user research, systematic interface design, and modern tooling.
+          </p>
+        </div>
+
+        <div class="skills-layout reveal">
+          <!-- Column 1: Core Competencies -->
+          <div class="skills-group">
+            <h3 class="skills-group-title">
+              <span class="icon">design_services</span> Core Competencies
+            </h3>
+
+            <div class="competency-grid">
+              <div class="competency-card">
+                <h4>UX Design & Research</h4>
+                <p>User flows, journey mapping, heuristic evaluation, qualitative user interviews, and usability audits grounded in behavioral evidence.</p>
+              </div>
+
+              <div class="competency-card">
+                <h4>UI & Visual Architecture</h4>
+                <p>Responsive layouts, Swiss typography, visual rhythm, microinteractions, and tactile, purposeful digital surfaces.</p>
+              </div>
+
+              <div class="competency-card">
+                <h4>Design Systems & Tokens</h4>
+                <p>Scalable component libraries, auto-layout architectures, design tokens, style guides, and WCAG accessibility compliance.</p>
+              </div>
+
+              <div class="competency-card">
+                <h4>Prototyping & Handoff</h4>
+                <p>High-fidelity Figma prototypes, interaction logic, redline documentation, and collaborative engineering partnerships.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Software & Tools -->
+          <div class="skills-group">
+            <h3 class="skills-group-title">
+              <span class="icon">construction</span> Software & Tools
+            </h3>
+
+            <div class="tools-list">
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Figma</span>
+                  <span class="tool-tag">Primary Suite</span>
+                </div>
+                <span class="tool-role">Design systems, UI & interactive prototyping</span>
+              </div>
+
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Adobe Illustrator</span>
+                </div>
+                <span class="tool-role">Vector craft, iconography & identity assets</span>
+              </div>
+
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Adobe Photoshop</span>
+                </div>
+                <span class="tool-role">Raster refinement & digital compositions</span>
+              </div>
+
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Miro</span>
+                </div>
+                <span class="tool-role">Discovery workshops & journey mapping</span>
+              </div>
+
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Canva</span>
+                </div>
+                <span class="tool-role">Rapid pitch assets & visual communications</span>
+              </div>
+
+              <div class="tool-row">
+                <div>
+                  <span class="tool-name">Adobe Premiere Pro</span>
+                </div>
+                <span class="tool-role">Interactive narrative edits & motion storytelling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Process Subsection -->
+        <div class="process-strip reveal">
+          <div class="education-header">
+            <div>
+              <span class="eyebrow" style="margin-bottom: 0.25rem;">Methodology</span>
+              <h3 class="education-title">Design Process</h3>
+            </div>
+            <span class="education-sub">A structured, non-linear framework</span>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-card">
+              <span class="process-num">01</span>
+              <h4>Understand</h4>
+              <p>Explore user goals, business constraints, and competitor benchmarks.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-num">02</span>
+              <h4>Define</h4>
+              <p>Structure research into personas, journey maps, and concrete requirements.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-num">03</span>
+              <h4>Explore</h4>
+              <p>Rapid low-fidelity wireframing and testing alternative architectural routes.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-num">04</span>
+              <h4>Design</h4>
+              <p>Craft high-fidelity surfaces with typography, hierarchy, and reusable tokens.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-num">05</span>
+              <h4>Refine</h4>
+              <p>Conduct usability testing, collect feedback, and eliminate interaction friction.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-num">06</span>
+              <h4>Handoff</h4>
+              <p>Deliver specs, export assets, and partner during engineering implementation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / SELECTED WORK SECTION -->
+    <section id="work" class="section">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">04 / Portfolio Archive</span>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-desc">
+            Case studies exploring complex problem spaces, user-centered flows, and high-fidelity interface execution.
+          </p>
+        </div>
+
+        <div class="projects-stream">
+          <!-- Project 1: Zoom Web App Redesign -->
+          <article class="project-card tilt-card reveal">
+            <div class="project-preview">
+              <div class="project-preview-frame">
+                <img src="./zoom_cover_photo.jpeg" alt="Zoom Web Application Redesign Preview" loading="lazy">
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                  <span class="project-index">01</span>
+                  <div class="project-tags">
+                    <span class="tag">Product Redesign</span>
+                    <span class="tag">Information Architecture</span>
+                  </div>
+                </div>
+
+                <h3 class="project-title">Zoom Web Application Redesign</h3>
+                <p class="project-desc">
+                  A redesign focused on improving navigation, hierarchy, and usability for more efficient meeting workflows. Clarified core controls and reduced user friction during active sessions.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a href="./Zoom%20redesign%20%20concept-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Explore Case Study <span class="icon sm">visibility</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Fitnest App Experience -->
+          <article class="project-card reverse tilt-card reveal">
+            <div class="project-preview">
+              <div class="project-preview-frame">
+                <img src="./fitnest.jpg" alt="Fitnest Fitness App Experience Preview" loading="lazy">
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                  <span class="project-index">02</span>
+                  <div class="project-tags">
+                    <span class="tag">Mobile Product</span>
+                    <span class="tag">Design System</span>
+                  </div>
+                </div>
+
+                <h3 class="project-title">Fitnest — Fitness App Experience</h3>
+                <p class="project-desc">
+                  A fitness app concept designed to make progress tracking clearer, more motivating, and easier to understand. Features habit-forming feedback loops and clean visual statistics.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a href="./FITNEST-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Explore Case Study <span class="icon sm">visibility</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Usability Testing Quora -->
+          <article class="project-card tilt-card reveal">
+            <div class="project-preview">
+              <div class="project-preview-frame">
+                <img src="./quora.jpg" alt="Usability Testing Quora Preview" loading="lazy">
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                  <span class="project-index">03</span>
+                  <div class="project-tags">
+                    <span class="tag">UX Research</span>
+                    <span class="tag">Usability Testing</span>
+                  </div>
+                </div>
+
+                <h3 class="project-title">Usability Testing Quora</h3>
+                <p class="project-desc">
+                  A comprehensive usability testing study evaluating Quora's user experience, identifying friction points in feed discovery, and proposing validated design improvements.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a href="./usability%20testing-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Explore Case Study <span class="icon sm">visibility</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 / CONTACT SECTION -->
+    <section id="contact" class="section section-alt">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">05 / Initiate Conversation</span>
+          <h2 class="section-title">Let's Create Something Meaningful.</h2>
+          <p class="section-desc">
+            Whether you are looking to hire a dedicated UX/UI designer, revamp an existing application, or explore a new concept from zero to one — I am ready to collaborate.
+          </p>
+        </div>
+
+        <div class="contact-layout reveal">
+          <!-- Left side: Direct Channels & Verified Links -->
+          <div>
+            <div class="contact-channels">
+              <!-- Direct Email -->
+              <a href="mailto:deepdezyne@gmail.com" class="channel-row">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <span class="icon">mail</span>
+                  </div>
+                  <div>
+                    <div class="channel-label">Direct Email</div>
+                    <div class="channel-value">deepdezyne@gmail.com</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <button type="button" class="copy-btn-chip" data-copy="deepdezyne@gmail.com" aria-label="Copy email address" title="Copy email address">
+                    <span class="icon sm">content_copy</span>
+                    <span>Copy</span>
+                  </button>
+                  <span class="icon sm" style="color: var(--charcoal-faint);">arrow_outward</span>
+                </div>
+              </a>
+
+              <!-- Phone / WhatsApp -->
+              <a href="https://wa.me/916205421316" target="_blank" rel="noopener noreferrer" class="channel-row">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <span class="icon">chat</span>
+                  </div>
+                  <div>
+                    <div class="channel-label">Phone & WhatsApp</div>
+                    <div class="channel-value">+91 6205421316</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <button type="button" class="copy-btn-chip" data-copy="+916205421316" aria-label="Copy phone number" title="Copy phone number">
+                    <span class="icon sm">content_copy</span>
+                    <span>Copy</span>
+                  </button>
+                  <span class="icon sm" style="color: var(--charcoal-faint);">arrow_outward</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="channel-row" style="cursor: default;">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <span class="icon">location_on</span>
+                  </div>
+                  <div>
+                    <div class="channel-label">Location</div>
+                    <div class="channel-value">New Delhi, India</div>
+                  </div>
+                </div>
+                <span class="tag">IST (UTC+5:30)</span>
+              </div>
+            </div>
+
+            <!-- Verified Profiles -->
+            <div style="margin-top: 2rem;">
+              <span class="eyebrow" style="margin-bottom: 0.75rem;">Verified Network Profiles</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem;">
+                <a href="https://www.linkedin.com/in/deepak-kumar-165420259?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  LinkedIn Profile <span class="icon sm">arrow_outward</span>
+                </a>
+                <a href="https://www.behance.net/deepakdeepak714" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  Behance Portfolio <span class="icon sm">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Minimal Contact Form -->
+          <div class="contact-form-box">
+            <form id="contact-form" class="form-grid">
+              <div class="form-field">
+                <label for="name">Your Name *</label>
+                <input id="name" class="form-input" type="text" placeholder="e.g. Priya Sharma" required>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Your Email *</label>
+                <input id="email" class="form-input" type="email" placeholder="priya@company.com" required>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="subject">Project Inquiry / Subject *</label>
+                <input id="subject" class="form-input" type="text" placeholder="e.g. UX/UI Designer Role / Product Redesign" required>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="details">Project Details & Context *</label>
+                <textarea id="details" class="form-input form-textarea" placeholder="Share context about your design challenges, scope, or timeline..." required></textarea>
+              </div>
+
+              <div class="form-field-full form-footer">
+                <span class="form-note">Guaranteed response within 24 business hours.</span>
+                <button type="submit" id="submit-btn" class="btn btn-primary">
+                  Send message <span class="icon sm">send</span>
+                </button>
+              </div>
+
+              <div id="form-status" class="form-field-full form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>DEEPAK KR</h3>
+          <p class="footer-tagline">
+            Product & UX/UI Designer crafting digital experiences, design systems, and minimalist interfaces grounded in editorial clarity and architectural restraint.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills & Tools</a>
+            <a href="#work">Selected Work</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Direct Connect</h4>
+          <div class="footer-links">
+            <a href="mailto:deepdezyne@gmail.com">deepdezyne@gmail.com</a>
+            <a href="tel:+916205421316">+91 6205421316</a>
+            <a href="https://wa.me/916205421316" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            <a href="https://www.linkedin.com/in/deepak-kumar-165420259?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.behance.net/deepakdeepak714" target="_blank" rel="noopener noreferrer">Behance</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Deepak Kr. All rights reserved. Crafted with architectural clarity and restraint.
+        </div>
+        <a href="#home" class="back-to-top-btn" aria-label="Scroll back to top">
+          Back to top <span class="icon sm">arrow_upward</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CONNECT MODAL
+       ========================================================================== -->
+  <div id="connect-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title" class="modal-title">Let's Connect</h3>
+          <p class="brand-role" style="margin-top: 2px;">Choose how you'd like to reach out</p>
+        </div>
+        <button id="close-connect-modal" class="modal-close" aria-label="Close connect modal">
+          <span class="icon sm">close</span>
+        </button>
+      </div>
+
+      <div class="modal-options">
+        <!-- Gmail Web -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepdezyne@gmail.com" target="_blank" rel="noopener noreferrer" class="modal-option-btn">
+          <div class="modal-option-left">
+            <div class="modal-option-icon">
+              <span class="icon" style="color: #EA4335;">mail</span>
+            </div>
+            <div>
+              <div class="modal-option-title">Open in Gmail Web</div>
+              <div class="modal-option-sub">deepdezyne@gmail.com</div>
+            </div>
+          </div>
+          <span class="icon sm" style="color: var(--charcoal-faint);">arrow_outward</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/916205421316" target="_blank" rel="noopener noreferrer" class="modal-option-btn">
+          <div class="modal-option-left">
+            <div class="modal-option-icon">
+              <span class="icon" style="color: #25D366;">chat</span>
+            </div>
+            <div>
+              <div class="modal-option-title">Chat on WhatsApp</div>
+              <div class="modal-option-sub">+91 6205421316</div>
+            </div>
+          </div>
+          <span class="icon sm" style="color: var(--charcoal-faint);">arrow_outward</span>
+        </a>
+
+        <!-- System Email Client -->
+        <a href="mailto:deepdezyne@gmail.com" class="modal-option-btn">
+          <div class="modal-option-left">
+            <div class="modal-option-icon">
+              <span class="icon" style="color: var(--charcoal);">send</span>
+            </div>
+            <div>
+              <div class="modal-option-title">Default Mail App</div>
+              <div class="modal-option-sub">Launch system email client</div>
+            </div>
+          </div>
+          <span class="icon sm" style="color: var(--charcoal-faint);">arrow_forward</span>
+        </a>
+      </div>
     </div>
   </div>
-</footer>
 
-<a href="#home" class="fixed bottom-5 left-5 grid h-12 w-12 place-items-center rounded-full border border-[#ddd9d5] bg-white shadow-lg" aria-label="Back to top"><span class="icon">arrow_upward</span></a>
+  <!-- Floating Back to Top Button -->
+  <button id="floating-back-top" class="floating-back-top" aria-label="Back to top">
+    <span class="icon sm">arrow_upward</span>
+  </button>
 
-<!-- Connect Modal -->
-<div id="connect-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4 transition-all">
-  <div class="relative w-full max-w-md rounded-2xl border border-[#ddd9d5] bg-[#f4f3f0] p-6 shadow-2xl">
-    <div class="flex items-center justify-between border-b border-[#ddd9d5] pb-4">
-      <div>
-        <h3 class="text-xl font-bold tracking-tight">Let's Connect</h3>
-        <p class="mt-1 text-xs text-[#586370]">Choose how you'd like to reach out</p>
-      </div>
-      <button id="close-connect-modal" class="grid h-8 w-8 place-items-center rounded-full border border-[#ddd9d5] bg-white text-[#586370] hover:bg-[#eae7e2]" aria-label="Close">
-        <span class="icon tiny">close</span>
-      </button>
-    </div>
-    <div class="mt-5 space-y-3">
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepdezyne@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-xl border border-[#ddd9d5] bg-white p-4 transition hover:border-[#b8b3ac] hover:shadow-sm">
-        <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-lg bg-red-50 text-red-600 border border-red-200">
-            <span class="icon">mail</span>
-          </div>
-          <div>
-            <div class="text-sm font-bold">Open in Gmail Web</div>
-            <div class="text-xs text-[#586370]">deepdezyne@gmail.com</div>
-          </div>
-        </div>
-        <span class="icon tiny text-[#586370]">arrow_outward</span>
-      </a>
+  <!-- ==========================================================================
+       SCRIPTS & INTERACTIONS
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll Progress Bar
+      const scrollProgressBar = document.getElementById('scroll-progress');
+      function updateScrollProgress() {
+        if (!scrollProgressBar) return;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+        scrollProgressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+      }
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      updateScrollProgress();
 
-      <a href="https://wa.me/916205421316" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-xl border border-[#ddd9d5] bg-white p-4 transition hover:border-[#b8b3ac] hover:shadow-sm">
-        <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-lg bg-green-50 text-green-600 border border-green-200">
-            <span class="icon">phone_iphone</span>
-          </div>
-          <div>
-            <div class="text-sm font-bold">Chat on WhatsApp</div>
-            <div class="text-xs text-[#586370]">+91 6205421316</div>
-          </div>
-        </div>
-        <span class="icon tiny text-[#586370]">arrow_outward</span>
-      </a>
+      // 2. Interactive Web Audio API Tactile Feedback (Synthesized micro-haptic clicks)
+      let audioCtx = null;
+      let soundEnabled = false;
 
-      <a href="mailto:deepdezyne@gmail.com" class="flex items-center justify-between rounded-xl border border-[#ddd9d5] bg-white p-4 transition hover:border-[#b8b3ac] hover:shadow-sm">
-        <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-lg bg-blue-50 text-blue-600 border border-blue-200">
-            <span class="icon">send</span>
-          </div>
-          <div>
-            <div class="text-sm font-bold">Default Mail App</div>
-            <div class="text-xs text-[#586370]">Launch system email client</div>
-          </div>
-        </div>
-        <span class="icon tiny text-[#586370]">arrow_forward</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<script>
-  const menu = document.getElementById('menu');
-  const drawer = document.getElementById('drawer');
-  menu && menu.addEventListener('click', () => drawer.classList.toggle('hidden'));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('show'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-  // Connect modal handlers
-  const connectModal = document.getElementById('connect-modal');
-  const openConnectBtns = document.querySelectorAll('.open-connect-btn');
-  const closeConnectModal = document.getElementById('close-connect-modal');
-
-  openConnectBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      drawer?.classList.add('hidden');
-      connectModal?.classList.remove('hidden');
-      connectModal?.classList.add('flex');
-    });
-  });
-
-  closeConnectModal?.addEventListener('click', () => {
-    connectModal?.classList.add('hidden');
-    connectModal?.classList.remove('flex');
-  });
-
-  connectModal?.addEventListener('click', (e) => {
-    if (e.target === connectModal) {
-      connectModal.classList.add('hidden');
-      connectModal.classList.remove('flex');
-    }
-  });
-
-  // Contact form submission
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = (document.getElementById('name')?.value || '').trim();
-      const email = (document.getElementById('email')?.value || '').trim();
-      const subject = (document.getElementById('subject')?.value || 'Portfolio inquiry').trim();
-      const details = (document.getElementById('details')?.value || '').trim();
-      
-      const bodyText = `Name: ${name}\nEmail: ${email}\n\nProject details:\n${details}`;
-      const mailtoUrl = `mailto:deepdezyne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
-      const webGmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=deepdezyne@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
-      
-      const statusEl = document.getElementById('form-status');
-      if (statusEl) {
-        statusEl.className = 'full rounded-lg border border-[#ddd9d5] bg-white p-4 text-sm text-[#171819] shadow-sm';
-        statusEl.innerHTML = `
-          <div class="flex items-center gap-2 font-bold text-[#171819]">
-            <span class="icon tiny text-green-600">check_circle</span> Launching your email app...
-          </div>
-          <p class="mt-2 text-xs text-[#586370]">If your email client didn't open automatically, you can <a href="${webGmailUrl}" target="_blank" rel="noopener noreferrer" class="font-bold underline text-[#171819] hover:text-[#d57a5d]">open directly in Gmail Web</a> or send email to <b class="text-[#171819]">deepdezyne@gmail.com</b>.</p>
-        `;
-        statusEl.classList.remove('hidden');
+      function playMicroHaptic(freq = 720, duration = 0.016) {
+        if (!soundEnabled) return;
+        try {
+          if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(freq * 0.5, audioCtx.currentTime + duration);
+          gain.gain.setValueAtTime(0.035, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + duration);
+        } catch(e) {}
       }
 
-      window.location.href = mailtoUrl;
+      const audioBtn = document.getElementById('audio-toggle-btn');
+      const audioIcon = document.getElementById('audio-icon');
+
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          soundEnabled = !soundEnabled;
+          audioBtn.classList.toggle('active', soundEnabled);
+          audioBtn.setAttribute('title', `Subtle Haptics: ${soundEnabled ? 'Enabled' : 'Muted'}`);
+          if (audioIcon) audioIcon.textContent = soundEnabled ? 'volume_up' : 'volume_off';
+          if (soundEnabled) {
+            playMicroHaptic(850, 0.024);
+            showToast('Tactile audio feedback enabled');
+          } else {
+            showToast('Tactile audio muted');
+          }
+        });
+      }
+
+      // 3. Floating Toast Notification System
+      const toastEl = document.getElementById('toast-notify');
+      const toastMsg = document.getElementById('toast-msg');
+      let toastTimer = null;
+
+      function showToast(message) {
+        if (!toastEl || !toastMsg) return;
+        toastMsg.textContent = message;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toastEl.classList.remove('show');
+        }, 2600);
+      }
+
+      // 4. Quick 1-Click Copy Buttons
+      const copyBtns = document.querySelectorAll('.copy-btn-chip');
+      copyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const textToCopy = btn.getAttribute('data-copy');
+          if (!textToCopy) return;
+
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            playMicroHaptic(920, 0.025);
+            btn.classList.add('copied');
+            const icon = btn.querySelector('.icon');
+            const label = btn.querySelector('span:not(.icon)');
+            const prevIcon = icon ? icon.textContent : 'content_copy';
+            const prevLabel = label ? label.textContent : 'Copy';
+
+            if (icon) icon.textContent = 'check';
+            if (label) label.textContent = 'Copied';
+            showToast(`Copied to clipboard: ${textToCopy}`);
+
+            setTimeout(() => {
+              btn.classList.remove('copied');
+              if (icon) icon.textContent = prevIcon;
+              if (label) label.textContent = prevLabel;
+            }, 2200);
+          }).catch(() => {
+            showToast(`Press Ctrl+C to copy: ${textToCopy}`);
+          });
+        });
+      });
+
+      // 5. Kinetic Hero Headline Stagger Initialization
+      const kineticWords = document.querySelectorAll('.kinetic-word');
+      kineticWords.forEach((word, index) => {
+        word.style.animationDelay = `${0.12 + index * 0.055}s`;
+      });
+
+      // 6. Hero Role Ticker Rotation
+      const tickerTexts = document.querySelectorAll('.ticker-text');
+      if (tickerTexts.length > 1) {
+        let tickerIndex = 0;
+        setInterval(() => {
+          const current = tickerTexts[tickerIndex];
+          tickerIndex = (tickerIndex + 1) % tickerTexts.length;
+          const next = tickerTexts[tickerIndex];
+
+          current.classList.remove('active');
+          current.classList.add('exit');
+
+          setTimeout(() => {
+            current.classList.remove('exit');
+          }, 450);
+
+          next.classList.add('active');
+        }, 3000);
+      }
+
+      // 7. Interactive Boutique Dual-Cursor System & Ambient Spotlight
+      const ambientGlow = document.getElementById('cursor-ambient');
+      const cursorDot = document.getElementById('cursor-dot');
+      const cursorRing = document.getElementById('cursor-ring');
+      const cursorBadge = document.getElementById('cursor-badge-text');
+
+      if (window.matchMedia('(pointer: fine)').matches) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let ringX = mouseX;
+        let ringY = mouseY;
+        let ambientX = mouseX;
+        let ambientY = mouseY;
+        let isMoving = false;
+
+        document.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          if (cursorDot) {
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+            cursorDot.style.opacity = '1';
+          }
+
+          if (!isMoving) {
+            isMoving = true;
+            if (ambientGlow) ambientGlow.style.opacity = '1';
+            if (cursorRing) cursorRing.style.opacity = '1';
+            requestAnimationFrame(renderCursorFollower);
+          }
+        });
+
+        function renderCursorFollower() {
+          // Smooth Lerp for ring
+          ringX += (mouseX - ringX) * 0.18;
+          ringY += (mouseY - ringY) * 0.18;
+
+          if (cursorRing) {
+            cursorRing.style.left = `${ringX}px`;
+            cursorRing.style.top = `${ringY}px`;
+          }
+
+          // Gentle Lerp for ambient glow
+          ambientX += (mouseX - ambientX) * 0.09;
+          ambientY += (mouseY - ambientY) * 0.09;
+
+          if (ambientGlow) {
+            ambientGlow.style.transform = `translate(${ambientX}px, ${ambientY}px) translate(-50%, -50%)`;
+          }
+
+          requestAnimationFrame(renderCursorFollower);
+        }
+
+        document.addEventListener('mouseleave', () => {
+          if (ambientGlow) ambientGlow.style.opacity = '0';
+          if (cursorDot) cursorDot.style.opacity = '0';
+          if (cursorRing) cursorRing.style.opacity = '0';
+        });
+
+        // Hover Detection for Interactive Elements
+        const hoverTargets = document.querySelectorAll('a, button, input, textarea, .tag, .status-pill, .tool-row, .process-card');
+        hoverTargets.forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            document.body.classList.add('cursor-hover');
+            playMicroHaptic(680, 0.012);
+          });
+          el.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-hover');
+          });
+        });
+
+        // Project Card Hover -> "EXPLORE ↗" Pill State
+        const projectCards = document.querySelectorAll('.project-card, .project-preview');
+        projectCards.forEach(card => {
+          card.addEventListener('mouseenter', () => {
+            document.body.classList.add('cursor-project');
+            if (cursorBadge) cursorBadge.textContent = 'EXPLORE ↗';
+            playMicroHaptic(780, 0.018);
+          });
+          card.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-project');
+          });
+        });
+      }
+
+      // 8. Sliding Fluid Pill Indicator on Desktop Navigation
+      const navIndicator = document.getElementById('nav-indicator');
+      const navItems = document.querySelectorAll('.nav-desktop a');
+      const navContainer = document.querySelector('.nav-desktop');
+
+      function positionIndicator(target) {
+        if (!target || !navIndicator || !navContainer) return;
+        const targetRect = target.getBoundingClientRect();
+        const containerRect = navContainer.getBoundingClientRect();
+        navIndicator.style.left = `${targetRect.left - containerRect.left}px`;
+        navIndicator.style.width = `${targetRect.width}px`;
+        navIndicator.style.opacity = '1';
+      }
+
+      const activeItem = document.querySelector('.nav-desktop a.active') || navItems[0];
+      if (activeItem) {
+        setTimeout(() => positionIndicator(activeItem), 120);
+      }
+
+      navItems.forEach(item => {
+        item.addEventListener('mouseenter', () => positionIndicator(item));
+      });
+
+      navContainer?.addEventListener('mouseleave', () => {
+        const currentActive = document.querySelector('.nav-desktop a.active');
+        if (currentActive) positionIndicator(currentActive);
+      });
+
+      // 9. Active Section Highlighting in Desktop Nav & Indicator Sync
+      const sections = document.querySelectorAll('section[id], main[id]');
+
+      function updateActiveNav() {
+        const scrollPosition = window.scrollY + 180;
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            navItems.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                if (!link.classList.contains('active')) {
+                  navItems.forEach(l => l.classList.remove('active'));
+                  link.classList.add('active');
+                  positionIndicator(link);
+                }
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
+
+      // 10. 3D Magnetic Tilt & Real-Time Card Spotlight Sheen
+      if (window.matchMedia('(pointer: fine)').matches) {
+        const tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(card => {
+          let rect;
+          function setBounds() { rect = card.getBoundingClientRect(); }
+
+          card.addEventListener('mouseenter', setBounds);
+          card.addEventListener('mousemove', (e) => {
+            if (!rect) setBounds();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            // Set spotlight CSS variables
+            card.style.setProperty('--mouse-x', `${mouseX}px`);
+            card.style.setProperty('--mouse-y', `${mouseY}px`);
+
+            // 3D Tilt angles
+            const xPct = (mouseX / rect.width - 0.5) * 2;
+            const yPct = (mouseY / rect.height - 0.5) * 2;
+            const maxDeg = 3.5;
+            card.style.transform = `perspective(1000px) rotateX(${(-yPct * maxDeg).toFixed(2)}deg) rotateY(${(xPct * maxDeg).toFixed(2)}deg) translateY(-4px)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+          });
+        });
+
+        // Magnetic Pull on Action Buttons
+        const magneticBtns = document.querySelectorAll('.btn-primary, .btn-secondary, .open-connect-btn, .audio-toggle-btn');
+        magneticBtns.forEach(btn => {
+          btn.addEventListener('mousemove', (e) => {
+            const b = btn.getBoundingClientRect();
+            const x = e.clientX - b.left - b.width / 2;
+            const y = e.clientY - b.top - b.height / 2;
+            btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+          });
+        });
+      }
+
+      // 11. Animated Number Counters (Metrics Strip)
+      const counters = document.querySelectorAll('.metric-counter');
+      let countersTriggered = false;
+
+      function startCounters() {
+        if (countersTriggered) return;
+        countersTriggered = true;
+
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'), 10);
+          const duration = 1500;
+          const startTime = performance.now();
+
+          function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out expo
+            const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            const current = Math.floor(ease * target);
+            counter.textContent = current;
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              counter.textContent = target;
+            }
+          }
+          requestAnimationFrame(update);
+        });
+      }
+
+      const metricsStrip = document.querySelector('.metrics-strip');
+      if (metricsStrip) {
+        const metricsObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.25 });
+        metricsObserver.observe(metricsStrip);
+      }
+
+      // 12. Floating Back to Top Button
+      const floatingBackTop = document.getElementById('floating-back-top');
+      if (floatingBackTop) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 380) {
+            floatingBackTop.classList.add('visible');
+          } else {
+            floatingBackTop.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        floatingBackTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 13. Scroll Reveal via IntersectionObserver
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // 14. Mobile Drawer Toggle
+      const menuBtn = document.getElementById('menu-toggle-btn');
+      const drawer = document.getElementById('mobile-drawer');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleDrawer() {
+        const isOpen = drawer.classList.toggle('open');
+        menuIcon.textContent = isOpen ? 'close' : 'menu';
+      }
+
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', toggleDrawer);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            drawer.classList.remove('open');
+            menuIcon.textContent = 'menu';
+          });
+        });
+      }
+
+      // 15. Connect Modal Logic
+      const modal = document.getElementById('connect-modal');
+      const openModalBtns = document.querySelectorAll('.open-connect-btn');
+      const closeModalBtn = document.getElementById('close-connect-modal');
+
+      function openModal() {
+        if (drawer) {
+          drawer.classList.remove('open');
+          if (menuIcon) menuIcon.textContent = 'menu';
+        }
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      openModalBtns.forEach(btn => btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      }));
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+        });
+      }
+
+      // 16. Contact Form Submission Handler
+      const contactForm = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const name = (document.getElementById('name')?.value || '').trim();
+          const email = (document.getElementById('email')?.value || '').trim();
+          const subject = (document.getElementById('subject')?.value || 'Portfolio inquiry').trim();
+          const details = (document.getElementById('details')?.value || '').trim();
+
+          const bodyText = `Name: ${name}\nEmail: ${email}\n\nProject Context:\n${details}`;
+          const mailtoUrl = `mailto:deepdezyne@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+          const webGmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=deepdezyne@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+
+          if (statusEl) {
+            statusEl.innerHTML = `
+              <div style="display:flex; align-items:center; gap:0.5rem; font-weight:700; color:var(--charcoal); margin-bottom:0.4rem;">
+                <span class="icon sm" style="color:#2E8540;">check_circle</span> Launching your email client...
+              </div>
+              <p style="font-size:0.8rem; color:var(--charcoal-muted); line-height:1.6;">
+                If your system email app did not launch automatically, you can
+                <a href="${webGmailUrl}" target="_blank" rel="noopener noreferrer" style="font-weight:700; text-decoration:underline; color:var(--charcoal);">
+                  open directly in Gmail Web
+                </a>
+                or send an email to <b style="color:var(--charcoal);">deepdezyne@gmail.com</b>.
+              </p>
+            `;
+            statusEl.classList.add('show');
+          }
+
+          window.location.href = mailtoUrl;
+        });
+      }
     });
-  }
-</script>
+  </script>
 </body>
 </html>
