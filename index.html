@@ -1549,6 +1549,68 @@
       transform: scale(1.045);
     }
 
+    /* Blank Cover Frame Placeholder (Editorial Pending State) */
+    .project-preview-frame.blank-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      background: linear-gradient(135deg, var(--ivory-surface) 0%, var(--ivory-wash) 100%);
+      border: 1px dashed var(--stone);
+      padding: 1.5rem;
+    }
+
+    .blank-frame-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      color: var(--bronze-dark);
+      box-shadow: 0 4px 14px rgba(36, 37, 33, 0.04);
+      transition: transform var(--transition-med), background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .project-card:hover .blank-frame-icon-wrap {
+      transform: scale(1.1) translateY(-2px);
+      background-color: var(--charcoal);
+      color: var(--ivory);
+      border-color: var(--charcoal);
+    }
+
+    .blank-frame-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      text-align: center;
+    }
+
+    .blank-frame-tag {
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--charcoal-faint);
+    }
+
+    .blank-frame-hint {
+      font-size: 0.82rem;
+      color: var(--charcoal-muted);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .project-card:hover .blank-frame-hint {
+      color: var(--charcoal);
+    }
+
     .project-info {
       padding: clamp(1.5rem, 3.5vw, 2.75rem);
       display: flex;
@@ -2349,11 +2411,11 @@
           </div>
           <div class="metric-card">
             <div class="metric-num-row">
-              <span class="metric-counter" data-target="3">0</span>
+              <span class="metric-counter" data-target="5">0</span>
               <span class="metric-symbol">Case Studies</span>
             </div>
             <div class="metric-title">Featured Portfolios</div>
-            <div class="metric-desc">Zoom Web, Fitnest Mobile, & Quora UX</div>
+            <div class="metric-desc">5 Production & Research Archives</div>
           </div>
           <div class="metric-card">
             <div class="metric-num-row">
@@ -2768,6 +2830,82 @@
 
               <div class="project-actions">
                 <a href="./usability%20testing-compressed.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Explore Case Study <span class="icon sm">visibility</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Futuristic Design & Interaction Design -->
+          <article class="project-card reverse tilt-card reveal">
+            <div class="project-preview">
+              <div class="project-preview-frame blank-frame">
+                <div class="blank-frame-icon-wrap">
+                  <span class="icon">auto_awesome</span>
+                </div>
+                <div class="blank-frame-meta">
+                  <span class="blank-frame-tag">Project 04 / Case Study</span>
+                  <span class="blank-frame-hint">Explore PDF Documentation <span class="icon sm" style="font-size: 1rem;">arrow_outward</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                  <span class="project-index">04</span>
+                  <div class="project-tags">
+                    <span class="tag">Futuristic Design</span>
+                    <span class="tag">Interaction Design</span>
+                  </div>
+                </div>
+
+                <h3 class="project-title">Futuristic Design & Interaction Design</h3>
+                <p class="project-desc">
+                  An exploratory conceptual study investigating next-generation digital interfaces, spatial interaction models, and speculative human-computer interaction paradigms with high-fidelity visual storytelling.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a href="./futurestic%20design%20and%20interaction%20design-2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Explore Case Study <span class="icon sm">visibility</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Learn UI Live Project -->
+          <article class="project-card tilt-card reveal">
+            <div class="project-preview">
+              <div class="project-preview-frame blank-frame">
+                <div class="blank-frame-icon-wrap">
+                  <span class="icon">school</span>
+                </div>
+                <div class="blank-frame-meta">
+                  <span class="blank-frame-tag">Project 05 / Live Project</span>
+                  <span class="blank-frame-hint">Explore PDF Documentation <span class="icon sm" style="font-size: 1rem;">arrow_outward</span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                  <span class="project-index">05</span>
+                  <div class="project-tags">
+                    <span class="tag">Live Product</span>
+                    <span class="tag">EdTech UI/UX</span>
+                  </div>
+                </div>
+
+                <h3 class="project-title">Learn UI — Live Project</h3>
+                <p class="project-desc">
+                  A comprehensive live digital education platform crafted to streamline student onboarding, lesson progress tracking, and interactive design exercises through structured UX workflows.
+                </p>
+              </div>
+
+              <div class="project-actions">
+                <a href="./Learn%20UI%20live%20project-2.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                   Explore Case Study <span class="icon sm">visibility</span>
                 </a>
               </div>
