@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    /* Progressive Enhancement: Enable scroll animations only if JS is active and reduced motion is disabled */
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js-reveal');
+    }
+  </script>
   <meta name="description" content="Deepak Kr — UI/UX Designer crafting simple, clear, and human digital experiences. Portfolio of selected work, design systems, and case studies.">
   <meta name="author" content="Deepak Kr">
   <title>Deepak Kr — UI/UX Designer</title>
@@ -2290,18 +2296,118 @@
       color: var(--charcoal-faint);
     }
 
-    /* Scroll Reveals */
-    .reveal {
+    /* ==========================================================================
+       PREMIUM SCROLL-TRIGGERED REVEAL ANIMATIONS
+       Specifications:
+       - Duration: 650–850ms
+       - Vertical movement: 24px
+       - Stagger delay: 115ms
+       - Easing: cubic-bezier(0.16, 1, 0.3, 1)
+       - Trigger threshold: ~15-20% viewport entry
+       - Safe progressive enhancement (no content flashing or hidden if JS disabled)
+       ========================================================================== */
+    :root {
+      --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --reveal-duration: 720ms;
+    }
+
+    /* Base Fade-Up Reveal (Headings, Paragraphs, Standalone Elements) */
+    html.js-reveal .reveal,
+    html.js-reveal .reveal-fade-up {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+      transform: translateY(24px);
+      transition: opacity var(--reveal-duration) var(--reveal-ease),
+                  transform var(--reveal-duration) var(--reveal-ease);
       will-change: opacity, transform;
     }
 
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
+    html.js-reveal .reveal.is-revealed,
+    html.js-reveal .reveal.show,
+    html.js-reveal .reveal-fade-up.is-revealed {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
+
+    /* Subtle Slide-In Left (Timeline cards, left columns) */
+    html.js-reveal .reveal-slide-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity var(--reveal-duration) var(--reveal-ease),
+                  transform var(--reveal-duration) var(--reveal-ease);
+      will-change: opacity, transform;
+    }
+
+    html.js-reveal .reveal-slide-left.is-revealed {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+    }
+
+    /* Subtle Slide-In Right (Profile card, form blocks) */
+    html.js-reveal .reveal-slide-right {
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity var(--reveal-duration) var(--reveal-ease),
+                  transform var(--reveal-duration) var(--reveal-ease);
+      will-change: opacity, transform;
+    }
+
+    html.js-reveal .reveal-slide-right.is-revealed {
+      opacity: 1 !important;
+      transform: translateX(0) !important;
+    }
+
+    /* Scale Reveal for Containers (Project Previews, Profile Card) */
+    html.js-reveal .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96) translateY(14px);
+      transition: opacity 800ms var(--reveal-ease),
+                  transform 850ms var(--reveal-ease);
+      will-change: opacity, transform;
+    }
+
+    html.js-reveal .reveal-scale.is-revealed {
+      opacity: 1 !important;
+      transform: scale(1) translateY(0) !important;
+    }
+
+    /* Image Internal Soft Scale Reveal (Project Images, Photos) */
+    .project-preview {
+      overflow: hidden;
+    }
+
+    html.js-reveal .reveal-img-scale {
+      opacity: 0;
+      transform: scale(1.08);
+      transition: opacity 750ms var(--reveal-ease),
+                  transform 900ms var(--reveal-ease);
+      will-change: opacity, transform;
+    }
+
+    html.js-reveal .reveal-img-scale.is-revealed {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
+
+    /* Staggered Container for Grouped Content (Metrics, Skills, Process, Education) */
+    html.js-reveal .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity var(--reveal-duration) var(--reveal-ease),
+                  transform var(--reveal-duration) var(--reveal-ease);
+      transition-delay: calc(var(--stagger-index, 0) * 115ms);
+      will-change: opacity, transform;
+    }
+
+    html.js-reveal .reveal-stagger.is-revealed > * {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Explicit delay utilities */
+    .delay-1 { transition-delay: 115ms !important; }
+    .delay-2 { transition-delay: 230ms !important; }
+    .delay-3 { transition-delay: 345ms !important; }
+    .delay-4 { transition-delay: 460ms !important; }
 
     /* Responsive Media Queries & Mobile-First Excellence */
     @media (max-width: 768px) {
@@ -2546,7 +2652,13 @@
       html {
         scroll-behavior: auto;
       }
-      .reveal {
+      .reveal,
+      .reveal-fade-up,
+      .reveal-slide-left,
+      .reveal-slide-right,
+      .reveal-scale,
+      .reveal-img-scale,
+      .reveal-stagger > * {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
@@ -2646,7 +2758,7 @@
     <section class="section hero">
       <div class="wrap">
         <div class="hero-grid">
-          <div class="hero-content reveal">
+          <div class="hero-content reveal-fade-up">
             <div class="hero-meta-bar">
               <span class="status-pill">
                 <span class="pulse-dot"></span> Available for UX/UI Design Opportunities
@@ -2698,10 +2810,10 @@
             </div>
           </div>
 
-          <div class="hero-visual reveal">
-            <div class="profile-card tilt-card">
+          <div class="hero-visual reveal-slide-right">
+            <div class="profile-card tilt-card reveal-scale">
               <div class="profile-img-wrap">
-                <img src="./d2%20photo.jpg" alt="Deepak Kr — UI/UX Designer">
+                <img src="./d2%20photo.jpg" alt="Deepak Kr — UI/UX Designer" class="reveal-img-scale">
               </div>
               <div class="profile-caption">
                 <div>
@@ -2717,9 +2829,9 @@
     </section>
 
     <!-- LIVE METRICS & CAPABILITIES STRIP -->
-    <section class="metrics-strip reveal" aria-label="Key Capabilities and Highlights">
+    <section class="metrics-strip reveal-fade-up" aria-label="Key Capabilities and Highlights">
       <div class="wrap">
-        <div class="metrics-grid">
+        <div class="metrics-grid reveal-stagger">
           <div class="metric-card">
             <div class="metric-num-row">
               <span class="metric-counter" data-target="6">0</span>
@@ -2759,7 +2871,7 @@
     <!-- 02 / ABOUT ME SECTION -->
     <section id="about" class="section section-alt">
       <div class="wrap">
-        <div class="reveal">
+        <div class="reveal-fade-up">
           <span class="eyebrow">01 / Profile</span>
           <h2 class="section-title">About Me</h2>
           <p class="editorial-serif" style="font-size: 1.15rem; color: var(--bronze-dark); margin-top: 0.35rem;">
@@ -2767,12 +2879,12 @@
           </p>
         </div>
 
-        <div class="about-intro-grid reveal" style="margin-top: 2.5rem;">
-          <p class="about-intro-text">
+        <div class="about-intro-grid" style="margin-top: 2.5rem;">
+          <p class="about-intro-text reveal-fade-up">
             I am a UI/UX Designer with a formal background in UX/UI Design and Human-Computer Interaction. I bridge user research with human-centered design thinking, transforming complex workflows into intuitive, resilient digital products. My work focuses on cognitive ergonomics, clean typography, and systematic design foundations—building products that solve genuine user problems with restraint, speed, and enduring aesthetic clarity.
           </p>
 
-          <div class="about-pillars">
+          <div class="about-pillars reveal-stagger">
             <div class="pillar-item">
               <div class="pillar-title">
                 <span class="icon sm">psychology</span>
@@ -2806,12 +2918,12 @@
         </div>
 
         <!-- Education & Credentials (Matching user screenshot) -->
-        <div id="education" class="edu-credentials-wrap reveal">
-          <div class="edu-credentials-header">
+        <div id="education" class="edu-credentials-wrap">
+          <div class="edu-credentials-header reveal-fade-up">
             <h3 class="edu-credentials-title">Education & Credentials</h3>
           </div>
 
-          <div class="edu-credentials-grid">
+          <div class="edu-credentials-grid reveal-stagger">
             <!-- Degree Program Card -->
             <div class="edu-cred-card tilt-card">
               <div class="edu-cred-head">
@@ -2861,7 +2973,7 @@
     <!-- 03 / EXPERIENCE SECTION -->
     <section id="experience" class="section">
       <div class="wrap">
-        <div class="reveal">
+        <div class="reveal-fade-up">
           <span class="eyebrow">02 / Professional Trajectory</span>
           <h2 class="section-title">Experience</h2>
           <p class="section-desc">
@@ -2869,8 +2981,8 @@
           </p>
         </div>
 
-        <div class="timeline reveal">
-          <article class="timeline-item tilt-card">
+        <div class="timeline">
+          <article class="timeline-item tilt-card reveal-slide-left">
             <div class="timeline-header">
               <div class="timeline-role-row">
                 <h3 class="timeline-role">UX/UI Designer</h3>
@@ -2913,7 +3025,7 @@
     <!-- 04 / SKILLS & TOOLS SECTION -->
     <section id="skills" class="section section-alt">
       <div class="wrap">
-        <div class="reveal">
+        <div class="reveal-fade-up">
           <span class="eyebrow">03 / Capabilities & Tooling</span>
           <h2 class="section-title">Skills & Expertise</h2>
           <p class="section-desc">
@@ -2921,10 +3033,10 @@
           </p>
         </div>
 
-        <div class="skills-symmetric-wrap reveal">
+        <div class="skills-symmetric-wrap">
           <!-- 1. Core Competencies: 4 Symmetric Cards Across Full Width -->
           <div class="skills-symmetric-block">
-            <div class="skills-block-header">
+            <div class="skills-block-header reveal-fade-up">
               <div class="skills-block-title-group">
                 <span class="skills-block-kicker">Specialized Disciplines</span>
                 <h3 class="skills-group-title">
@@ -2934,7 +3046,7 @@
               <span class="tag"><span class="pulse-dot"></span> End-to-End Design Craft</span>
             </div>
 
-            <div class="competencies-symmetric-grid">
+            <div class="competencies-symmetric-grid reveal-stagger">
               <!-- 01: UX Design & Research -->
               <div class="competency-symmetric-card tilt-card">
                 <div class="comp-card-header">
@@ -3019,7 +3131,7 @@
               </span>
             </div>
 
-            <div class="tools-carousel-wrap" aria-label="Software and tools automated logo carousel">
+            <div class="tools-carousel-wrap reveal-scale" aria-label="Software and tools automated logo carousel">
               <!-- Row 1: Leftward continuous smooth glide -->
               <div class="tools-marquee-row marquee-track-left">
                 <!-- Figma -->
@@ -3404,8 +3516,8 @@
         </div>
 
         <!-- Design Process Subsection -->
-        <div class="process-strip reveal">
-          <div class="education-header">
+        <div class="process-strip">
+          <div class="education-header reveal-fade-up">
             <div>
               <span class="eyebrow" style="margin-bottom: 0.25rem;">Methodology</span>
               <h3 class="education-title">Design Process</h3>
@@ -3413,7 +3525,7 @@
             <span class="education-sub">A structured, non-linear framework</span>
           </div>
 
-          <div class="process-grid">
+          <div class="process-grid reveal-stagger">
             <div class="process-card">
               <span class="process-num">01</span>
               <h4>Understand</h4>
@@ -3457,7 +3569,7 @@
     <!-- 05 / SELECTED WORK SECTION -->
     <section id="work" class="section">
       <div class="wrap">
-        <div class="reveal">
+        <div class="reveal-fade-up">
           <span class="eyebrow">04 / Portfolio Archive</span>
           <h2 class="section-title">Selected Work</h2>
           <p class="section-desc">
@@ -3467,10 +3579,10 @@
 
         <div class="projects-stream">
           <!-- Project 1: Zoom Web App Redesign -->
-          <article class="project-card tilt-card reveal">
-            <div class="project-preview">
+          <article class="project-card tilt-card reveal-fade-up">
+            <div class="project-preview reveal-scale">
               <div class="project-preview-frame">
-                <img src="./zoom_cover_photo.jpeg" alt="Zoom Web Application Redesign Preview" loading="lazy">
+                <img class="reveal-img-scale" src="./zoom_cover_photo.jpeg" alt="Zoom Web Application Redesign Preview" loading="lazy">
               </div>
             </div>
 
@@ -3499,10 +3611,10 @@
           </article>
 
           <!-- Project 2: Fitnest App Experience -->
-          <article class="project-card reverse tilt-card reveal">
-            <div class="project-preview">
+          <article class="project-card reverse tilt-card reveal-fade-up">
+            <div class="project-preview reveal-scale">
               <div class="project-preview-frame">
-                <img src="./fitnest.jpg" alt="Fitnest Fitness App Experience Preview" loading="lazy">
+                <img class="reveal-img-scale" src="./fitnest.jpg" alt="Fitnest Fitness App Experience Preview" loading="lazy">
               </div>
             </div>
 
@@ -3531,10 +3643,10 @@
           </article>
 
           <!-- Project 3: Usability Testing Quora -->
-          <article class="project-card tilt-card reveal">
-            <div class="project-preview">
+          <article class="project-card tilt-card reveal-fade-up">
+            <div class="project-preview reveal-scale">
               <div class="project-preview-frame">
-                <img src="./quora.jpg" alt="Usability Testing Quora Preview" loading="lazy">
+                <img class="reveal-img-scale" src="./quora.jpg" alt="Usability Testing Quora Preview" loading="lazy">
               </div>
             </div>
 
@@ -3563,10 +3675,10 @@
           </article>
 
           <!-- Project 4: Futuristic Design & Interaction Design -->
-          <article class="project-card reverse tilt-card reveal">
-            <div class="project-preview">
+          <article class="project-card reverse tilt-card reveal-fade-up">
+            <div class="project-preview reveal-scale">
               <div class="project-preview-frame">
-                <img src="./futurestic%20design%20and%20interaction%20design-2%20coverphoto.jpeg" alt="Futuristic Design & Interaction Design Case Study Preview" loading="lazy">
+                <img class="reveal-img-scale" src="./futurestic%20design%20and%20interaction%20design-2%20coverphoto.jpeg" alt="Futuristic Design & Interaction Design Case Study Preview" loading="lazy">
               </div>
             </div>
 
@@ -3595,10 +3707,10 @@
           </article>
 
           <!-- Project 5: Learn UI Live Project -->
-          <article class="project-card tilt-card reveal">
-            <div class="project-preview">
+          <article class="project-card tilt-card reveal-fade-up">
+            <div class="project-preview reveal-scale">
               <div class="project-preview-frame">
-                <img src="./Learn%20UI%20live%20project-2%20cover%20photo.jpeg" alt="Learn UI Live Platform Experience Preview" loading="lazy">
+                <img class="reveal-img-scale" src="./Learn%20UI%20live%20project-2%20cover%20photo.jpeg" alt="Learn UI Live Platform Experience Preview" loading="lazy">
               </div>
             </div>
 
@@ -3632,7 +3744,7 @@
     <!-- 06 / CONTACT SECTION -->
     <section id="contact" class="section section-alt">
       <div class="wrap">
-        <div class="reveal">
+        <div class="reveal-fade-up">
           <span class="eyebrow">05 / Initiate Conversation</span>
           <h2 class="section-title">Let's Create Something Meaningful.</h2>
           <p class="section-desc">
@@ -3640,10 +3752,10 @@
           </p>
         </div>
 
-        <div class="contact-layout reveal">
+        <div class="contact-layout">
           <!-- Left side: Direct Channels & Verified Links -->
-          <div>
-            <div class="contact-channels">
+          <div class="reveal-slide-left">
+            <div class="contact-channels reveal-stagger">
               <!-- Direct Email -->
               <a href="mailto:deepdezyne@gmail.com" class="channel-row">
                 <div class="channel-left">
@@ -3714,7 +3826,7 @@
           </div>
 
           <!-- Right side: Minimal Contact Form -->
-          <div class="contact-form-box">
+          <div class="contact-form-box reveal-slide-right">
             <form id="contact-form" class="form-grid">
               <div class="form-field">
                 <label for="name">Your Name *</label>
@@ -4240,21 +4352,56 @@
         });
       }
 
-      // 13. Scroll Reveal via IntersectionObserver
-      const revealElements = document.querySelectorAll('.reveal');
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
+      // 13. Premium Scroll-Triggered Reveal via IntersectionObserver
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!isReducedMotion) {
+        // Automatically calculate and assign stagger indices to children of .reveal-stagger
+        document.querySelectorAll('.reveal-stagger').forEach(staggerContainer => {
+          Array.from(staggerContainer.children).forEach((child, index) => {
+            child.style.setProperty('--stagger-index', index);
+          });
+        });
+
+        // Collect all animated elements
+        const revealSelector = '.reveal, .reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale, .reveal-img-scale, .reveal-stagger';
+        const revealElements = document.querySelectorAll(revealSelector);
+
+        // Target ~15-20% viewport entry
+        const observerOptions = {
+          threshold: 0.16,
+          rootMargin: '0px 0px -10% 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              entry.target.classList.add('show'); // backward compatibility
+
+              // Trigger any nested image scale reveals within project cards or containers
+              const nestedImgs = entry.target.querySelectorAll('.reveal-img-scale');
+              nestedImgs.forEach(img => img.classList.add('is-revealed'));
+
+              // Animate only once when entering viewport
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+          // Immediately reveal above-the-fold elements already in viewport on initial load
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('is-revealed');
+            el.classList.add('show');
+            const nestedImgs = el.querySelectorAll('.reveal-img-scale');
+            nestedImgs.forEach(img => img.classList.add('is-revealed'));
+          } else {
+            revealObserver.observe(el);
           }
         });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-      });
-
-      revealElements.forEach(el => revealObserver.observe(el));
+      }
 
       // 14. Mobile Drawer Toggle
       const menuBtn = document.getElementById('menu-toggle-btn');
