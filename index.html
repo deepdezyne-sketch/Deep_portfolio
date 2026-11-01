@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Deepak Kr — Product & UX/UI Designer crafting simple, clear, and human digital experiences. Portfolio of selected work, design systems, and case studies.">
+  <meta name="description" content="Deepak Kr — UI/UX Designer crafting simple, clear, and human digital experiences. Portfolio of selected work, design systems, and case studies.">
   <meta name="author" content="Deepak Kr">
-  <title>Deepak Kr — Product & UX/UI Designer</title>
+  <title>Deepak Kr — UI/UX Designer</title>
 
   <!-- Typography: Plus Jakarta Sans (Headings), Inter (Body), DM Serif Display (Editorial accents) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1342,52 +1342,137 @@
       color: var(--charcoal-muted);
     }
 
-    .tools-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
+    /* Software & Tools Auto-Carousel */
+    .tools-carousel-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--stone);
+      background-color: var(--white);
+      padding: 1.25rem 0;
+      box-shadow: 0 4px 20px -4px rgba(36, 37, 33, 0.03);
     }
 
-    .tool-row {
+    /* Left & Right Smooth Edge Fade Masks */
+    .tools-carousel-wrap::before,
+    .tools-carousel-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 44px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .tools-carousel-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .tools-carousel-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--white) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .tools-marquee-row {
+      display: flex;
+      gap: 0.85rem;
+      width: max-content;
+      margin-bottom: 0.85rem;
+    }
+
+    .tools-marquee-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .marquee-track-left {
+      animation: marqueeScrollLeft 22s linear infinite;
+    }
+
+    .marquee-track-right {
+      animation: marqueeScrollRight 24s linear infinite;
+    }
+
+    .tools-carousel-wrap:hover .marquee-track-left,
+    .tools-carousel-wrap:hover .marquee-track-right {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqueeScrollLeft {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes marqueeScrollRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .tool-carousel-card {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.9rem 1.1rem;
-      background-color: var(--white);
+      gap: 0.85rem;
+      padding: 0.75rem 1.15rem;
+      border-radius: 10px;
+      background-color: var(--ivory);
       border: 1px solid var(--stone);
-      border-radius: 8px;
-      transition: border-color var(--transition-fast);
+      min-width: 175px;
+      box-shadow: 0 2px 8px rgba(36, 37, 33, 0.02);
+      transition: all var(--transition-fast);
+      cursor: default;
+      user-select: none;
+      flex-shrink: 0;
     }
 
-    .tool-row:hover {
+    .tool-carousel-card:hover {
       border-color: var(--charcoal);
+      background-color: var(--white);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 10px 24px -4px rgba(36, 37, 33, 0.08);
     }
 
-    .tool-name {
+    .tool-card-logo {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border-radius: 8px;
+      transition: transform var(--transition-fast);
+    }
+
+    .tool-carousel-card:hover .tool-card-logo {
+      transform: scale(1.12);
+    }
+
+    .tool-card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .tool-card-title {
       font-family: var(--font-heading);
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: var(--charcoal);
+      line-height: 1.2;
     }
 
-    .tool-role {
-      font-size: 0.8rem;
-      color: var(--charcoal-muted);
-      text-align: right;
-    }
-
-    .tool-tag {
-      font-family: var(--font-heading);
-      font-size: 0.65rem;
+    .tool-card-badge {
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      background-color: var(--bronze-soft);
-      color: var(--bronze-dark);
-      margin-left: 0.5rem;
+      letter-spacing: 0.04em;
+      color: var(--charcoal-muted);
     }
 
     /* Process Flow */
@@ -2267,7 +2352,7 @@
       <div class="header-inner">
         <a href="#home" class="brand" aria-label="Deepak Kr Home">
           <span class="brand-name">DEEPAK KR</span>
-          <span class="brand-role">Product & UX/UI Designer</span>
+          <span class="brand-role">UI/UX Designer</span>
         </a>
 
         <nav class="nav-desktop" aria-label="Main Navigation">
@@ -2343,7 +2428,7 @@
             </h1>
 
             <p class="hero-copy">
-              Product and UX/UI Designer with a foundation in user research, interaction design, visual design, and responsive digital experiences. I focus on creating thoughtful interfaces that balance usability, clarity, and business goals.
+              UI/UX Designer with a foundation in user research, interaction design, visual design, and responsive digital experiences. I focus on creating thoughtful interfaces that balance usability, clarity, and business goals.
             </p>
 
             <div class="hero-cta-row">
@@ -2374,12 +2459,12 @@
           <div class="hero-visual reveal">
             <div class="profile-card tilt-card">
               <div class="profile-img-wrap">
-                <img src="./d2%20photo.jpg" alt="Deepak Kr — Product & UX/UI Designer">
+                <img src="./d2%20photo.jpg" alt="Deepak Kr — UI/UX Designer">
               </div>
               <div class="profile-caption">
                 <div>
                   <div class="profile-caption-name">Deepak Kr</div>
-                  <div class="profile-caption-sub">Product & UX Designer</div>
+                  <div class="profile-caption-sub">UI/UX Designer</div>
                 </div>
                 <span class="tag">B.Des UX/UI</span>
               </div>
@@ -2442,7 +2527,7 @@
 
         <div class="about-intro-grid reveal" style="margin-top: 2.5rem;">
           <p class="about-intro-text">
-            I am a Product and UX/UI Designer with a formal background in UX/UI Design and Human-Computer Interaction. I bridge user research with human-centered design thinking, transforming complex workflows into intuitive, resilient digital products. My work focuses on cognitive ergonomics, clean typography, and systematic design foundations—building products that solve genuine user problems with restraint, speed, and enduring aesthetic clarity.
+            I am a UI/UX Designer with a formal background in UX/UI Design and Human-Computer Interaction. I bridge user research with human-centered design thinking, transforming complex workflows into intuitive, resilient digital products. My work focuses on cognitive ergonomics, clean typography, and systematic design foundations—building products that solve genuine user problems with restraint, speed, and enduring aesthetic clarity.
           </p>
 
           <div class="about-pillars">
@@ -2624,54 +2709,396 @@
             </div>
           </div>
 
-          <!-- Column 2: Software & Tools -->
+          <!-- Column 2: Software & Tools (Auto Carousel) -->
           <div class="skills-group">
-            <h3 class="skills-group-title">
-              <span class="icon">construction</span> Software & Tools
-            </h3>
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--stone); padding-bottom: 0.75rem;">
+              <h3 class="skills-group-title" style="border-bottom: none; padding-bottom: 0;">
+                <span class="icon">construction</span> Software & Tools
+              </h3>
+              <span class="tag" style="font-size: 0.65rem; padding: 0.2rem 0.55rem; background: var(--bronze-soft); color: var(--bronze-dark); border-color: transparent;">
+                <span class="pulse-dot"></span> Auto-Flow
+              </span>
+            </div>
 
-            <div class="tools-list">
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Figma</span>
-                  <span class="tool-tag">Primary Suite</span>
+            <div class="tools-carousel-wrap" aria-label="Software and tools automated logo carousel">
+              <!-- Row 1: Leftward continuous smooth glide -->
+              <div class="tools-marquee-row marquee-track-left">
+                <!-- Figma -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="22" height="32" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                      <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                      <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                      <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                      <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Figma</span>
+                    <span class="tool-card-badge">UI & Design Systems</span>
+                  </div>
                 </div>
-                <span class="tool-role">Design systems, UI & interactive prototyping</span>
+
+                <!-- Adobe Photoshop -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#001E36"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#31A8FF"/>
+                      <path d="M26.8 29.8C27.9 30.6 29.6 31.2 31.2 31.2C33.1 31.2 33.9 30.4 33.9 29.4C33.9 26.6 27.2 28 27.2 22.7C27.2 20.1 29.3 18.2 32.9 18.2C34.5 18.2 35.8 18.6 36.6 19.1L35.7 21.7C35 21.3 34 21 32.8 21C31.2 21 30.4 21.7 30.4 22.5C30.4 25.3 37.1 23.8 37.1 29.2C37.1 31.9 34.9 33.8 31.1 33.8C29.2 33.8 27.5 33.3 26.3 32.6L26.8 29.8Z" fill="#31A8FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Photoshop</span>
+                    <span class="tool-card-badge">Raster & Compositions</span>
+                  </div>
+                </div>
+
+                <!-- Adobe Illustrator -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#330000"/>
+                      <path d="M11 33L18.4 15H22.1L29.5 33H25.6L23.9 28.7H16.6L14.9 33H11ZM17.7 25.7H22.8L20.3 19.3L17.7 25.7Z" fill="#FF9A00"/>
+                      <path d="M33.2 18.8C33.2 17.6 34.2 16.7 35.5 16.7C36.8 16.7 37.8 17.6 37.8 18.8C37.8 20 36.8 20.9 35.5 20.9C34.2 20.9 33.2 20 33.2 18.8ZM33.7 22.6H37.3V33H33.7V22.6Z" fill="#FF9A00"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Illustrator</span>
+                    <span class="tool-card-badge">Vector Craft & Icons</span>
+                  </div>
+                </div>
+
+                <!-- Miro -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#FFD02F"/>
+                      <path d="M34.8 12L28.6 22.6L24.5 12H18.2L24.8 27.2L18.6 12H12.4L20.9 31.7L12 12H7.2L18 36H24.3L32.8 19.5L28.6 36H34.9L42 12H34.8Z" fill="#050038"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Miro</span>
+                    <span class="tool-card-badge">UX Flow Workshops</span>
+                  </div>
+                </div>
+
+                <!-- Canva -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" fill="url(#canvaGrad1)"/>
+                      <defs>
+                        <linearGradient id="canvaGrad1" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#00C4CC"/>
+                          <stop offset="1" stop-color="#7D2AE8"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M26.8 14.5C22 14.5 17.5 18.2 16.2 23.5C15 28.5 17.8 32.5 22.8 32.5C25.5 32.5 28 31.2 29.8 29.5L28.2 27.8C26.8 29.1 24.8 30.1 22.9 30.1C19.5 30.1 17.6 27.2 18.5 23.7C19.5 19.6 23 16.9 26.7 16.9C28.8 16.9 30.4 17.7 31.5 18.8L33.2 17C31.7 15.4 29.4 14.5 26.8 14.5Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Canva</span>
+                    <span class="tool-card-badge">Visual Assets</span>
+                  </div>
+                </div>
+
+                <!-- Adobe Premiere Pro -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#00005B"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#EA77FF"/>
+                      <path d="M27.5 21H31V23.4H31.1C31.8 21.8 33.5 20.6 35.4 20.6C36.1 20.6 36.6 20.7 37.1 20.9L36.3 24.3C35.8 24.1 35.3 24.1 34.7 24.1C32.8 24.1 31.3 25.5 31.3 28.1V33H27.5V21Z" fill="#EA77FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Premiere Pro</span>
+                    <span class="tool-card-badge">Motion & Video</span>
+                  </div>
+                </div>
+
+                <!-- Duplicated set for seamless loop -->
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="22" height="32" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                      <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                      <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                      <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                      <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Figma</span>
+                    <span class="tool-card-badge">UI & Design Systems</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#001E36"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#31A8FF"/>
+                      <path d="M26.8 29.8C27.9 30.6 29.6 31.2 31.2 31.2C33.1 31.2 33.9 30.4 33.9 29.4C33.9 26.6 27.2 28 27.2 22.7C27.2 20.1 29.3 18.2 32.9 18.2C34.5 18.2 35.8 18.6 36.6 19.1L35.7 21.7C35 21.3 34 21 32.8 21C31.2 21 30.4 21.7 30.4 22.5C30.4 25.3 37.1 23.8 37.1 29.2C37.1 31.9 34.9 33.8 31.1 33.8C29.2 33.8 27.5 33.3 26.3 32.6L26.8 29.8Z" fill="#31A8FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Photoshop</span>
+                    <span class="tool-card-badge">Raster & Compositions</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#330000"/>
+                      <path d="M11 33L18.4 15H22.1L29.5 33H25.6L23.9 28.7H16.6L14.9 33H11ZM17.7 25.7H22.8L20.3 19.3L17.7 25.7Z" fill="#FF9A00"/>
+                      <path d="M33.2 18.8C33.2 17.6 34.2 16.7 35.5 16.7C36.8 16.7 37.8 17.6 37.8 18.8C37.8 20 36.8 20.9 35.5 20.9C34.2 20.9 33.2 20 33.2 18.8ZM33.7 22.6H37.3V33H33.7V22.6Z" fill="#FF9A00"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Illustrator</span>
+                    <span class="tool-card-badge">Vector Craft & Icons</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#FFD02F"/>
+                      <path d="M34.8 12L28.6 22.6L24.5 12H18.2L24.8 27.2L18.6 12H12.4L20.9 31.7L12 12H7.2L18 36H24.3L32.8 19.5L28.6 36H34.9L42 12H34.8Z" fill="#050038"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Miro</span>
+                    <span class="tool-card-badge">UX Flow Workshops</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" fill="url(#canvaGrad2)"/>
+                      <defs>
+                        <linearGradient id="canvaGrad2" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#00C4CC"/>
+                          <stop offset="1" stop-color="#7D2AE8"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M26.8 14.5C22 14.5 17.5 18.2 16.2 23.5C15 28.5 17.8 32.5 22.8 32.5C25.5 32.5 28 31.2 29.8 29.5L28.2 27.8C26.8 29.1 24.8 30.1 22.9 30.1C19.5 30.1 17.6 27.2 18.5 23.7C19.5 19.6 23 16.9 26.7 16.9C28.8 16.9 30.4 17.7 31.5 18.8L33.2 17C31.7 15.4 29.4 14.5 26.8 14.5Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Canva</span>
+                    <span class="tool-card-badge">Visual Assets</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#00005B"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#EA77FF"/>
+                      <path d="M27.5 21H31V23.4H31.1C31.8 21.8 33.5 20.6 35.4 20.6C36.1 20.6 36.6 20.7 37.1 20.9L36.3 24.3C35.8 24.1 35.3 24.1 34.7 24.1C32.8 24.1 31.3 25.5 31.3 28.1V33H27.5V21Z" fill="#EA77FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Premiere Pro</span>
+                    <span class="tool-card-badge">Motion & Video</span>
+                  </div>
+                </div>
               </div>
 
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Adobe Illustrator</span>
+              <!-- Row 2: Rightward continuous smooth glide (reversed order) -->
+              <div class="tools-marquee-row marquee-track-right">
+                <!-- Miro -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#FFD02F"/>
+                      <path d="M34.8 12L28.6 22.6L24.5 12H18.2L24.8 27.2L18.6 12H12.4L20.9 31.7L12 12H7.2L18 36H24.3L32.8 19.5L28.6 36H34.9L42 12H34.8Z" fill="#050038"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Miro</span>
+                    <span class="tool-card-badge">Discovery Maps</span>
+                  </div>
                 </div>
-                <span class="tool-role">Vector craft, iconography & identity assets</span>
-              </div>
 
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Adobe Photoshop</span>
+                <!-- Adobe Premiere Pro -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#00005B"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#EA77FF"/>
+                      <path d="M27.5 21H31V23.4H31.1C31.8 21.8 33.5 20.6 35.4 20.6C36.1 20.6 36.6 20.7 37.1 20.9L36.3 24.3C35.8 24.1 35.3 24.1 34.7 24.1C32.8 24.1 31.3 25.5 31.3 28.1V33H27.5V21Z" fill="#EA77FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Premiere Pro</span>
+                    <span class="tool-card-badge">Motion Design</span>
+                  </div>
                 </div>
-                <span class="tool-role">Raster refinement & digital compositions</span>
-              </div>
 
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Miro</span>
+                <!-- Figma -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="22" height="32" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                      <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                      <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                      <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                      <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Figma</span>
+                    <span class="tool-card-badge">Prototyping</span>
+                  </div>
                 </div>
-                <span class="tool-role">Discovery workshops & journey mapping</span>
-              </div>
 
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Canva</span>
+                <!-- Canva -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" fill="url(#canvaGrad3)"/>
+                      <defs>
+                        <linearGradient id="canvaGrad3" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#00C4CC"/>
+                          <stop offset="1" stop-color="#7D2AE8"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M26.8 14.5C22 14.5 17.5 18.2 16.2 23.5C15 28.5 17.8 32.5 22.8 32.5C25.5 32.5 28 31.2 29.8 29.5L28.2 27.8C26.8 29.1 24.8 30.1 22.9 30.1C19.5 30.1 17.6 27.2 18.5 23.7C19.5 19.6 23 16.9 26.7 16.9C28.8 16.9 30.4 17.7 31.5 18.8L33.2 17C31.7 15.4 29.4 14.5 26.8 14.5Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Canva</span>
+                    <span class="tool-card-badge">Pitch Decks</span>
+                  </div>
                 </div>
-                <span class="tool-role">Rapid pitch assets & visual communications</span>
-              </div>
 
-              <div class="tool-row">
-                <div>
-                  <span class="tool-name">Adobe Premiere Pro</span>
+                <!-- Adobe Illustrator -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#330000"/>
+                      <path d="M11 33L18.4 15H22.1L29.5 33H25.6L23.9 28.7H16.6L14.9 33H11ZM17.7 25.7H22.8L20.3 19.3L17.7 25.7Z" fill="#FF9A00"/>
+                      <path d="M33.2 18.8C33.2 17.6 34.2 16.7 35.5 16.7C36.8 16.7 37.8 17.6 37.8 18.8C37.8 20 36.8 20.9 35.5 20.9C34.2 20.9 33.2 20 33.2 18.8ZM33.7 22.6H37.3V33H33.7V22.6Z" fill="#FF9A00"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Illustrator</span>
+                    <span class="tool-card-badge">Brand Vectoring</span>
+                  </div>
                 </div>
-                <span class="tool-role">Interactive narrative edits & motion storytelling</span>
+
+                <!-- Adobe Photoshop -->
+                <div class="tool-carousel-card">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#001E36"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#31A8FF"/>
+                      <path d="M26.8 29.8C27.9 30.6 29.6 31.2 31.2 31.2C33.1 31.2 33.9 30.4 33.9 29.4C33.9 26.6 27.2 28 27.2 22.7C27.2 20.1 29.3 18.2 32.9 18.2C34.5 18.2 35.8 18.6 36.6 19.1L35.7 21.7C35 21.3 34 21 32.8 21C31.2 21 30.4 21.7 30.4 22.5C30.4 25.3 37.1 23.8 37.1 29.2C37.1 31.9 34.9 33.8 31.1 33.8C29.2 33.8 27.5 33.3 26.3 32.6L26.8 29.8Z" fill="#31A8FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Photoshop</span>
+                    <span class="tool-card-badge">Visual Polish</span>
+                  </div>
+                </div>
+
+                <!-- Duplicated set for seamless loop -->
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#FFD02F"/>
+                      <path d="M34.8 12L28.6 22.6L24.5 12H18.2L24.8 27.2L18.6 12H12.4L20.9 31.7L12 12H7.2L18 36H24.3L32.8 19.5L28.6 36H34.9L42 12H34.8Z" fill="#050038"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Miro</span>
+                    <span class="tool-card-badge">Discovery Maps</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#00005B"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#EA77FF"/>
+                      <path d="M27.5 21H31V23.4H31.1C31.8 21.8 33.5 20.6 35.4 20.6C36.1 20.6 36.6 20.7 37.1 20.9L36.3 24.3C35.8 24.1 35.3 24.1 34.7 24.1C32.8 24.1 31.3 25.5 31.3 28.1V33H27.5V21Z" fill="#EA77FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Premiere Pro</span>
+                    <span class="tool-card-badge">Motion Design</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="22" height="32" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                      <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                      <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                      <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                      <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Figma</span>
+                    <span class="tool-card-badge">Prototyping</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="22" fill="url(#canvaGrad4)"/>
+                      <defs>
+                        <linearGradient id="canvaGrad4" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#00C4CC"/>
+                          <stop offset="1" stop-color="#7D2AE8"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M26.8 14.5C22 14.5 17.5 18.2 16.2 23.5C15 28.5 17.8 32.5 22.8 32.5C25.5 32.5 28 31.2 29.8 29.5L28.2 27.8C26.8 29.1 24.8 30.1 22.9 30.1C19.5 30.1 17.6 27.2 18.5 23.7C19.5 19.6 23 16.9 26.7 16.9C28.8 16.9 30.4 17.7 31.5 18.8L33.2 17C31.7 15.4 29.4 14.5 26.8 14.5Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Canva</span>
+                    <span class="tool-card-badge">Pitch Decks</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#330000"/>
+                      <path d="M11 33L18.4 15H22.1L29.5 33H25.6L23.9 28.7H16.6L14.9 33H11ZM17.7 25.7H22.8L20.3 19.3L17.7 25.7Z" fill="#FF9A00"/>
+                      <path d="M33.2 18.8C33.2 17.6 34.2 16.7 35.5 16.7C36.8 16.7 37.8 17.6 37.8 18.8C37.8 20 36.8 20.9 35.5 20.9C34.2 20.9 33.2 20 33.2 18.8ZM33.7 22.6H37.3V33H33.7V22.6Z" fill="#FF9A00"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Illustrator</span>
+                    <span class="tool-card-badge">Brand Vectoring</span>
+                  </div>
+                </div>
+
+                <div class="tool-carousel-card" aria-hidden="true">
+                  <div class="tool-card-logo">
+                    <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="48" height="48" rx="10" fill="#001E36"/>
+                      <path d="M12.5 15H19.8C22.8 15 25.1 16.4 25.1 19.8C25.1 23.3 22.7 24.8 19.6 24.8H16.2V33H12.5V15ZM16.2 21.6H19.2C20.8 21.6 21.6 20.9 21.6 19.8C21.6 18.7 20.8 18.1 19.2 18.1H16.2V21.6Z" fill="#31A8FF"/>
+                      <path d="M26.8 29.8C27.9 30.6 29.6 31.2 31.2 31.2C33.1 31.2 33.9 30.4 33.9 29.4C33.9 26.6 27.2 28 27.2 22.7C27.2 20.1 29.3 18.2 32.9 18.2C34.5 18.2 35.8 18.6 36.6 19.1L35.7 21.7C35 21.3 34 21 32.8 21C31.2 21 30.4 21.7 30.4 22.5C30.4 25.3 37.1 23.8 37.1 29.2C37.1 31.9 34.9 33.8 31.1 33.8C29.2 33.8 27.5 33.3 26.3 32.6L26.8 29.8Z" fill="#31A8FF"/>
+                    </svg>
+                  </div>
+                  <div class="tool-card-info">
+                    <span class="tool-card-title">Photoshop</span>
+                    <span class="tool-card-badge">Visual Polish</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3035,7 +3462,7 @@
         <div class="footer-brand">
           <h3>DEEPAK KR</h3>
           <p class="footer-tagline">
-            Product & UX/UI Designer crafting digital experiences, design systems, and minimalist interfaces grounded in editorial clarity and architectural restraint.
+            UI/UX Designer crafting digital experiences, design systems, and minimalist interfaces grounded in editorial clarity and architectural restraint.
           </p>
         </div>
 
