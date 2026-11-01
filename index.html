@@ -1278,79 +1278,167 @@
       background-color: var(--bronze);
     }
 
-    /* Skills & Tools Section */
-    .skills-layout {
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .skills-group {
+    /* Symmetrical Skills & Expertise Section */
+    .skills-symmetric-wrap {
+      margin-top: 3.5rem;
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 3.75rem;
+    }
+
+    .skills-block-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--stone);
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skills-block-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .skills-block-kicker {
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bronze-dark);
     }
 
     .skills-group-title {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: var(--charcoal);
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      border-bottom: 1px solid var(--stone);
-      padding-bottom: 0.75rem;
+      margin: 0;
     }
 
     .skills-group-title .icon {
       color: var(--bronze);
     }
 
-    .competency-grid {
+    .competencies-symmetric-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    .competency-card {
+    @media (min-width: 640px) {
+      .competencies-symmetric-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .competencies-symmetric-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .competency-symmetric-card {
       background-color: var(--white);
       border: 1px solid var(--stone);
-      border-radius: 8px;
-      padding: 1.25rem;
-      transition: border-color var(--transition-fast);
+      border-radius: 12px;
+      padding: 1.6rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      transition: all var(--transition-fast);
+      box-shadow: 0 4px 16px -4px rgba(36, 37, 33, 0.02);
     }
 
-    .competency-card:hover {
+    .competency-symmetric-card:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px -4px rgba(36, 37, 33, 0.08);
+    }
+
+    .comp-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.15rem;
+    }
+
+    .comp-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background-color: var(--ivory);
+      border: 1px solid var(--stone);
+      display: grid;
+      place-items: center;
+      color: var(--charcoal);
+      transition: all var(--transition-fast);
+    }
+
+    .competency-symmetric-card:hover .comp-icon-box {
+      background-color: var(--charcoal);
+      color: var(--ivory);
       border-color: var(--charcoal);
     }
 
-    .competency-card h4 {
+    .comp-card-num {
       font-family: var(--font-heading);
-      font-size: 0.95rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--bronze);
+    }
+
+    .competency-symmetric-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       color: var(--charcoal);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.55rem;
     }
 
-    .competency-card p {
+    .competency-symmetric-card p {
       font-size: 0.85rem;
-      line-height: 1.6;
+      line-height: 1.62;
       color: var(--charcoal-muted);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
     }
 
-    /* Software & Tools Auto-Carousel */
+    .comp-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: auto;
+    }
+
+    .comp-card-tags .tag {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      background-color: var(--ivory);
+      border-color: var(--stone);
+    }
+
+    /* Full-Width Software & Tools Auto-Carousel */
     .tools-carousel-wrap {
       position: relative;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid var(--stone);
       background-color: var(--white);
-      padding: 1.25rem 0;
-      box-shadow: 0 4px 20px -4px rgba(36, 37, 33, 0.03);
+      padding: 1.6rem 0;
+      box-shadow: 0 4px 24px -4px rgba(36, 37, 33, 0.03);
+      width: 100%;
     }
 
     /* Left & Right Smooth Edge Fade Masks */
@@ -1360,7 +1448,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 44px;
+      width: 64px;
       z-index: 2;
       pointer-events: none;
     }
@@ -1377,9 +1465,9 @@
 
     .tools-marquee-row {
       display: flex;
-      gap: 0.85rem;
+      gap: 1rem;
       width: max-content;
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
     }
 
     .tools-marquee-row:last-child {
@@ -1387,11 +1475,11 @@
     }
 
     .marquee-track-left {
-      animation: marqueeScrollLeft 22s linear infinite;
+      animation: marqueeScrollLeft 24s linear infinite;
     }
 
     .marquee-track-right {
-      animation: marqueeScrollRight 24s linear infinite;
+      animation: marqueeScrollRight 26s linear infinite;
     }
 
     .tools-carousel-wrap:hover .marquee-track-left,
@@ -1420,12 +1508,12 @@
     .tool-carousel-card {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
-      padding: 0.75rem 1.15rem;
+      gap: 0.95rem;
+      padding: 0.85rem 1.35rem;
       border-radius: 10px;
       background-color: var(--ivory);
       border: 1px solid var(--stone);
-      min-width: 175px;
+      min-width: 195px;
       box-shadow: 0 2px 8px rgba(36, 37, 33, 0.02);
       transition: all var(--transition-fast);
       cursor: default;
@@ -1436,13 +1524,13 @@
     .tool-carousel-card:hover {
       border-color: var(--charcoal);
       background-color: var(--white);
-      transform: translateY(-2px) scale(1.03);
+      transform: translateY(-2px) scale(1.025);
       box-shadow: 0 10px 24px -4px rgba(36, 37, 33, 0.08);
     }
 
     .tool-card-logo {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       display: grid;
       place-items: center;
       flex-shrink: 0;
@@ -1457,12 +1545,12 @@
     .tool-card-info {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;
+      gap: 0.15rem;
     }
 
     .tool-card-title {
       font-family: var(--font-heading);
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--charcoal);
       line-height: 1.2;
@@ -2215,7 +2303,164 @@
       transform: translateY(0);
     }
 
-    /* Responsive Media Queries */
+    /* Responsive Media Queries & Mobile-First Excellence */
+    @media (max-width: 768px) {
+      .header-inner {
+        height: 60px;
+      }
+      .brand-name {
+        font-size: 0.95rem;
+      }
+      .brand-role {
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+      }
+      .nav-actions {
+        gap: 0.45rem;
+      }
+      .nav-actions .open-connect-btn {
+        display: none !important; /* Declutter header on mobile */
+      }
+      .audio-toggle-btn {
+        width: 36px;
+        height: 36px;
+      }
+      .menu-toggle {
+        width: 38px;
+        height: 38px;
+      }
+      .mobile-drawer {
+        padding: 1.25rem 1.5rem 1.75rem;
+      }
+      .mobile-nav-links a {
+        font-size: 1.1rem;
+        padding: 0.65rem 0.25rem;
+        border-bottom: 1px solid rgba(220, 214, 202, 0.4);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 5.5rem;
+        padding-bottom: 3.5rem;
+      }
+      .hero-content {
+        gap: 1.25rem;
+      }
+      .headline {
+        font-size: clamp(1.85rem, 8vw, 2.45rem);
+        line-height: 1.16;
+        letter-spacing: -0.025em;
+      }
+      .hero-copy {
+        font-size: 0.95rem;
+        line-height: 1.68;
+      }
+      .hero-cta-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.65rem;
+      }
+      .hero-cta-row .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.25rem;
+      }
+      .hero-specs {
+        flex-direction: column;
+        gap: 0.65rem;
+        padding-top: 1.15rem;
+        font-size: 0.72rem;
+      }
+      .hero-visual {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      .profile-card {
+        max-width: 320px;
+        width: 100%;
+      }
+      .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+      }
+      .metric-item {
+        padding: 1.1rem 0.75rem;
+      }
+      .metric-num {
+        font-size: 2rem;
+      }
+      .metric-title {
+        font-size: 0.8rem;
+      }
+      .metric-desc {
+        font-size: 0.7rem;
+      }
+      .tools-carousel-wrap {
+        padding: 1.1rem 0;
+      }
+      .tools-carousel-wrap::before,
+      .tools-carousel-wrap::after {
+        width: 28px;
+      }
+      .tool-carousel-card {
+        min-width: 160px;
+        padding: 0.65rem 0.95rem;
+        gap: 0.7rem;
+      }
+      .tool-card-logo {
+        width: 32px;
+        height: 32px;
+      }
+      .tool-card-title {
+        font-size: 0.85rem;
+      }
+      .tool-card-badge {
+        font-size: 0.62rem;
+      }
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      .process-card {
+        padding: 1.15rem 1rem;
+      }
+      .project-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.65rem;
+      }
+      .project-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .project-preview {
+        height: 240px;
+      }
+      .project-preview img {
+        height: 240px;
+        object-fit: cover;
+      }
+      .project-info {
+        padding: 1.5rem;
+      }
+      .form-input, .form-textarea {
+        font-size: 16px !important; /* Prevents auto-zoom on iOS */
+        padding: 0.75rem 0.85rem;
+      }
+      .form-footer .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+
     @media (min-width: 640px) {
       .form-grid {
         grid-template-columns: 1fr 1fr;
@@ -2259,10 +2504,7 @@
       .timeline-body {
         grid-template-columns: 0.8fr 1.2fr;
       }
-      .skills-layout {
-        grid-template-columns: 1fr 1fr;
-        gap: 3.5rem;
-      }
+      /* .skills-symmetric-wrap is responsive by default */
       .process-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -2679,44 +2921,101 @@
           </p>
         </div>
 
-        <div class="skills-layout reveal">
-          <!-- Column 1: Core Competencies -->
-          <div class="skills-group">
-            <h3 class="skills-group-title">
-              <span class="icon">design_services</span> Core Competencies
-            </h3>
+        <div class="skills-symmetric-wrap reveal">
+          <!-- 1. Core Competencies: 4 Symmetric Cards Across Full Width -->
+          <div class="skills-symmetric-block">
+            <div class="skills-block-header">
+              <div class="skills-block-title-group">
+                <span class="skills-block-kicker">Specialized Disciplines</span>
+                <h3 class="skills-group-title">
+                  <span class="icon">design_services</span> Core Competencies
+                </h3>
+              </div>
+              <span class="tag"><span class="pulse-dot"></span> End-to-End Design Craft</span>
+            </div>
 
-            <div class="competency-grid">
-              <div class="competency-card">
+            <div class="competencies-symmetric-grid">
+              <!-- 01: UX Design & Research -->
+              <div class="competency-symmetric-card tilt-card">
+                <div class="comp-card-header">
+                  <div class="comp-icon-box">
+                    <span class="icon">psychology</span>
+                  </div>
+                  <span class="comp-card-num">01</span>
+                </div>
                 <h4>UX Design & Research</h4>
                 <p>User flows, journey mapping, heuristic evaluation, qualitative user interviews, and usability audits grounded in behavioral evidence.</p>
+                <div class="comp-card-tags">
+                  <span class="tag">User Flows</span>
+                  <span class="tag">Heuristics</span>
+                  <span class="tag">User Testing</span>
+                </div>
               </div>
 
-              <div class="competency-card">
+              <!-- 02: UI & Visual Architecture -->
+              <div class="competency-symmetric-card tilt-card">
+                <div class="comp-card-header">
+                  <div class="comp-icon-box">
+                    <span class="icon">palette</span>
+                  </div>
+                  <span class="comp-card-num">02</span>
+                </div>
                 <h4>UI & Visual Architecture</h4>
-                <p>Responsive layouts, Swiss typography, visual rhythm, microinteractions, and tactile, purposeful digital surfaces.</p>
+                <p>Responsive layouts, Swiss typography, visual rhythm, microinteractions, tactile surfaces, and deliberate digital hierarchy.</p>
+                <div class="comp-card-tags">
+                  <span class="tag">Typography</span>
+                  <span class="tag">Layouts</span>
+                  <span class="tag">Micro-UX</span>
+                </div>
               </div>
 
-              <div class="competency-card">
+              <!-- 03: Design Systems & Tokens -->
+              <div class="competency-symmetric-card tilt-card">
+                <div class="comp-card-header">
+                  <div class="comp-icon-box">
+                    <span class="icon">layers</span>
+                  </div>
+                  <span class="comp-card-num">03</span>
+                </div>
                 <h4>Design Systems & Tokens</h4>
-                <p>Scalable component libraries, auto-layout architectures, design tokens, style guides, and WCAG accessibility compliance.</p>
+                <p>Scalable component libraries, auto-layout architectures, semantic tokens, style guides, and WCAG accessibility standards.</p>
+                <div class="comp-card-tags">
+                  <span class="tag">Figma Tokens</span>
+                  <span class="tag">Auto-Layout</span>
+                  <span class="tag">WCAG 2.1</span>
+                </div>
               </div>
 
-              <div class="competency-card">
+              <!-- 04: Prototyping & Handoff -->
+              <div class="competency-symmetric-card tilt-card">
+                <div class="comp-card-header">
+                  <div class="comp-icon-box">
+                    <span class="icon">smart_button</span>
+                  </div>
+                  <span class="comp-card-num">04</span>
+                </div>
                 <h4>Prototyping & Handoff</h4>
-                <p>High-fidelity Figma prototypes, interaction logic, redline documentation, and collaborative engineering partnerships.</p>
+                <p>High-fidelity Figma prototypes, interaction logic, redline documentation, developer tokens, and engineering partnerships.</p>
+                <div class="comp-card-tags">
+                  <span class="tag">Prototypes</span>
+                  <span class="tag">Spec Handoff</span>
+                  <span class="tag">Validation</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Column 2: Software & Tools (Auto Carousel) -->
-          <div class="skills-group">
-            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--stone); padding-bottom: 0.75rem;">
-              <h3 class="skills-group-title" style="border-bottom: none; padding-bottom: 0;">
-                <span class="icon">construction</span> Software & Tools
-              </h3>
-              <span class="tag" style="font-size: 0.65rem; padding: 0.2rem 0.55rem; background: var(--bronze-soft); color: var(--bronze-dark); border-color: transparent;">
-                <span class="pulse-dot"></span> Auto-Flow
+          <!-- 2. Software & Tools: Full-Width Symmetric Interactive Marquee -->
+          <div class="skills-symmetric-block">
+            <div class="skills-block-header">
+              <div class="skills-block-title-group">
+                <span class="skills-block-kicker">Production Stack</span>
+                <h3 class="skills-group-title">
+                  <span class="icon">construction</span> Software & Tools
+                </h3>
+              </div>
+              <span class="tag" style="background: var(--bronze-soft); color: var(--bronze-dark); border-color: transparent;">
+                <span class="pulse-dot"></span> Auto-Flow Toolkit
               </span>
             </div>
 
